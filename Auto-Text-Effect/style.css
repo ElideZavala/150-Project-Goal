@@ -26,5 +26,12 @@ div {
 input {
 	width: 50px;
 	padding: 5px;
-	font-size: 20px;
+	font-size: 18px;
+	background: papayawhip;
+	border: none;
+	text-align: center;
+}
+
+input:focus {
+	outline: none;
 }
