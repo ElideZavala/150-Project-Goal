@@ -5,6 +5,7 @@
 }
 
 body {
+	background-image: radial-gradient(circle at 100% 0%, #f89dff 0, #ff96ff 3.33%, #ff90f3 6.67%, #ff8be3 10%, #ff88d2 13.33%, #ff86c1 16.67%, #ff86b0 20%, #ff87a0 23.33%, #ff8b8f 26.67%, #ff8f80 30%, #ff9571 33.33%, #ff9b64 36.67%, #ffa157 40%, #ffa84c 43.33%, #ffaf43 46.67%, #f2b53c 50%, #e4bb38 53.33%, #d4c038 56.67%, #c4c53b 60%, #b3ca42 63.33%, #a1ce4c 66.67%, #8ed257 70%, #78d564 73.33%, #5ed773 76.67%, #3ad983 80%, #00db93 83.33%, #00dca4 86.67%, #00ddb5 90%, #00dec7 93.33%, #00ded8 96.67%, #00dee9 100%);
 	font-family: 'Roboto', sans-serif;
 	display: flex;
 	flex-direction: column;
@@ -13,4 +14,17 @@ body {
 	height: 100vh;
 	overflow: hidden;
 	margin: 0;
+}
+
+div {
+	position: absolute;
+	bottom: 20px;
+	background: rgba(0, 0, 0, 0.1);
+	padding: 10px 20px;
+}
+
+input {
+	width: 50px;
+	padding: 5px;
+	font-size: 20px;
 }
