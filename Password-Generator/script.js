@@ -25,9 +25,38 @@ generateEl.addEventListener('click', () => {
 })
 
 function generatePassword(length, lower, upper, number, symbol) {
-	let generatedPassord = '';
+	let generatedPassword = '';
 	const typesCount = lower + upper + number + symbol;
-	console.log(typesCount);
+
+	// Obtenemos los valores que esten en true 
+	const typesArr = [{
+		lower
+	}, {
+		upper
+	}, {
+		number
+	}, {
+		symbol
+	}].filter(item => Object.values(item)[0]);
+
+	// Si las casillas de checked estan vacias
+	if (typesCount === 0) {
+		return '';
+	}
+
+	// leer el length y repetir hasta acompletar la peticion de elementos
+	for (let i = 0; i < length; i += typesCount) {
+		typesArr.forEach(type => {
+			const funcName = Object.keys(type)[0]
+			// Insertamos un indice cualquiera y llamamos a la función 
+			generatedPassword += randomFunc[funcName]();
+		})
+	}
+
+	const finalPassword = generatedPassword.slice(0, length);
+
+	return finalPassword;
+
 }
 
 
@@ -44,7 +73,6 @@ function getRandomNumber() {
 }
 
 function getRandomSymbol() {
-	const symbols = '!@#$%^&*()[]=<>/,.{}'
-	return symbols[Math.floor(Math.random() * symbols.length)]
-
+	const symbols = '!@#$%^&*()[]=<>/,.{}';
+	return symbols[Math.floor(Math.random() * symbols.length)];
 }
