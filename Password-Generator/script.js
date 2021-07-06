@@ -6,6 +6,7 @@ const numbersEl = document.getElementById('numbers');
 const symbolsEl = document.getElementById('symbols');
 const generateEl = document.getElementById('generate');
 const clipboardEl = document.getElementById('clipboard');
+const contentEl = document.querySelector('.container');
 
 const randomFunc = {
 	lower: getRandomLower,
@@ -13,6 +14,23 @@ const randomFunc = {
 	number: getRandomNumber,
 	symbol: getRandomSymbol
 }
+
+clipboardEl.addEventListener('click', () => {
+	const textarea = document.createElement('textarea');
+	const password = resultEl.innerText
+
+	if (!password) {
+		return
+	};
+
+	textarea.value = password;
+	document.body.appendChild(textarea);
+	textarea.select();
+	document.execCommand('copy');
+	textarea.remove();
+	// alert('Password copiadó a portapapeles');
+	mensaje('Password copiadó a portapapeles');
+})
 
 generateEl.addEventListener('click', () => {
 	const length = +lengthEl.value; //leer el numero 
@@ -75,4 +93,16 @@ function getRandomNumber() {
 function getRandomSymbol() {
 	const symbols = '!@#$%^&*()[]=<>/,.{}';
 	return symbols[Math.floor(Math.random() * symbols.length)];
+}
+
+function mensaje(msg) {
+	const parrafo = document.createElement('p')
+	parrafo.innerText = msg;
+	parrafo.style.textAlign = 'center';
+	parrafo.style.background = '#CC527A';
+	contentEl.appendChild(parrafo);
+
+	setTimeout(() => {
+		parrafo.remove();
+	}, 3000);
 }
