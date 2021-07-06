@@ -95,6 +95,7 @@ function getRandomSymbol() {
 	return symbols[Math.floor(Math.random() * symbols.length)];
 }
 
+// Mensaje
 function mensaje(msg) {
 	const parrafo = document.createElement('p')
 	parrafo.innerText = msg;
