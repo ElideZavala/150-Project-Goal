@@ -1,18 +1,85 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap');
+
+:root {
+	--colorOne: #f9cdae;
+	--colorTwo: #Ef4566;
+	--colorThree: #f7a7a6;
+	--colorFour: #acdbc9;
+	--colorFive: #dbebc2;
+}
 
 * {
 	box-sizing: border-box;
 }
 
 body {
-	background-color: #000;
-	color: #fff;
-	font-family: 'Roboto', sans-serif;
+	background-image: radial-gradient(circle at 56.16% 120.44%, #e7daee 0, #ead9ec 3.85%, #edd9e9 7.69%, #efd8e7 11.54%, #f2d8e4 15.38%, #f3d8e1 19.23%, #f5d7de 23.08%, #f6d7db 26.92%, #f6d7d9 30.77%, #f6d8d6 34.62%, #f6d8d3 38.46%, #f5d9d1 42.31%, #f4d9cf 46.15%, #f2dacd 50%, #f0dbcc 53.85%, #eedcca 57.69%, #ebddca 61.54%, #e8dec9 65.38%, #e5dec9 69.23%, #e2dfca 73.08%, #dfe0cb 76.92%, #dce1cc 80.77%, #d8e2cd 84.62%, #d5e3cf 88.46%, #d2e3d1 92.31%, #cfe4d4 96.15%, #cce4d6 100%);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	font-family: 'Noto Sans KR', sans-serif;
 	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	height: 100vh;
-	overflow: hidden;
+	flex-wrap: wrap;
 	margin: 0;
+	padding-top: 3rem;
+}
+
+.add {
+	position: fixed;
+	bottom: 1rem;
+	right: 1rem;
+	background-color: var(--colorTwo);
+	color: #fff;
+	padding: .5rem;
+	border: none;
+	box-sizing: border-box;
+	overflow: hidden;
+	height: 53px;
+	border-radius: 6px;
+	line-height: 30px;
+	font-size: 16px;
+	font-weight: bold;
+	text-shadow: 0px 1px 1px var(--colorOne);
+}
+
+.add:active {
+	transform: scale(0.98);
+}
+
+.note {
+	background-color: var(--colorThree);
+	box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.1);
+	margin: 30px 20px;
+	height: 400px;
+	width: 400px;
+}
+
+.note .tools {
+	display: flex;
+	justify-content: flex-end;
+	padding: 0.5rem;
+}
+
+.note .tools button {
+	background-color: transparent;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	font-size: 1rem;
+	margin-left: 0.5rem;
+}
+
+.note textarea {
+	background-color: var(--colorOne);
+	outline: none;
+	font-family: inherit;
+	font-size: 1.2rem;
+	border: none;
+	height: 400px;
+	width: 100%;
+	padding: 20px;
+}
+
+.hidden {
+	display: none;
 }
