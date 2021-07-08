@@ -4,3 +4,6 @@
 
 
   * | 02 | [Doble-Heart](https://github.com/ElideZavala/150-Project-Goal/tree/main/Doble-Heart) | [ir a la vista](https://wonderful-haibt-1591cc.netlify.app/) *
+
+  
+  * | 03 | [Checkboxes](https://github.com/ElideZavala/150-Project-Goal/tree/main/Checkboxes) | [ir a la vista](https://naughty-bose-a369b1.netlify.app/) *
