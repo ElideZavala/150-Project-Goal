@@ -1,6 +1,11 @@
 const addBtn = document.querySelector('.add');
 
-addBtn.addEventListener('click', () => addNewNote('Hola'));
+// Obtenemos los elementos de localStorage y los convertimos a un array
+const notes = JSON.parse(localStorage.getItem('notes'));
+
+console.log('%cscript.js line:6 notes', 'color: #007acc;', notes);
+
+addBtn.addEventListener('click', () => addNewNote(''));
 
 function addNewNote(text = '') {
 	const note = document.createElement('div')
@@ -39,11 +44,24 @@ function addNewNote(text = '') {
 		} = e.target;
 
 		main.innerHTML = marked(value);
+
+		updateLs();
 	})
 
 	document.body.appendChild(note);
 }
 
+function updateLs() {
+	const notesText = document.querySelectorAll('textarea');
+
+	const notes = [];
+
+	// A notes le agregaremos cada note.value 
+	notesText.forEach(note => notes.push(note.value));
+
+	// Almacenamos los elementos y los covertimos en un string
+	localStorage.setItem('notes', JSON.stringify(notes));
+}
 
 
 
