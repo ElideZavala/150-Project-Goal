@@ -1,25 +1,26 @@
-const addBtn = document.querySelector('.add');
+const addBtn = document.getElementById('add');
 
-// Obtenemos los elementos de localStorage y los convertimos a un array
+// Obtenemos los datos de localStorage, lo covertimos de string a un array
 const notes = JSON.parse(localStorage.getItem('notes'));
 
-console.log('%cscript.js line:6 notes', 'color: #007acc;', notes);
+if (notes) {
+	notes.forEach(note => addNewNote(note));
+}
 
-addBtn.addEventListener('click', () => addNewNote(''));
+addBtn.addEventListener('click', () => addNewNote());
 
 function addNewNote(text = '') {
-	const note = document.createElement('div')
+	const note = document.createElement('div');
 	note.classList.add('note');
 
 	note.innerHTML = `
-	<div class="tools">
-		<button class="edit"><i class="fas fa-edit"></i></button>
-		<button class="delete"><i class="fas fa-trash-alt"></i></button>
-	</div>
-
-	<div class="main ${text ? "" : "hidden"}"></div>
-	<textarea class="${text ? "hidden" : ""}"></textarea>
-	`;
+    <div class="tools">
+        <button class="edit"><i class="fas fa-edit"></i></button>
+        <button class="delete"><i class="fas fa-trash-alt"></i></button>
+    </div>
+    <div class="main ${text ? "" : "hidden"}"></div>
+    <textarea class="${text ? "hidden" : ""}"></textarea>
+    `
 
 	const editBtn = note.querySelector('.edit');
 	const deleteBtn = note.querySelector('.delete');
@@ -31,66 +32,35 @@ function addNewNote(text = '') {
 
 	deleteBtn.addEventListener('click', () => {
 		note.remove();
+
+		updateLS();
 	})
 
 	editBtn.addEventListener('click', () => {
-		main.classList.toggle('hidden');
-		textArea.classList.toggle('hidden');
+		main.classList.toggle('hidden')
+		textArea.classList.toggle('hidden')
 	})
 
 	textArea.addEventListener('input', (e) => {
 		const {
 			value
-		} = e.target;
+		} = e.target
 
 		main.innerHTML = marked(value);
 
-		updateLs();
+		updateLS();
 	})
 
 	document.body.appendChild(note);
 }
 
-function updateLs() {
+function updateLS() {
 	const notesText = document.querySelectorAll('textarea');
 
 	const notes = [];
 
-	// A notes le agregaremos cada note.value 
 	notesText.forEach(note => notes.push(note.value));
 
-	// Almacenamos los elementos y los covertimos en un string
+	// Guardamos datos en localStorage lo covertimos en String
 	localStorage.setItem('notes', JSON.stringify(notes));
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-{
-	/* <div class="tools">
-				<button class="edit"><i class="fas fa-edit"></i></button>
-				<button class="delete"><i class="fas fa-trash-alt"></i></button>
-			</div>
-
-			<div class="main hidden"></div>
-			<textarea></textarea> */
-}
-
-// 	<div class="note">
-// 	<div class="tools">
-// 		<button class="edit"><i class="fas fa-edit"></i></button>
-// 		<button class="delete"><i class="fas fa-trash-alt"></i></button>
-// 	</div>
-
-// 	<div class="hidden"></div>
-// 	<textarea></textarea>
-// </div>
