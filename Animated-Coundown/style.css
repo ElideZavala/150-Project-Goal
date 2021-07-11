@@ -6,9 +6,9 @@
 
 body {
 	font-family: 'Roboto', sans-serif;
+	margin: 0;
 	height: 100vh;
 	overflow: hidden;
-	margin: 0;
 }
 
 h4 {
@@ -27,7 +27,7 @@ h4 {
 
 .counter.hide {
 	transform: translate(-50%, -50%) scale(0);
-	animation: hide .2s ease-out;
+	animation: hide 0.2s ease-out;
 }
 
 @keyframes hide {
@@ -44,13 +44,13 @@ h4 {
 	position: fixed;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%) scale(0);
 	text-align: center;
 }
 
 .final.show {
 	transform: translate(-50%, -50%) scale(1);
-	animation: show .2s ease-out;
+	animation: show 0.2s ease-out;
 }
 
 @keyframes show {
@@ -68,7 +68,7 @@ h4 {
 }
 
 .nums {
-	color: #355C7D;
+	color: #c80000;
 	font-size: 50px;
 	position: relative;
 	overflow: hidden;
