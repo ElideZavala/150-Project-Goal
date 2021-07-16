@@ -4,8 +4,6 @@ const rightBtn = document.querySelector('#right');
 
 const img = document.querySelectorAll('#imags img');
 
-console.log(img);
-
 let idx = 0;
 
 let interval = setInterval(run, 2000);
@@ -24,3 +22,20 @@ function changeImage() {
 
 	imgs.style.transform = `translateX(${-idx * 500}px)`
 }
+
+function resetInterval() {
+	clearInterval(interval); // Borramos el intervalo actual.
+	interval = setInterval(run, 2000);  // => restablecemos el interval
+}
+
+rightBtn.addEventListener('click', () => {
+	idx++;
+	changeImage();
+	resetInterval();
+});
+
+leftBtn.addEventListener('click', () => {
+	idx--;
+	changeImage();
+	resetInterval();
+});
