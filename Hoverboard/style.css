@@ -16,7 +16,10 @@ body {
 }
 
 .container {
-	/* display: flex; */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
 }
 
 .square {
@@ -26,4 +29,8 @@ body {
 	width: 16px;
 	margin: 2px;
 	transition: 2s ease;
+}
+
+.square:hover {
+	transition-duration: 0s;
 }
