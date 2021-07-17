@@ -16,6 +16,7 @@ body {
 }
 
 .container {
+	position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -34,3 +35,4 @@ body {
 .square:hover {
 	transition-duration: 0s;
 }
+
