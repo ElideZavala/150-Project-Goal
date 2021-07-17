@@ -1,15 +1,15 @@
 const textEl = document.getElementById('text');
 const speedEl = document.getElementById('speed');
-const text = "Nosotros amamos la programación";
+const texto = "Sé la energía que quieres atraer";
 let idx = 1;
 let speed = 300 / speedEl.value;
 
 writeText();
 
 function writeText() {
-	textEl.innerHTML = text.slice(0, idx); //=> Empezamos desde el 0 y cantidades de idx
+	textEl.innerHTML = texto.slice(0, idx);
 	idx++;
-	idx > text.length ? idx = 1 : null;
+	idx > texto.length ? idx = 1 : null;
 	setTimeout(writeText, speed);
 }
 
