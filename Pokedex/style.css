@@ -6,6 +6,7 @@
 
 body {
 	background-image: linear-gradient(180deg, #eefda9 0, #f0f398 10%, #f1e787 20%, #f2db76 30%, #f2cc64 40%, #f2bd53 50%, #f2ad43 60%, #f39d37 70%, #f48d2f 80%, #f67d2c 90%, #f86d2e 100%);
+	background-attachment: fixed;
 	color: #fff;
 	font-family: 'Merriweather', serif;
 	display: flex;
@@ -35,6 +36,7 @@ h1 {
 	border: 5px solid white;
 	margin: 10px;
 	padding: 20px;
+	text-align: center;
 }
 
 .pokemon .img-container {
@@ -48,4 +50,19 @@ h1 {
 .pokemon .img-container img {
 	max-width: 90%;
 	margin-top: 20px;
+}
+
+.pokemon .info {
+	margin-top: 20px;
+}
+
+.pokemon .info .number {
+	background-color: rgba(0, 0, 0, 0.1);
+	padding: 5px 10px;
+	border-radius: 10px;
+	font-size: 0.8em;
+}
+
+.pokemon .info .name {
+	margin: 15px 0 8px;
 }
