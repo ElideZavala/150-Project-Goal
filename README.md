@@ -12,4 +12,6 @@
 
    * | 05 | [Carousel](https://github.com/ElideZavala/150-Project-Goal/tree/main/Carousel-Ul) | [ir a la página]() 
 
+   * | 06 | [Carousel](https://github.com/ElideZavala/150-Project-Goal/tree/main/Pokedex) | [ir a la página](https://stoic-stonebraker-836fce.netlify.app/) 
+
 
