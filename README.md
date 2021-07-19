@@ -6,15 +6,17 @@
   * | 02 | [Doble-Heart](https://github.com/ElideZavala/150-Project-Goal/tree/main/Doble-Heart) | [ir a la vista](https://wonderful-haibt-1591cc.netlify.app/) 
 
   
-  * | 03 | [Checkboxes](https://github.com/ElideZavala/150-Project-Goal/tree/main/Checkboxes) | [ir a la vista](https://naughty-bose-a369b1.netlify.app/) 
+  * | 03 | [Checkboxes](https://github.com/ElideZavala/150-Project-Goal/tree/main/Checkboxes)  | [ir a la vista](https://naughty-bose-a369b1.netlify.app/) 
 
-  * | 04 | [AppNotes](https://github.com/ElideZavala/150-Project-Goal/tree/main/Notes-app) | [ir a la página](https://tender-hugle-f28617.netlify.app/) 
+  * | 04 | [AppNotes](https://github.com/ElideZavala/150-Project-Goal/tree/main/Notes-app)                    | [ir a la página](https://tender-hugle-f28617.netlify.app/) 
 
    * | 05 | [Carousel](https://github.com/ElideZavala/150-Project-Goal/tree/main/Carousel-Ul) | [ir a la página]() 
 
    * | 06 | [Pokebola](https://github.com/ElideZavala/150-Project-Goal/tree/main/Pokedex) | [ir a la página](https://stoic-stonebraker-836fce.netlify.app/) 
 
-   * | 07 | [Animation boxes](https://github.com/ElideZavala/150-Project-Goal/tree/main/Hoverboard) | [ir a la página](https://sharp-goodall-fe105b.netlify.app/) 
+   * | 07 | [Animation boxes](https://github.com/ElideZavala/150-Project-Goal/tree/main/Hoverboard)  | [ir a la página](https://sharp-goodall-fe105b.netlify.app/) 
+
+   * | 08 | [Counter](https://github.com/ElideZavala/150-Project-Goal/tree/main/Counter)                      | [ir a la página](https://trusting-lamport-e09329.netlify.app/) 
 
 
 
