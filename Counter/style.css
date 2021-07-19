@@ -69,6 +69,11 @@ img {
 	outline: none;
 	background-color: var(--color2);
 	cursor: pointer;
+
+}
+
+.buttons button:active {
+	transform: scale(0.90);
 }
 
 button.substract {
