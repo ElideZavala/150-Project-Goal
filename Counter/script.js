@@ -1,17 +1,27 @@
 const contar = document.querySelector(".count");
-const add = document.querySelector(".add");
-const resetear = document.querySelector(".resetear");
-const sub = document.querySelector(".substract");
 const botones = document.querySelector(".buttons");
 
-add.addEventListener('click', () => {
-	contar.innerHTML++; // <== sumara las veces que le demos click
-});
+botones.addEventListener("click", (e) => {
+	if (e.target.classList.contains("add")) {
+		contar.innerHTML++;
+		setColor();
+	}
+	if (e.target.classList.contains("substract")) {
+		contar.innerHTML--;
+		setColor();	
+	}
+	if (e.target.classList.contains("resetear")) {
+		contar.innerHTML = 0;
+		setColor();
+	}
+}); 
 
-sub.addEventListener('click', () => {
-	contar.innerHTML--; // <== se contara de forma regresiva. 
-});
-
-resetear.addEventListener('click', () => {
-	contar.innerHTML = 0;
-})
+function setColor() {
+	if (contar.innerHTML > 0) {
+		contar.style.color = "green";
+	} else if (contar.innerHTML < 0 ) {
+		contar.style.color = "orangered";
+	} else {
+		contar.style.color = "#fff";
+	}
+}
