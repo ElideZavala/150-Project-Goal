@@ -1,13 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+	--color1: radial-gradient(circle at 104.17% 95.45%, #ac78ff 0, #8f6cff 25%, #6b62ff 50%, #3159fc 75%, #0051fa 100%);;	
+	--color2: #6c63ff;
+	--color3: #5a6170;
+	--color4: #9da6b8;
+	--color5: #f8a4d8
+}
 
 * {
 	box-sizing: border-box;
 }
 
 body {
-	background-color: #000;
+	background-image: var(--color1);
 	color: #fff;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bolder;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -16,3 +25,62 @@ body {
 	overflow: hidden;
 	margin: 0;
 }
+
+img {
+	width: 100%;
+}
+
+.container {
+	max-width: 900px;
+	padding: 0 20px;
+	text-align: center;
+}
+
+.counter-div {
+	width: 30rem;;
+	border: 1px solid var(--color2);
+	padding: 1rem;
+	background-color: var(--color5) ;
+	border-radius: 1em;
+	color: var(--color3);
+
+}
+
+.counter-div h1 {
+	font-size: 2rem;
+}
+
+.counter-div > * {
+	margin-bottom: 1rem;
+}
+
+.count {
+	font-size: 4rem;
+}
+
+.buttons button {
+	padding: 1rem;
+	margin: 1rem 1rem;
+	font-size: 1rem;
+	color: #fff;
+	font-weight: 700;
+	border-radius: 5px;
+	border: none;
+	outline: none;
+	background-color: var(--color2);
+	cursor: pointer;
+}
+
+button.substract {
+	background-color: rgb(250, 96, 96);
+}
+
+button.resetear {
+	background-color: #fff;
+	color: var(--color3)
+}
+
+button.add {
+	background-color: rgb(93, 209, 93);
+}
+
