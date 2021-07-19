@@ -1,20 +1,8 @@
+const add = document.querySelector(".add");
+const resetear = document.querySelector(".resetear");
+const sub = document.querySelector(".substract");
 const contar = document.querySelector(".count");
 const botones = document.querySelector(".buttons");
-
-botones.addEventListener("click", (e) => {
-	if (e.target.classList.contains("add")) {
-		contar.innerHTML++;
-		setColor();
-	}
-	if (e.target.classList.contains("substract")) {
-		contar.innerHTML--;
-		setColor();	
-	}
-	if (e.target.classList.contains("resetear")) {
-		contar.innerHTML = 0;
-		setColor();
-	}
-}); 
 
 function setColor() {
 	if (contar.innerHTML > 0) {
@@ -25,3 +13,18 @@ function setColor() {
 		contar.style.color = "#fff";
 	}
 }
+
+add.addEventListener('click', () => {
+	contar.innerHTML++; // <== sumara las veces que le demos clicksetColor()v
+	setColor() 
+});
+
+sub.addEventListener('click', () => {
+	contar.innerHTML--; // <== se contara de forma regresiva. 
+	setColor() 
+});
+
+resetear.addEventListener('click', () => {
+	contar.innerHTML = 0;
+	setColor() 
+})
