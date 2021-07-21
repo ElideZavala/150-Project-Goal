@@ -17,7 +17,9 @@
 } */
 
 .card-img {
-	max-width: 50%;
+	max-width: 65%;
+	margin: 0 auto;
+	margin: 0  17%;
 }
 
 .container {
@@ -45,5 +47,8 @@
 }
 
 .card {
-	display: none;
+	height: 100%;
+	width: 100%;
+	background-color: #fff;
+	border-radius: inherit;
 }
