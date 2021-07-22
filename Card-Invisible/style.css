@@ -92,3 +92,33 @@
 	button: -10%;
 	margin-left: 10px;
 }
+
+.card-icons {
+	list-style: none;
+	display: flex;
+	width: 70%;
+	justify-content: space-around;
+	/* background: var(--azul);	 */
+	border-radius: 5px;
+}
+
+.card-icons i:hover {
+	transform: scale(1.5);
+}
+
+.card-icon-link {
+	text-decoration: none;
+	width: 35px;
+	height: 35px;
+	border: 1px solid var(--white);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 5px;
+	margin: 5px;
+}
+
+.card-icon {
+	font-size: 20px;
+	color: var(--white);
+}
