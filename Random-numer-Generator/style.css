@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
-:root {	
+:root {
+	--color1: radial-gradient(circle at 104.17% 95.45%, #ac78ff 0, #8f6cff 25%, #6b62ff 50%, #3159fc 75%, #0051fa 100%);;	
 	--color2: #6c63ff;
 	--color3: #5a6170;
 	--color4: #9da6b8;
@@ -12,6 +13,7 @@
 }
 
 body {
+	background-image: var(--color1);
 	color: #fff;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: bolder;
@@ -36,11 +38,11 @@ img {
 
 .counter-div {
 	width: 30rem;;
-	border: 1px solid var(--color5);
+	border: 1px solid var(--color2);
 	padding: 1rem;
-	background-color: var(--color2) ;
+	background-color: var(--color5) ;
 	border-radius: 1em;
-	color: var(--color5);
+	color: var(--color3);
 
 }
 
@@ -49,13 +51,11 @@ img {
 }
 
 .counter-div > * {
-	margin-bottom: 1rem;	
+	margin-bottom: 1rem;
 }
 
 .count {
 	font-size: 4rem;
-	border: 1px solid var(--color2);
-	padding: 0 1rem;
 }
 
 .buttons button {
@@ -67,7 +67,7 @@ img {
 	border-radius: 5px;
 	border: none;
 	outline: none;
-	background-color: var(--color4);
+	background-color: var(--color2);
 	cursor: pointer;
 
 }
@@ -88,3 +88,4 @@ button.resetear {
 button.add {
 	background-color: rgb(93, 209, 93);
 }
+
