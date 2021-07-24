@@ -4,4 +4,4 @@
 # Vista 
 ![image](vista.gif)
 
-[ir a la vista](https://eloquent-mestorf-aaf204.netlify.app/)
+[ir a la vista](https://elegant-boyd-c855fb.netlify.app/)
