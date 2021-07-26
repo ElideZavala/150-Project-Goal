@@ -205,6 +205,15 @@
 	text-align: center;
 	background: linear-gradient(to top, rgba(0, 0, 0, .8), rgba(0, 0, 0, .2)),url(images/2.webp) center no-repeat;
 	background-size: cover;
+	box-shadow: -10px 0 30px rgba(0, 0, 0, .3);
+	position: relative;
+}
+
+.header h1 {
+	position: absolute;
+	top: 15%;
+	left: 50%;
+	transform: translateX(-50%);
 }
 
 .x-btn {
