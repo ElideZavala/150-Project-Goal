@@ -145,3 +145,29 @@
 	letter-spacing: 1px;
 	text-transform: uppercase;
 }
+
+.sign-up-form input[type="checkbox"] {
+	--webkit-appearance: none;
+	--moz-appearance: none;
+	appearance: none;
+	width: 30px;
+	height: 15px;
+	background-color: #eee;
+	outline: none;
+	border-radius: 30px;
+	margin: 0 8px;
+	box-shadow: inset 0 0 10px rgba(0, 0, 0, .4)
+}
+
+.sign-up-form input[type="checkbox"]::before {
+	content: '';
+	width: 17px;
+	height: 17px;
+	background-color: #aaa;
+	position: absolute;
+}
+
+.sign-up-form button {
+	display: block;
+	margin-top: 80px;
+}
