@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Yomogi&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cantarell:ital@1&family=PT+Sans:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cantarell:ital@1&family=PT+Sans:ital@1&family=Prompt&display=swap');
 
 * {
 	box-sizing: border-box;
@@ -214,6 +214,11 @@
 	top: 15%;
 	left: 50%;
 	transform: translateX(-50%);
+	color: #fff;
+	font-family: 'Prompt', sans-serif;
+	font-size: 40px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
 }
 
 .x-btn {
