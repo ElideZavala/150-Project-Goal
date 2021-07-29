@@ -32,17 +32,22 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	display: none;
 }
 
 .banner-heading {
 	font-family: 'Playfair Display', serif;
 	font-size: 70px;
 	text-transform: uppercase;
+	padding: 1.5em 0em;
+	border-width: 3px 0;
 	margin-bottom: 30px;
-	border-top: 7px double #fff;
+	border-top: 7px double #fff;	
 	border-bottom: 7px double #fff;
 	padding: 10px;
+	transition: color 1s ease-in; 
+	color: #fff;
+	background-color: transparent;
+	text-shadow: #fff 0 0 10px;
 }
 
 .arrow {
@@ -98,8 +103,8 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 	box-shadow: 0 20px 50px rgba(0, 0, 0, .4);
-	/* opacity: 0;
-	visibility: hidden;	 */
+	opacity: 0;
+	visibility: hidden;	
 	transition: opacity 1s;
 }
 
@@ -280,5 +285,54 @@
 		padding: 6px 4px;
 		font-size: 13px;
 		border-width: 1px;
+	}
+
+	.header h1 {
+		font-size: 30px;
+	}
+}
+
+@media(max-width: 800px) {
+	.banner {
+		width: 450px;
+	}
+
+	.banner-heading {
+		font-size: 45px;
+		margin-bottom: 40px;
+		border-width: 4px;
+	}
+
+	.arrow {
+		font-size: 30px;
+	}
+
+	.banner.btn {
+		width: 150px;
+		padding: 10px;
+		font-size: 15px;
+	}
+}
+
+@media(max-width: 650px) {
+	.header {
+		display: none;
+	}
+
+	.form-container {
+		width: 300px;
+	}
+
+	.sign-up-form {
+		width: 100%;
+	}
+}
+
+@media(max-width: 500px) {
+	.banner {
+		width: 300px;
+	}
+	.banner-heading {
+		font-size: 30px;
 	}
 }
