@@ -92,10 +92,10 @@ form button:hover {
 .modal-content {
   width: 80%;
   max-width: 60rem;
-  background-color: #eee;
+  background-color: var(--white);
   margin: 15% auto;
   padding: 2rem;
-  border: 1px solid #777;
+  border: 1px solid var(--black);
   position: relative;
   text-align: center;
   animation: slide ease 0.8s;
@@ -114,7 +114,7 @@ form button:hover {
   position: absolute;
   top: 5px;
   right: 10px;
-  color: var(--color-primary);
+  color: var(--blue);
   font-size: 2rem;
   cursor: pointer;
 }
