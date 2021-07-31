@@ -20,9 +20,9 @@
 
   * | 09 | [Card-Invisible ](https://github.com/ElideZavala/150-Project-Goal/tree/main/Card-Invisible) | [ir a la página](https://brave-nobel-fca764.netlify.app/) 
   
-  * | 10 | [Sign Up]() | [ir a la página](https://lucid-engelbart-a21c34.netlify.app/) 
+  * | 10 | [Sign Up](https://github.com/ElideZavala/150-Project-Goal/tree/main/Sign%20Up) | [ir a la página](https://lucid-engelbart-a21c34.netlify.app/) 
   
-  * | 11 | [Counter Vocal]() | [ir a la página](https://trusting-lamport-e09329.netlify.app/) 
-  v
-  * | 12 | [Palindrome]() | [ir a la página](https://epic-chandrasekhar-0f9f41.netlify.ap) 
+  * | 11 | [Counter Vocal](https://github.com/ElideZavala/150-Project-Goal/tree/main/Counter-vocal) | [ir a la página](https://trusting-lamport-e09329.netlify.app/) 
+  
+  * | 12 | [Palindrome](https://github.com/ElideZavala/150-Project-Goal/tree/main/Palindrome) | [ir a la página](https://epic-chandrasekhar-0f9f41.netlify.ap) 
 
