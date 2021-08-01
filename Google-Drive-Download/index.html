@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +7,72 @@
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="normalize.css">
 	<script src="https://kit.fontawesome.com/1935d064dd.js" crossorigin="anonymous"></script>
-	<title>Document</title>
+	<title>Google Generador Directo de link</title>
 </head>
 <body>
-	<h1>Nuevo Proyecto</h1>
+	<main>
+		<section class="main-container">
+			<div class="instructions">
+				<div class="container">
+					<h2 class="line">Instrucciones</h2>
+					<p>Sugue las instrucciones siguientes para obtener un enlace a su archivo de Google Drive</p>
+					<ol type="1">
+						<li>
+							<p>Abrir <a href="https://drive.google.com">Google Drive</a></p>
+						</li>
+						<li>
+							<p>Hacer click derecho en un archivo</p>
+						</li>
+						<li>
+							<p>Seleccione "Obtener link" y de click en "Copiar link"</p>
+						</li>
+						<li>
+							<p>Pegue el link aqui y de click en el botón generar link directo </p>
+						</li>
+					</ol>		
+				</div>
+			</div>
+
+			<div class="download-link">
+				<div class="container">
+					<h1>Generador de enlace de descarga directa de google</h1>
+					<input type="radio" id="login" name="tab" checked>
+					<input type="radio" id="register" name="tab" checked>
+					<input type="radio" id="reset" name="tab" checked>
+					
+					<nav>
+						<label for="login" id="login">
+							<i class="fas fa-sign-in-alt"></i>
+							pegar Link
+						</label>
+						<label for="login" id="register">
+							<i class="fas fa-headphones-alt"></i>
+							Inscrustar Audio
+						</label>
+						<label for="login" id="reset">
+							<i class="fas fa-photo-video"></i>
+							Inscrustar Video/Docs
+						</label>
+					</nav>
+
+					<section>
+						<div class="content content-link"> 
+							<i class="fas fa-download"></i>
+							<h2>Google Drive link</h2>
+							<p>Pega tu Google Drive File link abajo</p>
+							<form action="">
+								<label for="glink">
+									<i class="fas fa-google-drive"></i>
+									<input type="text" placeholder="Google Drive Link" class="glink" id="glink">
+
+								</label>
+							</form>
+						</div>
+					</section>
+				</div>
+			</div>
+		</section>
+	</main>
 
 	<script src="script.js"></script>
 </body>
