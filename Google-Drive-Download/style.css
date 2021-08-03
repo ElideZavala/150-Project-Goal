@@ -86,7 +86,7 @@ body {
 }
 
 .download-link section {
-	border: 2px solid var(--purple);
+	border: 3px solid var(--purple);
 	border-radius: 10px;
 }
 
@@ -143,10 +143,6 @@ nav .slide {
 	transition: all .3s;
 }
 
-nav .slide:active {
-	transform: scale(0.90);
-}
-
 #register:checked ~ nav .slide {
 	left: 28%;
 }
@@ -160,4 +156,22 @@ nav .slide:active {
 #reset:checked ~ nav label#reset {
 	color: var(--white);
 }
+
+.content {
+	display: none;
+}
+
+#login:checked ~ section .content-link {
+	display: block;
+}
+
+#register:checked ~ section .content-audio {
+	display: block;
+}
+
+#reset:checked ~ section .content-video {
+	display: block;
+}
+
+/* Estilos del Formulario  */
 
