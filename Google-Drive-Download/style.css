@@ -18,8 +18,6 @@ html {
 }
 
 body {
-	background-color: #000;
-	color: #fff;
 	font-family: 'Roboto', sans-serif;
 	display: flex;
 	flex-direction: column;
@@ -39,4 +37,111 @@ body {
 .main-container {
 	display: flex;
 	justify-content: center;
+}
+
+.instructions {
+	font-size: 1.6rem;
+	width: 30%;
+	/* height: 100vh; */
+	border-radius: 10px;
+	margin-top: 10px;
+	background-color: var(--black); 
+	color: var(--white);
+	padding-top: 5rem;
+}
+
+.instructions h2 {
+	font-size: 3.5rem;
+	color: var(--red);
+	text-align: center;
+	margin-bottom: 1rem;
+	border-bottom: .5rem solid var(--green);
+	position: relative;
+	padding: 5px 0;
+}
+
+.instructions h2::after {
+	content: '';
+	position: absolute;
+	left: 33.3%;
+	right: 33.3%;
+	top: -5px;
+	width: 33.3%;
+	height: 3px;
+	background-color: var(--green);
+}
+
+.instructions ol {
+	padding: 1rem 0  0 1.5rem;
+}
+
+.instructions ol a {
+	color: var(--green);
+	text-decoration: none;
+}
+
+.download-link {
+	width: 70%;
+	padding-top: 5rem;
+}
+
+.download-link section {
+	border: 2px solid var(--purple);
+	border-radius: 10px;
+}
+
+main h1 {
+	display: block;
+	font-size: 3.5rem;
+	font-weight: 700;
+	line-height: 5rem;
+	text-align: center;
+	color: var(--purple-stronge);
+}
+
+main input[type=radio] {
+	display: none;
+}
+
+main nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: 1px solid #eee;
+	padding: 5px 10px;
+	position: relative;
+	background-color: var(--green);
+	z-index: 1;
+	color: var(--white);
+	border-radius: 5px;
+} 
+
+main nav label {
+	font-size: 1.6rem;
+	font-weight: 500;
+	padding: 1rem;
+	position: relative;
+	text-align: center;
+	cursor: pointer;
+
+}
+
+main nav label i {
+	padding-right: 5px;
+	color: var(--red);
+}
+
+nav .slide {
+	position: absolute;
+	top: 0;
+	left:3%;
+	width: 26%;
+	height: 100%;
+	background-color: var(--purple);
+	border-radius: 5px;
+	z-index: -1;
+}
+
+nav .slide:active {
+	transform: scale(0.55);
 }
