@@ -140,8 +140,9 @@ nav .slide {
 	background-color: var(--purple);
 	border-radius: 5px;
 	z-index: -1;
+	transition: all .3s;
 }
 
 nav .slide:active {
-	transform: scale(0.55);
+	transform: scale(0.90);
 }
