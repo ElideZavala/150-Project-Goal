@@ -123,7 +123,7 @@ main nav label {
 	position: relative;
 	text-align: center;
 	cursor: pointer;
-	color: var(--white);	
+	color: rgb(117, 112, 112);	
 }
 
 main nav label i {
@@ -148,5 +148,16 @@ nav .slide:active {
 }
 
 #register:checked ~ nav .slide {
-
+	left: 28%;
 }
+
+#reset:checked ~ nav .slide {
+	left: 64.5%;
+}
+
+#login:checked ~ nav label#login,
+#register:checked ~ nav label#register,
+#reset:checked ~ nav label#reset {
+	color: var(--white);
+}
+
