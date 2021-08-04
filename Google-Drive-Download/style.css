@@ -289,7 +289,7 @@ section .content {
 	right: 1px;
 	font-size: 1.6rem;
 	font-weight: 700;
-	bottom: 5px;
+	bottom: 25px;
 	background-color: var(--red);
 	color: var(--white);
 	padding: .5rem;
