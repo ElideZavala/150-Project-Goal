@@ -216,5 +216,17 @@ section .content {
 	width: 100%;
 	padding: 1.3rem 3rem;
 	border-radius: 10px 0 10px 0;
+	border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+	margin-bottom: 2rem;
+	background-color: rgba(0, 0, 0, 0.1);
+	outline: none;
+	color: var(--black);
+	transition: all .3s;
+}
+
+.content form label input:focus:invalid {
+	font-size: 1.6rem;
+	border-bottom: 2px solid var(--red);
+	border-right: 2px solid var(--red);
 }
 
