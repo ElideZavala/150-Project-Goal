@@ -215,6 +215,7 @@ section .content {
 	display: block;
 	width: 100%;
 	padding: 1.3rem 3rem;
+	font-size: 1.4rem;
 	border-radius: 10px 0 10px 0;
 	border-bottom: 2px solid rgba(0, 0, 0, 0.4);
 	margin-bottom: 2rem;
@@ -230,3 +231,22 @@ section .content {
 	border-right: 2px solid var(--red);
 }
 
+.content form label input:valid {
+	font-size: 1.6rem;
+	border-bottom: 2px solid green;
+	border-right: 2px solid green;
+	background-color: var(--white);
+}
+
+.content form i {
+	position: absolute;
+	left: 1rem;
+	top: 1.5rem;
+	font-size: 1.3rem;
+	color: var(--black)
+}
+
+::placeholder {
+	font-size: 1.6rem;
+	color: gray;
+}
