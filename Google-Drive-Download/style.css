@@ -269,9 +269,12 @@ section .content {
 	transition: all .3s;
 }
 
-.content .btn:active {
-	transform: scale(.95);
+.content .btn:hover {
 	background-color: var(--purple-stronge)
+} 
+
+.content .btn:active {
+	transform: scale(.97);
 }
 
 .embed-code {
