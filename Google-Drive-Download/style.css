@@ -161,15 +161,16 @@ nav .slide {
 	display: none;
 }
 
-#login:checked ~ section .content-link {
-	display: block;
-}
 
 #register:checked ~ section .content-audio {
 	display: block;
 }
 
 #reset:checked ~ section .content-video {
+	display: block;
+}
+
+#login:checked ~ section .content-link {
 	display: block;
 }
 
