@@ -1,6 +1,8 @@
 const gLink = document.getElementById('glink');
 const btn = document.getElementById('btn');
 const descargarLink = document.getElementById('download-link');
+const copy = document.querySelector('.copy');
+const contentEl = document.querySelector('.msg');
 
 btn.addEventListener('click', generarLink);
 
@@ -19,17 +21,28 @@ function generarLink(e) {
 
 		function copyText(target) {
 			if (target.value == "") {
-				alert("Porfavor genera un enlace de descarga");
+				mensaje("Porfavor genera un enlace de descarga"); 
 			} else {
 				target.select();
 				document.execCommand("copy");
-				alert("Enlace ha sido copiado exitosamente!!")
+				mensaje("Enlace ha sido copiado exitosamente!!"); 
 			}
 		}
 
-		const copy = document.querySelector('.copy');
 		copy.addEventListener('click', () => {
 			return copyText(descargarLink);
 		})
 	}
+}
+
+// Mensaje
+function mensaje(msg) {
+	const parrafo = document.createElement('p');
+	parrafo.innerText = msg;
+	parrafo.style.textAlign = 'center';
+	contentEl.appendChild(parrafo);
+
+	setTimeout(() => {
+		parrafo.remove();
+	}, 3000);
 }
