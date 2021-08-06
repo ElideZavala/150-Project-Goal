@@ -44,5 +44,6 @@ function mensaje(msg) {
 
 	setTimeout(() => {
 		parrafo.remove();
+		contentEl.appendChild('');
 	}, 3000);
 }

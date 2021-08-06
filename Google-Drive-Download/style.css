@@ -294,8 +294,11 @@ section .content {
 
 .msg {
 	position: absolute;
-	bottom: 1px;
-	font-size: 1.5rem;
+	top: 90%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	bottom: 5rem;
+	font-size: inherit;
 	color: var(--white);
 	background-color: var(--green);
 	outline: none;
