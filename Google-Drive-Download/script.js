@@ -35,6 +35,12 @@ function generarLink(e) {
 	}
 }
 
+//Embed Audio function
+	const audioOne = '<audio width="300" height="32" controls="controls" src=""';
+	const audioTwo = '" type="audio/mp3></audio>';
+	const embedAudio = document.getElementById("embed-audio");
+
+	
 // Mensaje
 function mensaje(msg) {
 	const parrafo = document.createElement('p');
