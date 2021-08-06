@@ -19,8 +19,17 @@ function generarLink(e) {
 
 		function copyText(target) {
 			if (target.value == "") {
-				alert("Porfavor genera un link de descarga")
+				alert("Porfavor genera un enlace de descarga");
+			} else {
+				target.select();
+				document.execCommand("copy");
+				alert("Enlace ha sido copiado exitosamente!!")
 			}
 		}
+
+		const copy = document.querySelector('.copy');
+		copy.addEventListener('click', () => {
+			return copyText(descargarLink);
+		})
 	}
 }
