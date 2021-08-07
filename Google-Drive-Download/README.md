@@ -2,6 +2,6 @@
 `JavaScript & CSS`
 
 # Vista 
-![image]()
+![image](vista.gif)
 
-[Ir a la página]()
+[Ir a la página](https://pensive-allen-a3612b.netlify.app/)
