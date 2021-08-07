@@ -28,6 +28,25 @@
 	letter-spacing: 5px;
 }
 
+.cards-wrapper {
+	width: 80%;
+	display: flex;
+	justify-content: space-evenly;
+	position: relative;
+	top: 35%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
 .card {
 	width: 280px;
+	background-color: #eee;
+}
+
+.image-top {
+	width: 100%;
+}
+
+.profile-image {
+	width: 120px;
 }
