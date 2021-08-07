@@ -35,12 +35,32 @@ function generarLink(e) {
 	}
 }
 
-//Embed Audio function
+	//Embed Audio function
 	const audioOne = '<audio width="300" height="32" controls="controls" src=""';
 	const audioTwo = '" type="audio/mp3></audio>';
-	const embedAudio = document.getElementById("embed-audio");
+	const embedAudio = document.getElementById("embed-audio");	
+	embedAudio.value = `${audioOne}${descargarLink.value}${audioTwo}`
+	// console.log(embedAudio.value);
 
+	// Copiar inserción del audio
+	const copyAudio = document.querySelector('copy.audio');
+	copyAudio.addEventListener('click', () => {
+		return copyText(embedAudio)
+	})
+
+	//Embed Video function
+	const getVideoLink = gLink.value.replace("/view?usp=sharing", "")
+
+	const videoOne = '<iframe src="';
+	const videoTwo = '/preview" width="560" height="315"></iframe>';
+
+	const embedVideo = document.getElementById("embed-video");
+	embedVideo.value = `${}`
 	
+	embedVideo.addEventListener('click', () => {
+
+	})
+
 // Mensaje
 function mensaje(msg) {
 	const parrafo = document.createElement('p');

@@ -143,13 +143,14 @@ nav .slide {
 	transition: all .3s;
 }
 
+#reset:checked ~ nav .slide {
+	left: 67%;
+}
+
 #register:checked ~ nav .slide {
 	left: 31%;
 }
 
-#reset:checked ~ nav .slide {
-	left: 67%;
-}
 
 #login:checked ~ nav label#login,
 #register:checked ~ nav label#register,
@@ -162,18 +163,17 @@ nav .slide {
 }
 
 
-#register:checked ~ section .content-audio {
+#reset:checked ~ section .content-video {
 	display: block;
 }
 
-#reset:checked ~ section .content-video {
+#register:checked ~ section .content-audio {
 	display: block;
 }
 
 #login:checked ~ section .content-link {
 	display: block;
 }
-
 /* Estilos del Formulario  */
 section .content {
 	margin: 3rem auto;
