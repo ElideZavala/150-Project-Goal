@@ -400,5 +400,10 @@ section .content {
 		font-weight: 500;
 	}
 
+	.msg {
+		bottom: -4.3rem;
+		font-size: inherit;
+	}
+
 
 }

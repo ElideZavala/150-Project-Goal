@@ -9,9 +9,8 @@ btn.addEventListener('click', generarLink);
 function generarLink(e) {
 	e.preventDefault();
 
-	const gLinkValue  = gLink.value;
+	const gLinkValue = gLink.value;
 	const id = 'https://drive.google.com/file/d/'
-	
 	const confirmLink = gLink.value.includes(id);
 
 	if (confirmLink == true) {
@@ -32,35 +31,38 @@ function generarLink(e) {
 		copy.addEventListener('click', () => {
 			return copyText(descargarLink);
 		})
+		//Embed Audio function
+		const audioOne = '<audio width="300" height="32" controls="controls" src=""';
+		const audioTwo = '" type="audio/mp3></audio>';
+		const embedAudio = document.getElementById("embed-audio");	
+		embedAudio.value = `${audioOne}${descargarLink.value}${audioTwo}`
+		// console.log(embedAudio.value);
+		
+		// Copiar inserción del audio
+		const copyAudio = document.querySelector('.copy-audio');
+		copyAudio.addEventListener('click', () => {
+			return copyText(embedAudio);
+		})
+		
+		//Embed Video function
+		const getVideoLink = gLink.value.replace("/view?usp=sharing", "")
+		
+		const videoOne = '<iframe src="';
+		const videoTwo = '/preview" width="560" height="315"></iframe>';
+		
+		const embedVideo = document.getElementById('embed-video');
+		embedVideo.value = `${videoOne}${getVideoLink}${videoTwo}`;
+		
+		const copyVideo = document.querySelector('copy-video');
+		copyVideo.addEventListener('click', () => {
+			return copyText(embedVideo);
+		})
+
+	} else {
+		mensaje('Por favor ingrese un enlace de Google Drive')
 	}
 }
 
-	//Embed Audio function
-	const audioOne = '<audio width="300" height="32" controls="controls" src=""';
-	const audioTwo = '" type="audio/mp3></audio>';
-	const embedAudio = document.getElementById("embed-audio");	
-	embedAudio.value = `${audioOne}${descargarLink.value}${audioTwo}`
-	// console.log(embedAudio.value);
-
-	// Copiar inserción del audio
-	const copyAudio = document.querySelector('.copy-audio');
-	copyAudio.addEventListener('click', () => {
-		return copyText(embedAudio);
-	})
-
-	//Embed Video function
-	const getVideoLink = gLink.value.replace("/view?usp=sharing", "")
-
-	const videoOne = '<iframe src="';
-	const videoTwo = '/preview" width="560" height="315"></iframe>';
-
-	const embedVideo = document.getElementById('embed-video');
-	embedVideo.value = `${videoOne}${getVideoLink}${videoTwo}`;
-	
-	const copyVideo = document.querySelector('copy-video');
-	copyVideo.addEventListener('click', () => {
-		return copyText(embedVideo);
-	})
 
 // Mensaje
 function mensaje(msg) {
