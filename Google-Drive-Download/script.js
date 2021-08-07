@@ -43,9 +43,9 @@ function generarLink(e) {
 	// console.log(embedAudio.value);
 
 	// Copiar inserción del audio
-	const copyAudio = document.querySelector('copy.audio');
+	const copyAudio = document.querySelector('.copy-audio');
 	copyAudio.addEventListener('click', () => {
-		return copyText(embedAudio)
+		return copyText(embedAudio);
 	})
 
 	//Embed Video function
@@ -54,11 +54,12 @@ function generarLink(e) {
 	const videoOne = '<iframe src="';
 	const videoTwo = '/preview" width="560" height="315"></iframe>';
 
-	const embedVideo = document.getElementById("embed-video");
-	embedVideo.value = `${}`
+	const embedVideo = document.getElementById('embed-video');
+	embedVideo.value = `${videoOne}${getVideoLink}${videoTwo}`;
 	
-	embedVideo.addEventListener('click', () => {
-
+	const copyVideo = document.querySelector('copy-video');
+	copyVideo.addEventListener('click', () => {
+		return copyText(embedVideo);
 	})
 
 // Mensaje
