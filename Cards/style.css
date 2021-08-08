@@ -1,6 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Dosis&family=Karla&family=MonteCarlo&family=STIX+Two+Text&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Dosis&family=Karla&family=Lobster&family=MonteCarlo&family=STIX+Two+Text&display=swap');
 * {
 	
 	box-sizing: border-box;
@@ -85,6 +84,40 @@
 	font-family: 'Karla', sans-serif;
 	font-weight: 500;
 	text-align: center;
-	margin-top: 10px;
+	margin: 15px 0;
 	width: 90%;
+	font-style: italic;
+	color: rgb(77, 47, 47)
+}
+
+.card button {
+	width: 120px;
+	padding: 7px;
+	margin: 10px 0;
+	background-color: aqua;
+	border: none;
+	outline: none;
+	color: #fff;
+	font-size: 1rem;
+	border-radius: 20px;
+	font-family: 'Lobster', cursive;
+	box-shadow: 5px 5px 20px rgba(0, 0, 0, .4);
+}
+
+.social-icons {
+	width: 150px;
+	list-style: none;
+	display: flex;
+	justify-content: space-evenly;
+	margin: 10px 0 20px 0;
+	border-top: 1px solid #999;
+	padding-top: 20px;
+}
+
+.social-icons i {
+	font-size: 18px;
+}
+
+.fa-facebook-f {
+	color: #3b5999;
 }
