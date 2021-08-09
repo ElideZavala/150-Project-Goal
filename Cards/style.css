@@ -20,12 +20,21 @@
 	font-family: 'MonteCarlo', cursive;
 	font-size: 80px;
 	position: absolute;
-	top: 10%;
+	top: 8%;
 	left: 50%;
 	transform: translateX(-50%);
 	text-align: center;
 	/* text-transform: uppercase; */
 	letter-spacing: 5px;
+	white-space: pre-wrap;
+}
+
+.heading::after {
+	content: '';
+	width: 5px;
+	height: 55px;
+	background-color: #fff;
+	position: absolute;
 }
 
 .cards-wrapper {
