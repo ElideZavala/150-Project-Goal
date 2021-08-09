@@ -35,7 +35,7 @@
 	position: relative;
 	top: 35%;
 	left: 50%;
-	transform: translateX(-50%);
+	transform: translateX(-50%);;
 }
 
 .card {
@@ -45,6 +45,11 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-evenly;
+	transition: transform .5s;
+}
+
+.card:hover {
+	transform: scale(1.1);
 }
 
 .image-top {
@@ -120,4 +125,16 @@
 
 .fa-facebook-f {
 	color: #3b5999;
+}
+
+.fa-youtube {
+	color: #cd201f;
+}
+
+.fa-twitter {
+	color: #55acee;
+}
+
+.fa-google-plus-g {
+	color: #dd4b39;
 }
