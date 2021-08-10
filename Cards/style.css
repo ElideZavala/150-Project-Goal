@@ -56,7 +56,8 @@
 
 .card {
 	width: 280px;
-	background-color: #fff;
+	/* background-color: #fff; */
+	background-image: radial-gradient(circle at 50% 2.76%, #e8ffff 0, #d7ffff 10%, #c3ffff 20%, #adffff 30%, #94fafd 40%, #77f0fb 50%, #54e6fa 60%, #20dcfa 70%, #00d3fa 80%, #00cafc 90%, #00c1fe 100%);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -98,7 +99,7 @@
 	width: 120px;
 	height: 120px;
 	/* top: 1rem; */
-	border: 8px solid #fff;
+	border: 8px solid #adffff;
 	border-radius: 10px;
 	margin-bottom: 50px;
 	margin-top: -140px;
@@ -131,7 +132,7 @@
 	width: 120px;
 	padding: 7px;
 	margin: 10px 0;
-	background-color: aqua;
+	background-color: rgb(100, 63, 4);
 	border: none;
 	outline: none;
 	color: #fff;
