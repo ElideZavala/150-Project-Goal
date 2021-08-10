@@ -221,6 +221,7 @@
 	}
 
 	.heading {
+		position: relative;
 		width: 90%
 	}
 
@@ -231,5 +232,31 @@
 	
 	.card {
 		margin: 0 30px 50px 30px;
+	}
+}
+
+@media(max-width: 700px) {
+	.heading {
+		position: relative;
+		font-size: 40px;
+	}
+
+	.heading::after {
+		height: 40px;
+	}
+}
+
+@media(max-width: 450px) {
+	.heading {
+		position: relative;
+		font-size: 37px;
+	}
+
+	.heading::after {
+		height: 33px;
+	}
+
+	.cards-wrapper {
+		padding: 10px 0 150px 0;
 	}
 }
