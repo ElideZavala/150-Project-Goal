@@ -99,9 +99,21 @@ img {
 }
 
 .btn {
+	display: flex;
+	align-items: flex-end;
 	background-color: var(--color4);
 	border: none;
 	width: 100%;
-	font-size: 1.8rem
-	color: var(var(--color1))
+	font-size: 1.8rem;
+	color: var(--color1);
+	border: 1px solid rgb(26, 40, 116);
+	border-radius: 5px;
+	margin: 7px 0;
+	padding: 1rem;
+	outline: none;
+}
+
+.btn:active {
+	transform: scale(.97);
+	border: 1px solid rgb(33, 175, 14);
 }
