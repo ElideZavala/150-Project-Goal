@@ -136,6 +136,11 @@ img {
 }
 
 .quiz-repeat {
+	text-align: center;
+	margin: 0 auto;
+}
+
+.quiz-repeat a {
 	font-size: 1.6rem;
 	font-weight: 600;
 	color: #fff;
@@ -145,3 +150,7 @@ img {
 	border-radius: 5px;
 	transition: all .3s;
 } 
+
+.quiz-repeat a:hover {
+	background-color: var(--color1);
+}
