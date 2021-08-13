@@ -163,3 +163,7 @@ footer p i {
 	font-size: 4rem;
 	/* text-align: center; */
 }
+
+audio {
+	display: none;
+}

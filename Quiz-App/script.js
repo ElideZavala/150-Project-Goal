@@ -11,7 +11,7 @@ class Quiz {
 
 	guess(answer) {
 		if (this.getQuestionIndex().isCorrectAnswer(answer)) {
-			this.score++
+			this.score++;
 		}
 		this.questionIndex++
 	}
@@ -30,7 +30,7 @@ class Question {
 	}
 
 	isCorrectAnswer(choice) {
-		return this.answer === choice
+		return this.answer === choice;
 	}
 }
 
@@ -38,7 +38,7 @@ class Question {
 function displayQuestion() {
 	if (quiz.isEnded()) {
 		// mostrar scores si llegamos al final
-		showScore()
+		showScores()
 	} else {
 		// mostrar preguntas si no llegamos al final
 		let questionElement = document.getElementById('question');
@@ -69,7 +69,7 @@ function guess(id, guess) {
 function showProgress() {
 	let currentQuestionNumber = quiz.questionIndex + 1;
 	let progressElement = document.getElementById('progress');
-	progressElement.innerHTML = `Pregunta ${currentQuestionNumber} de ${quiz.question.length}`;
+	progressElement.innerHTML = `Pregunta ${currentQuestionNumber} de ${quiz.questions.length}`;
 }
 
 // Mostrar Score
@@ -77,7 +77,7 @@ function showScores() {
 	let quizEndHTML = 
 		`
 			<h1>Examen Completado</h1>
-			<h2 id="score">Tu calificación final es: ${quiz.score / quiz.question.length * 10} of ${quiz.question.length} </h2>
+			<h2 id="score">Tu calificación final es: ${quiz.score / quiz.questions.length * 10} de ${quiz.questions.length} </h2>
 			<div class="quiz-repeat">
 				<a href="index.html">Repetir de nuevo el examen</a>
 			</div>	
@@ -124,3 +124,41 @@ let quiz = new Quiz(question);
 
 // display question 
 displayQuestion();
+
+// Add un temporizador
+let time = 3;
+let quizTimeInMinutes = time * 60 * 60 ;  
+quizTime = quizTimeInMinutes / 60;
+
+let counting = document.getElementById("count-down");
+// counting.innerHTML = time;
+
+function startCountdown(){
+	let quizTimer = setInterval(function() {
+		if (quizTime <= 0) {
+			clearInterval(quizTimer)
+			showScores();
+			removeEventListener(audio());
+		} else {
+			quizTime--;
+			let sec = Math.floor(quizTime % 60);
+			let min = Math.floor(quizTime / 60) % 60;
+			counting.innerHTML = `Tiempo: ${min} : ${sec}`
+			// -- Tiempo
+			if (min <= 1) {
+				counting.innerHTML = `<i class="far fa-clock"></i> Tiempo: ${min} : ${sec} `;
+				counting.style.background = "red";
+				counting.style.color = "#fff";
+				audio();
+			}
+		}
+	}, 1000)
+}
+
+startCountdown();
+
+// add alarma
+function audio() {
+	let sound = document.querySelector("audio");
+	sound.play()
+}
