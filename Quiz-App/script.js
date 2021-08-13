@@ -34,9 +34,6 @@ class Question {
 	}
 }
 
-
-// const quiz = new Quiz();
-
 // Mostra Pregunta
 function displayQuestion() {
 	if (quiz.isEnded()) {
@@ -51,8 +48,8 @@ function displayQuestion() {
 		let choices = quiz.getQuestionIndex().choices;
 		for (let i = 0; i < choices.length; i ++){
 			let choiceElement = document.getElementById("choice" + i);
-			choiceElement.innerHTML = choice[i];
-			guess("btn" + i, choice[i]);
+			choiceElement.innerHTML = choices[i];
+			guess("btn" + i, choices[i]);
 		}	
 	}
 
@@ -122,3 +119,8 @@ let question = [
 		"Cuando queremos que el cuerpo de un bucle se ejecute como mínimo una vez utilizamos la sentencia:", ["execute...until", "do...while", "switch ... case", "while..."], "do...while"
 	),
 ]	
+
+let quiz = new Quiz(question);
+
+// display question 
+displayQuestion();
