@@ -91,5 +91,34 @@ function showScores() {
 
 // Crear preguntas del cuestionario 
 let question = [
-	new Question = 
-]
+	new Question(
+		"Cuando queremos almacenar una lista de valores en Javascript lo más adecuado es usar...", ["Una constante tipo lista", "Una variable cualquiera", " Una instancia del objeto array", "Una variable cuyo nombre termine en un número o índice"], "Una instancia del objeto array"
+	),
+	new Question(
+		"En Javascript, como en cualquier lenguaje de programación, se utilizan variables, pero ¿sabes que son las variables?", ["Los nombres de las funciones.", "Los nombres de los eventos.", "Los elementos usados para almacenar valores.", "Elementos que cambian adaptándose al entorno."], " Los elementos usados para almacenar valores."
+	),
+	new Question(
+		"Cuando construimos una función debemos", ["Return sólo sirve para abortar la ejecución de la función.", "Su última instrucción debe ser siempre return", "La instrucción return no existe en Javascript", "Si devuelve un valor lo debe hacer mediante una instrucción return"], "Si devuelve un valor lo debe hacer mediante una instrucción return"
+	),
+	new Question(
+		"En Javascript se utilizan operadores para", ["Realizar operaciones matemáticas entre variables numéricas.", "Realizar operaciones entre cadenas o strings.", "Es el nombre que se da a los métodos definidos dentro de los objetos.", "Relacionar dos o más valores produciendo un resultado."], "Relacionar dos o más valores produciendo un resultado."
+	),
+	new Question(
+		"Para identificar una variable, objeto o función en Javascript se pueden usar mayúsculas o minúsculas siempre que tengamos en cuenta que...", ["Sólo pueden usarse mayúsculas", "Javascript diferencia entre mayúsculas y minúsculas", "Sólo pueden usarse minúsculas", " Javascript no distingue entre mayúsculas y minúsculas."], "Javascript diferencia entre mayúsculas y minúsculas"
+	),
+	new Question(
+		"De las siguientes palabras claves instrucciones una no se utiliza para construir bucles, señala cual es.", ["while", "for", "do", "if"], "if"
+	),
+	new Question(
+		"Los bucles son un conjunto de instrucciones que se ejecutan de forma repetida y se detienen cuando:", ["Sólo se detiene con la instrucción break", "Se deje de cumplir una condición", "Se cumpla una cierta condición", "Se deje de cumplir una cierta condición o aparezca una instrucción break"], "Se deje de cumplir una cierta condición o aparezca una instrucción break"
+	),
+	new Question(
+		"Si queremos que se ejecute una u otra instrucción en función del resultado de una comparación se utiliza la sentencia", ["while", "compare ... else...", "do...while", " if ... else ..."], " if ... else ..."
+	),
+	new Question(
+  		"Para agrupar varias instrucciones de manera que se ejecuten como un bloque se encierran entre dos símbolos, estos símbolos son:", ["Corchetes [ ]", " Llaves { }", " Paréntesis ( )", "Ángulos < >"], "Llaves { }"
+	),
+	new Question(
+		"Cuando queremos que el cuerpo de un bucle se ejecute como mínimo una vez utilizamos la sentencia:", ["execute...until", "do...while", "switch ... case", "while..."], "do...while"
+	),
+]	
