@@ -68,7 +68,7 @@ function guess(id, guess) {
 // Mostrar quiz progress
 function showProgress() {
 	let currentQuestionNumber = quiz.questionIndex + 1;
-	let progressElement = document.getElementById('progress');
+	let progressElement = document.getElementById("progress");
 	progressElement.innerHTML = `Pregunta ${currentQuestionNumber} de ${quiz.questions.length}`;
 }
 
@@ -77,7 +77,7 @@ function showScores() {
 	let quizEndHTML = 
 		`
 			<h1>Examen Completado</h1>
-			<h2 id="score">Tu calificación final es: ${quiz.score / quiz.questions.length * 10} de ${quiz.questions.length} </h2>
+			<h2 id="score">Tus respuestas correctas fueron: ${quiz.score} de ${quiz.questions.length}</h2>
 			<div class="quiz-repeat">
 				<a href="index.html">Repetir de nuevo el examen</a>
 			</div>	
@@ -126,7 +126,7 @@ let quiz = new Quiz(question);
 displayQuestion();
 
 // Add un temporizador
-let time = 3;
+let time = 1;
 let quizTimeInMinutes = time * 60 * 60 ;  
 quizTime = quizTimeInMinutes / 60;
 
@@ -138,18 +138,17 @@ function startCountdown(){
 		if (quizTime <= 0) {
 			clearInterval(quizTimer)
 			showScores();
-			removeEventListener(audio());
 		} else {
 			quizTime--;
 			let sec = Math.floor(quizTime % 60);
 			let min = Math.floor(quizTime / 60) % 60;
-			counting.innerHTML = `Tiempo: ${min} : ${sec}`
+			counting.innerHTML = `Tiempo: ${min} : ${sec < 10 ? '0'+sec : sec}`
 			// -- Tiempo
-			if (min <= 1) {
-				counting.innerHTML = `<i class="far fa-clock"></i> Tiempo: ${min} : ${sec} `;
+			if (min < 1) {
+				counting.innerHTML = `<i class="far fa-clock"></i> Tiempo:  ${min} : ${sec < 10 ? '0'+sec : sec}`;
 				counting.style.background = "red";
 				counting.style.color = "#fff";
-				audio();
+				// audio();
 			}
 		}
 	}, 1000)
