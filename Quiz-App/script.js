@@ -35,7 +35,7 @@ class Question {
 }
 
 
-const quiz = new Quiz();
+// const quiz = new Quiz();
 
 // Mostra Pregunta
 function displayQuestion() {
@@ -48,10 +48,31 @@ function displayQuestion() {
 		questionElement.innerHTML = quiz.getQuestionIndex().text
 
 		//mostrar opciones
-		let choice = quiz.getQuestionIndex().choices;
+		let choices = quiz.getQuestionIndex().choices;
 		for (let i = 0; i < choices.length; i ++){
 			let choiceElement = document.getElementById("choice" + i);
 			choiceElement.innerHTML = choice[i];
+			guess("btn" + i, choice[i]);
 		}	
 	}
+
+	showProgress();
 }
+
+// Funcion de acertar la respuesta. 
+function guess(id, guess) {
+	let button = document.getElementById(id);
+	button.onclick = function() {
+		quiz.guess(guess);
+		displayQuestion();
+	}
+}
+
+// Mostrar quiz progress
+function showProgress() {
+	let currentQuestionNumber = quiz.questionIndex + 1;
+	let progressElement = document.getElementById('progress');
+	progressElement.innerHTML = `Pregunta ${currentQuestionNumber} de ${quiz.question.length}`;
+}
+
+// Mostrar Score
