@@ -76,3 +76,20 @@ function showProgress() {
 }
 
 // Mostrar Score
+function showScores() {
+	let quizEndHTML = 
+		`
+			<h1>Examen Completado</h1>
+			<h2 id="score">Tu calificación final es: ${quiz.score / quiz.question.length * 10} of ${quiz.question.length} </h2>
+			<div class="quiz-repeat">
+				<a href="index.html">Repetir de nuevo el examen</a>
+			</div>	
+		`;
+		let quizElement = document.getElementById('quiz');
+		quizElement.innerHTML = quizEndHTML;
+}
+
+// Crear preguntas del cuestionario 
+let question = [
+	new Question = 
+]
