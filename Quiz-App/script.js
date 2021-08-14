@@ -48,7 +48,7 @@ function displayQuestion() {
 		let choices = quiz.getQuestionIndex().choices;
 		for (let i = 0; i < choices.length; i ++){
 			let choiceElement = document.getElementById("choice" + i);
-			choiceElement.innerHTML = choices[i];
+			choiceElement.innerHTML = `- ${choices[i]}`;
 			guess("btn" + i, choices[i]);
 		}
 
@@ -127,7 +127,7 @@ let quiz = new Quiz(question);
 displayQuestion();
 
 // Add un temporizador
-let time = 10;
+let time = 8;
 let quizTimeInMinutes = time * 60 * 60 ;  
 quizTime = quizTimeInMinutes / 60;
 
@@ -149,7 +149,7 @@ function startCountdown(){
 				counting.innerHTML = `<i class="far fa-clock"></i> Tiempo:  ${min} : ${sec < 10 ? '0'+sec : sec}`;
 				counting.style.background = "red";
 				counting.style.color = "#fff";
-				// audio();
+				audio();
 			}
 		}
 	}, 1000)
