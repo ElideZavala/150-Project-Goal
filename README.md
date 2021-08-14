@@ -29,4 +29,4 @@
 
   * | 14 | [card](https://github.com/ElideZavala/150-Project-Goal/tree/main/Cards) | [ir a la página](https://dreamy-nightingale-d83580.netlify.app/) 
 
-  * | 15 | [Palindrome](https://github.com/ElideZavala/150-Project-Goal/tree/main/Quiz-App) | [ir a la página](https://gallant-chandrasekhar-a56a7d.netlify.app/) 
+  * | 15 | [Quiz app](https://github.com/ElideZavala/150-Project-Goal/tree/main/Quiz-App) | [ir a la página](https://gallant-chandrasekhar-a56a7d.netlify.app/) 
