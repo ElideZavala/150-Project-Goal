@@ -23,5 +23,10 @@
   
   * | 11 | [Counter Vocal](https://github.com/ElideZavala/150-Project-Goal/tree/main/Counter-vocal) | [ir a la página](https://trusting-lamport-e09329.netlify.app/) 
   
-  * | 12 | [Palindrome](https://github.com/ElideZavala/150-Project-Goal/tree/main/Palindrome) | [ir a la página](https://epic-chandrasekhar-0f9f41.netlify.ap) 
+  * | 12 | [Palindrome](https://github.com/ElideZavala/150-Project-Goal/tree/main/Palindrome) | [ir a la página](https://epic-chandrasekhar-0f9f41.netlify.app/) 
 
+  * | 13 | [Google Drive](https://github.com/ElideZavala/150-Project-Goal/tree/main/Google-Drive-Download) | [ir a la página](https://pensive-allen-a3612b.netlify.app/) 
+
+  * | 14 | [card](https://github.com/ElideZavala/150-Project-Goal/tree/main/Cards) | [ir a la página](https://dreamy-nightingale-d83580.netlify.app/) 
+
+  * | 15 | [Palindrome](https://github.com/ElideZavala/150-Project-Goal/tree/main/Quiz-App) | [ir a la página](https://gallant-chandrasekhar-a56a7d.netlify.app/) 
