@@ -167,3 +167,169 @@ footer p i {
 audio {
 	display: none;
 }
+
+
+@media(max-width:850px) {
+	p {
+		font-size: 1.2rem;
+	}
+
+	.container {
+		max-width: 600px;
+	}
+
+	.quiz-box h1 {
+		font-size: 3rem;
+	}
+
+	.quiz-header {
+		font-size: 1.3rem;
+	}
+	.quiz-box #question {
+		font-size: 1.3rem;
+		font-weight: 300;
+	}
+
+	.buttons {
+		margin: 1.3rem 0 1rem 0;
+	}
+
+	.btn {
+		font-size: 1.3rem;
+	}
+
+	#score {
+		font-size: 1.4rem;
+		margin-bottom: 3rem;
+	}
+
+	.quiz-repeat a {
+		font-size: 1.3rem;
+		font-weight: 400;
+	} 
+
+	footer p {
+		display: flex;
+		flex-direction: column;
+		transform: translateX(19.5rem);
+		font-size: .8rem;
+	}
+}
+
+@media(max-width:600px) {
+	p {
+		font-size: 1rem;
+	}
+
+	.quiz-box {
+		padding: 1rem 3rem 2rem 2rem;
+	}
+	
+	.quiz-box h1 {
+		font-size: 2.5rem;
+	}
+
+	.quiz-header {
+		font-size: 1.1rem;
+	}
+	.quiz-box #question {
+		font-size: 1.2rem;
+		font-weight: 300;
+	}
+
+	.buttons {
+		margin: .5rem 0 .5rem 0;
+	}
+
+	.btn {
+		font-size: 1.1rem;
+		width: 100%;
+		margin: 4px 0;
+		padding: .5rem;
+	}
+
+	#score {
+		font-size: 1.1rem;
+		margin-bottom: 1rem;
+	}
+
+	.quiz-repeat a {
+		font-size: 1.1rem;
+		font-weight: 80;
+	} 
+
+	footer p {
+		display: flex;
+		flex-direction: column;
+		transform: translateX(-0);
+		font-size: .8rem;
+	}
+}
+
+@media(max-width:550px) {
+
+	.quiz-box {
+		padding: 1rem 3rem 3rem 3rem;
+	}
+
+	footer p {
+		display: flex;
+		
+		flex-direction: column;
+		transform: translateX(-0);
+		font-size: .5rem;
+	}
+	footer p i {
+		font-size: 2rem;
+		/* text-align: center; */
+	}
+}
+
+@media(max-width:500px) {
+	p {
+		font-size: .8rem;
+	}
+	
+	.container {
+		max-width: 500px;
+		padding: 0 .3rem;
+		
+	}
+
+	.quiz-box {
+		padding: 1rem 3rem 3rem 3rem;
+	}
+
+	.quiz-box h1 {
+		font-size: 2.5rem;
+	}
+
+	.quiz-header {
+		font-size: 1.1rem;
+	}
+	.quiz-box #question {
+		font-size: 1rem;
+		font-weight: 300;
+	}
+
+	.buttons {
+		margin: .3rem 0 .3rem 0;
+	}
+
+	.btn {
+		font-size: 1rem;
+		width: 100%;
+		margin: 2px 0;
+		padding: .5rem;
+	}
+
+	#score {
+		font-size: 1.1rem;
+		margin-bottom: 1rem;
+	}
+
+	.quiz-repeat a {
+		font-size: 1.1rem;
+		font-weight: 80;
+	} 
+}

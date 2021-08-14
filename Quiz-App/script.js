@@ -50,7 +50,8 @@ function displayQuestion() {
 			let choiceElement = document.getElementById("choice" + i);
 			choiceElement.innerHTML = choices[i];
 			guess("btn" + i, choices[i]);
-		}	
+		}
+
 	}
 
 	showProgress();
@@ -126,7 +127,7 @@ let quiz = new Quiz(question);
 displayQuestion();
 
 // Add un temporizador
-let time = 1;
+let time = 10;
 let quizTimeInMinutes = time * 60 * 60 ;  
 quizTime = quizTimeInMinutes / 60;
 
