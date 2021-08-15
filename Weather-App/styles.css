@@ -1,7 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 :root {
-
+  --color1: #F8B195;
+  --color2: #F67280;
+  --color3: #000000;
+  --color4: #6C5B78;
+  --color5: #355C7D;
 }
 
 * {
@@ -15,9 +19,17 @@ html {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
-  background-color: #000;
+  background-image: linear-gradient(315deg, #b787e6 0, #c582dd 5.56%, #d27dd3 11.11%, #dc79c8 16.67%, #e575bc 22.22%, #ec73b0 27.78%, #f171a4 33.33%, #f47097 38.89%, #f6708b 44.44%, #f6727f 50%, #f47573 55.56%, #f17868 61.11%, #ed7c5e 66.67%, #e78054 72.22%, #e0854b 77.78%, #d98a43 83.33%, #d08e3d 88.89%, #c69338 94.44%, #bc9735 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Poppins', sans-serif;
   color: #fff;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 p {
@@ -30,7 +42,23 @@ img {
 }
 
 .container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 20px;
+  width: 100%;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  flex-direction: column;
+  width: 100%;
+  max-width: 320px;
+  height: 80vh;
+  background: url(./images/1.jpg) no-repeat center;
+  background-size: cover;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+h1 {
+  letter-spacing: 2.2px;
 }
