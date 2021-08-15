@@ -15,7 +15,7 @@
 }
 
 html {
-  font-size: 10px;
+  font-size: 14px;
 }
 
 body {
@@ -78,7 +78,32 @@ img {
 }
 
 .top h1 {
+  margin: 10px;
   color: #fff;
   line-height: 2;
   letter-spacing: 2.2px;
+}
+
+.top input,
+.top button {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+  margin-bottom: 5px;
+  outline: none;
+  border: none;
+}
+
+.top input {
+  background-color: rgba(0, 0, 0, .5);
+  border-bottom: solid 2px var(--color1);
+  border-radius: 10px 0 10px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+.top input:focus {
+  color: white;
+  font-size: 15px;  
 }
