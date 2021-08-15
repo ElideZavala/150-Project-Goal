@@ -12,14 +12,15 @@
   </head>
   <body>
       <div class="main-container">
-        <h1>El Clima</h1>
-        <form action="" onsubmit="return false">
-          <input type="text" class="search" 
-          placeholder="Buscar por nombre de la ciudad">
-          <button type="submit" class="btn">Buscar</button>
-          <p class="error"></p>
-        </form>
-        <section>
+        <div class="container top">
+          <h1>El Clima</h1>
+          <form action="" onsubmit="return false">
+            <input type="text" class="search" 
+            placeholder="Buscar por nombre de la ciudad">
+            <button type="submit" class="btn">Buscar</button>
+            <p class="error"></p>
+          </form>
+          <section>
             <div class="container">
               <div class="icon">
                 <img src="" alt="" class="weather-icon">
@@ -28,14 +29,15 @@
                 <div class="city">Chihuahua, MX</div>
                 <div class="date">Domingo, Nov 14 2021,</div>
               </div>
-                <div class="current">
-                  <div class="temp">Temp: 25 <span>°C</span></div>
-                  <div class="weather"></div>
-                  <div class="weather">Weather: Soleado</div>
-                  <div class="temp-range">Temp Rango: 10°C / 10°C</div> 
-                </div>
+              <div class="current">
+                <div class="temp">Temp: 25 <span>°C</span></div>
+                <div class="weather"></div>
+                <div class="weather">Weather: Soleado</div>
+                <div class="temp-range">Temp Rango: 10°C / 10°C</div> 
+              </div>
             </div>
-        </section>
+          </section>
+        </div>  
       </div>
 
     <script src="script.js"></script>
