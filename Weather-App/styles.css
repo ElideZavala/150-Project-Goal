@@ -39,10 +39,12 @@ p {
 
 img {
   width: 100%;
+  max-width: 320px;
 }
 
 .container {
   width: 100%;
+  /* margin: 0 auto; */
 }
 
 .main-container {
@@ -164,16 +166,40 @@ img {
 }
 
 .current {
+  position: relative;
   width: 100%;
   padding-top: 10px;
 }
 
-.corrent::before {
+.current::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: -2%;
+  transform: translateX(135px);
   left: 0;
-  width: 100%;
+  width: 15%;
   height: 2px;
-  background-color: white;
+  background-color: var(--color1);
+}
+
+.current::after {
+  content: "";
+  position: absolute;
+  bottom: -20%;
+  left: 50%;
+  transform: translateX(12%);
+  left: -0;
+  width: 80%;
+  height: 2px;
+  background-color: var(--color1);
+}
+
+.temp {
+  text-align: center;
+  font-weight: bold;
+  width: 30%;
+  padding: 3px 2px;
+  transform: translateX(116%);
+  border-radius: 5px;
+  background-color: var(--color5)
 }
