@@ -23,13 +23,18 @@ const api = {
 
 
 function displayData(data) {
-	// console.log(data);
+	console.log(data);
 	if (data.cod === '404') {
 		const error = document.querySelector('.error'); 
 		error.textContent = "Por favor escribe una ciudad válida";
-		search.value = "";
+		error.style.background = 'rgba(0, 0, 0, .5)';
 		setTimeout(() => {
-			error.textContent= '';
+			error.remove()
 		}, 3000);
+		search.value = "";
+	} else {
+		const city = document.querySelector('.city');
+		city.innerText = `${data.name}, ${data.sys.country}
+		search.value = ""
 	}
 }
