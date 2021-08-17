@@ -107,6 +107,7 @@ img {
   border-radius: 10px 0 10px 0;
   text-indent: 50px;
   font-size: 14px;
+  color: #fff;
 }
 
 .top button {
@@ -135,7 +136,6 @@ img {
 
 
 .top input:focus {
-  color: white;
   font-size: 15px;  
   text-indent: 3px;
 }
