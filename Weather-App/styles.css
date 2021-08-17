@@ -175,9 +175,9 @@ img {
   content: "";
   position: absolute;
   top: -2%;
-  transform: translateX(135px);
+  transform: translateX(150px);
   left: 0;
-  width: 15%;
+  width: 5%;
   height: 2px;
   background-color: var(--color1);
 }
@@ -185,7 +185,7 @@ img {
 .current::after {
   content: "";
   position: absolute;
-  bottom: -20%;
+  bottom: -10%;
   left: 50%;
   transform: translateX(12%);
   left: -0;
@@ -194,12 +194,16 @@ img {
   background-color: var(--color1);
 }
 
+.current > * {
+  padding-bottom: 5px;
+}
+
 .temp {
   text-align: center;
   font-weight: bold;
   width: 30%;
   padding: 3px 2px;
   transform: translateX(116%);
-  border-radius: 5px;
+  border-radius: 5px 0 5px 0;
   background-color: var(--color5)
 }
