@@ -44,7 +44,10 @@ function displayData(data) {
 		const temp = document.querySelector('.temp');
 		temp.innerHTML = `
 			Temp: ${Math.round(data.main.temp)} 
-			<span>°C</span>`
+			<span>°C</span>
+			`
+		const weather = document.querySelector('.weather');
+		weather.innerText = `Clima: ${weathers(data.weather[0].main)}`
 	}
 }
 
@@ -52,10 +55,23 @@ function dateFuntion(d) {
 	let months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
 	let days =["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"];
 
-	let day = days[d.getDay()];      // Obtenemos el dia. 
-	let date = d.getDay();
+	let day   = days[d.getDay()];     // Obtenemos el dia. 
+	let date  = d.getDay();		    // dia actual en numero	 	
 	let month = months[d.getMonth()]; // Obtenemos el mes. 
-	let year = d.getFullYear();           // Obtenemos el año.
+	let year  = d.getFullYear();      // Obtenemos el año.
 
 	return `${day} ${date} de ${month}, ${year}`
+}
+
+
+function weathers(clima) {
+	if (clima == 'Clouds') {
+		return 'Nublado'
+	} else if (clima == 'Sunny') {
+		return 'Soleado'
+	} else if (clima == 'Rain') {
+		return 'LLuvioso'
+	} else {
+		return clima
+	}
 }
