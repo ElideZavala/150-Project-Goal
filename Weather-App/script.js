@@ -29,8 +29,8 @@ function displayData(data) {
 		error.textContent = "Por favor escribe una ciudad válida";
 		error.style.background = 'rgba(0, 0, 0, .5)';
 		setTimeout(() => {
-			error.remove()
-		}, 3000);
+			error.textContent = '';
+		}, 2000);
 		search.value = "";
 	} else {
 		const city = document.querySelector('.city');
@@ -71,7 +71,23 @@ function weathers(clima) {
 		return 'Soleado'
 	} else if (clima == 'Rain') {
 		return 'LLuvioso'
-	} else {
+	} else if (clima == 'Clear') {
+		return 'Despejado'
+	} else if (clima == 'Thunderstorm') {
+		return 'Tormenta'
+	} else if (clima == 'Drizzle') {
+		return 'LLovizna'
+	} else if (clima == 'Snow') {
+		return 'Nieve'
+	} else if (clima == 'Clouds') {
+		return 'Nubes'
+	} else if (clima == 'Mist' | 'Smoke' | 'Haze' | 'Dust') {
+		return 'Neblina'
+	} else if (clima == 'Fog') {
+		return 'Bruma'
+	} else if (clima == 'Squall') {
+		return 'Chubasco'
+	}  else {
 		return clima
-	}
+	} 
 }
