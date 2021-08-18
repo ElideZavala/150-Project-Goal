@@ -47,7 +47,16 @@ function displayData(data) {
 			<span>°C</span>
 			`
 		const weather = document.querySelector('.weather');
-		weather.innerText = `Clima: ${weathers(data.weather[0].main)}`
+		weather.innerText = `Clima: ${weathers(data.weather[0].main)}`;
+
+		const tempRange = document.querySelector('.temp-range');
+		tempRange.innerHTML = `
+			Temp Rango: ${Math.round(data.main.temp_min)}
+			 <span>°C</span></div> / ${Math.round(data.main.temp_max)}
+			 <span>°C</span></div>
+		`;
+
+
 	}
 }
 

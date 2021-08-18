@@ -157,7 +157,7 @@ img {
 .location {
   padding-bottom: 15px;
   text-align: center;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
 .location .city {
@@ -202,8 +202,8 @@ img {
   text-align: center;
   font-weight: bold;
   width: 30%;
-  padding: 3px 2px;
+  padding: 2px 2px;
   transform: translateX(116%);
   border-radius: 5px 0 5px 0;
-  background-color: var(--color5)
+  background-color: var(--color5);
 }
