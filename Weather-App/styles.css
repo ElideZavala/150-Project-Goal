@@ -207,3 +207,8 @@ img {
   border-radius: 5px 0 5px 0;
   background-color: var(--color5);
 }
+
+.weather-icon {
+  width: 4rem;
+  height: 4rem;
+}

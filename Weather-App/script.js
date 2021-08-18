@@ -56,7 +56,11 @@ function displayData(data) {
 			 <span>°C</span></div>
 		`;
 
+		const weatherIcon = document.querySelector('.weather-icon');
+		const iconURL = "https://api.openweathermap.org/img/w/";
+		weatherIcon.src = iconURL + data.weather[0].icon + ".png"
 
+		search.value = ""
 	}
 }
 
