@@ -34,7 +34,28 @@ function displayData(data) {
 		search.value = "";
 	} else {
 		const city = document.querySelector('.city');
-		city.innerText = `${data.name}, ${data.sys.country}
+		city.innerText = `${data.name}, ${data.sys.country}`;
 		search.value = ""
+
+		const today = new Date();
+		const date = document.querySelector('.date');
+		date.innerText = dateFuntion(today);
+
+		const temp = document.querySelector('.temp');
+		temp.innerHTML = `
+			Temp: ${Math.round(data.main.temp)} 
+			<span>°C</span>`
 	}
+}
+
+function dateFuntion(d) {
+	let months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+	let days =["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"];
+
+	let day = days[d.getDay()];      // Obtenemos el dia. 
+	let date = d.getDay();
+	let month = months[d.getMonth()]; // Obtenemos el mes. 
+	let year = d.getFullYear();           // Obtenemos el año.
+
+	return `${day} ${date} de ${month}, ${year}`
 }
