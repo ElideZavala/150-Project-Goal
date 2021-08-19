@@ -23,7 +23,7 @@ const api = {
 
 
 function displayData(data) {
-	console.log(data);
+	// console.log(data);
 	if (data.cod === '404') {
 		const error = document.querySelector('.error'); 
 		error.textContent = "Por favor escribe una ciudad válida";
@@ -104,3 +104,49 @@ function weathers(clima) {
 		return clima
 	} 
 }
+
+function setTime() {
+	const time = new Date();
+	const horas = time.getHours();
+	background(horas);
+	console.log(horas)
+}
+
+function background(hours) {
+	if( hours >= 05 && hours <= 06) {
+		const body = document.querySelector('.main-container');
+		body.style.background = 'url(./images/2.jpg) no-repeat center';
+		body.style.backgroundSize = 'cover';
+	} else if( hours >= 07 &&  hours <= 08) {
+		const body = document.querySelector('.main-container');
+		body.style.background = 'url(./images/1.jpg) no-repeat center';
+		body.style.backgroundSize = 'cover';
+	} else if( hours >= 09 &&  hours <= 16) {
+		const body = document.querySelector('.main-container');
+		body.style.background = 'url(./images/5.jpg) no-repeat center';
+		body.style.backgroundSize = 'cover';
+	} else if ( hours >= 17 &&  hours <= 18) {
+		const body = document.querySelector('.main-container');
+		body.style.background = 'url(./images/8.jpg) no-repeat center';
+		body.style.backgroundSize = 'cover';
+	} else if ( hours == 19) {
+		const body = document.querySelector('.main-container');
+		body.style.background = 'url(./images/4.jpg) no-repeat center';
+		body.style.backgroundSize = 'cover';
+	} else if( hours >= 20 &&  hours <= 23) {
+		const body = document.querySelector('.main-container');
+		body.style.background = 'url(./images/6.jpg) no-repeat center';
+		body.style.backgroundSize = 'cover';
+	} else if ( hours >= 00 &&  hours <= 04) {
+		const body = document.querySelector('.main-container');
+		body.style.background = 'url(./images/7.jpg) no-repeat center';
+		body.style.backgroundSize = 'cover';
+
+	}
+
+	console.log(hours)
+
+	return hours
+}
+
+setTime();
