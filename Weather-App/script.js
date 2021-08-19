@@ -118,8 +118,7 @@ function weathers(clima) {
 
 function setTime() {
 	const time = new Date();
-	// const horas = time.getHours();
-	const horas = 19;
+	const horas = time.getHours();
 	background(horas);
 	console.log(horas)
 }
