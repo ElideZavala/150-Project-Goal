@@ -1,5 +1,6 @@
 const search = document.querySelector('.input');
 const btn = document.querySelector('.btn');
+const date = document.querySelector('.date');
 const api = {
 	key : "7d55409dc2603538db966d3600124d25",
  	base: "https://api.openweathermap.org/data/2.5/"
@@ -38,7 +39,7 @@ function displayData(data) {
 		search.value = ""
 
 		const today = new Date();
-		const date = document.querySelector('.date');
+		// const date = document.querySelector('.date');
 		date.innerText = dateFuntion(today);
 
 		const temp = document.querySelector('.temp');
@@ -60,9 +61,19 @@ function displayData(data) {
 		const iconURL = "https://api.openweathermap.org/img/w/";
 		weatherIcon.src = iconURL + data.weather[0].icon + ".png"
 
+		const humidity = document.querySelector('.humidity');
+		humidity.innerText = `Humedad: ${data.main.humidity}%`
+
+		const speedWind = document.querySelector('.wind-speed');
+		speedWind.innerText = `Vel. del Viento: ${data.wind.speed}m/s`
+
 		search.value = ""
 	}
 }
+
+const hoy = new Date();
+dateFuntion(hoy);
+date.innerText = dateFuntion(hoy);
 
 function dateFuntion(d) {
 	let months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
@@ -107,7 +118,8 @@ function weathers(clima) {
 
 function setTime() {
 	const time = new Date();
-	const horas = time.getHours();
+	// const horas = time.getHours();
+	const horas = 19;
 	background(horas);
 	console.log(horas)
 }
