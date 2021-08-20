@@ -1,14 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
 
 :root {
-  --white: #fff;
-  --black: #1c2b2d;
-  --blue: #31326f;
-  --light-blue: #005490;
-  --color-primary: #9d0191;
-  --color-sec: #db6400;
-  --grey: #eee;
-  --dark-grey: #222831;
+  --yellow: #FFF560 ;
+  --blue: #0083FB ;
+  --green: #2EE0AE ;
+  --pink: #FF709D ;
+  --red: #fc0101 ;
+  --black: #000;
+
 }
 
 * {
@@ -41,4 +40,39 @@ img {
 }
 
 /* `1 Parte` */
+body {
+  background-color: var(--yellow);
+}
 
+section {
+  width: 100%;
+  padding: 0 3rem;
+}
+
+.container {
+  max-width: 60rem;
+  margin: 5rem auto;
+}
+
+.add-item {
+  background-color: var(--green);
+  padding: 5rem 0;
+  margin: 2rem auto;
+  border-radius: 5px;
+  border: 3px solid ;
+}
+
+.add-item form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-item form input {
+  padding: 1rem 1.5rem;
+  font-size: 1.8rem;
+  color: var(--black);
+  border-radius: 3px;
+  border: 2px solid var(--black);
+  outline: none;
+}
