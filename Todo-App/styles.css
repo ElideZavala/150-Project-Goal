@@ -98,7 +98,7 @@ form button:active {
 	border-bottom: 1px solid;
 }
 
-ol h2 {
+h2 {
   color: var(--black);
   margin-bottom: 1rem;
   font-family: 'Noto Serif', serif;
