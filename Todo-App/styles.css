@@ -2,7 +2,7 @@
 
 :root {
   --yellow: #FFF560 ;
-  --blue: #0083FB ;
+  --blue: #7dddf5 ;
   --green: #2EE0AE ;
   --pink: #FF709D ;
   --red: #ff4040 ;
@@ -109,7 +109,7 @@ h2 {
 
 ol li {
   font-family: 'IM Fell English', serif;
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin: 5px 0;
   background-color: #fff;
   border-bottom: 4px solid rgba(4, 16, 39, 0.664);
@@ -121,10 +121,10 @@ ol li {
 
 ol li:nth-child(odd) {
   background-color: var(--blue);
-  color: #fff;
-  border-bottom: 4px solid rgba(4, 16, 39, 0.664);
+  color: var(--black);
+  border-bottom: 4px solid rgb(7, 72, 116);
   border-left: 2px solid rgba(11, 76, 197, 0.931);
-  text-shadow: 0px -2px rgba(4, 16, 39, 0.664);
+  /* text-shadow: 0px -2px rgba(4, 16, 39, 0.664); */
 }
 
 li button { 
