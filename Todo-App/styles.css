@@ -119,18 +119,19 @@ ol li {
   margin: 5px 0;
   background-color: #fff;
   border-bottom: 4px solid rgba(4, 16, 39, 0.664);
+  border-right: 4px solid rgba(46, 57, 77, 0.664);
   list-style: none;
   border-radius: 5px;
   padding: 1rem;
   position: relative;
+  transition: ease-in-out 1s;
 }
 
 ol li:nth-child(odd) {
   background-color: var(--blue);
   color: var(--black);
   border-bottom: 4px solid rgb(7, 72, 116);
-  border-left: 2px solid rgba(11, 76, 197, 0.931);
-  /* text-shadow: 0px -2px rgba(4, 16, 39, 0.664); */
+  border-right: 3px solid rgb(25, 116, 177);
 }
 
 li button { 

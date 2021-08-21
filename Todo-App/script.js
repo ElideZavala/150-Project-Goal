@@ -22,9 +22,36 @@ const addTask = (e) => {
 	} else {
 		mensaje("Por favor escribe una nueva tarea")
 	}
+
+	// Eliminar Tarea
+	delBtn.addEventListener('click', function() {
+		// const del = confirm("Estas por eliminar esta tarea");
+		// if (del == true) {
+		// 	console.log(true)
+		// }
+
+		swal({
+			title: "Estas por eliminar esta tarea",
+			buttons: true,
+			dangerMode: true,
+		   })
+		   .then((willDelete) => {
+			if (willDelete) {
+			  swal("Esta Tarea ha sido eliminada!", {
+			    icon: "success",
+			  });
+			  const parent = this.parentNode
+			  parent.remove();
+			} else {
+			  swal("Your imaginary file is safe!");
+			}
+		   });
+
+	})
 }
 
 btn.addEventListener("click", addTask);
+
 
 function mensaje(msg) {
 	const parrafo = document.createElement('p')
