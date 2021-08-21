@@ -42,15 +42,18 @@ const addTask = (e) => {
 			  });
 			  const parent = this.parentNode
 			  parent.remove();
-			} else {
-			  swal("Your imaginary file is safe!");
-			}
+			} 
 		   });
 
 	})
 }
 
 btn.addEventListener("click", addTask);
+
+clear.addEventListener('click', () => {
+	todoList.innerHTML = "";
+	swal("Sin tareas!", "Tareas eliminadas corectamente...", "success");
+})
 
 
 function mensaje(msg) {
