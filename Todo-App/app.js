@@ -1,3 +1,8 @@
+window.onload = function() {
+	displayTask();
+}
+
+
 // Variables 
 const input = document.querySelector('input');
 const btn   = document.querySelector('button');
@@ -37,14 +42,17 @@ function addTaskToLS() {
 // Mostrar la tarea a la pantalla
 function displayTask() {
 	getTask();
-	task.forEach((task, index) => {
+	tasks.forEach((task, index) => {
 		const newLi  = document.createElement("li");
 		const delBtn = document.createElement("button");
-		delBtn.innerHTML = `<i class="fas fa-trash-alt"></i> id="${index}" onclick="deleteTask(this.id)"`; 
+		delBtn.innerHTML = `<i class="fas fa-trash-alt" id="${index}" onclick="deleteTask(this.id)"></i> `; 
 
 		newLi.appendChild(document.createTextNode(task));
+		newLi.appendChild(delBtn);
+		todoList.appendChild(newLi);
 	});
 }
+
 
 function mensaje(msg) {
 	const parrafo = document.createElement('p')
