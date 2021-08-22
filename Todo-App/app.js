@@ -37,6 +37,13 @@ function addTaskToLS() {
 // Mostrar la tarea a la pantalla
 function displayTask() {
 	getTask();
+	task.forEach((task, index) => {
+		const newLi  = document.createElement("li");
+		const delBtn = document.createElement("button");
+		delBtn.innerHTML = `<i class="fas fa-trash-alt"></i> id="${index}" onclick="deleteTask(this.id)"`; 
+
+		newLi.appendChild(document.createTextNode(task));
+	});
 }
 
 function mensaje(msg) {
