@@ -43,7 +43,7 @@ const addTask = (e) => {
 			  const parent = this.parentNode
 			  parent.remove();
 			} 
-		   });
+		});
 
 	})
 }

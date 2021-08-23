@@ -25,6 +25,7 @@ function getTask() {
 function addTask() {
 	if (input.value !== "") {
 		addTaskToLS();
+		todoList.innerHTML = "";
 		displayTask();
 	} else {
 		mensaje("Por favor escribe una nueva tarea")
@@ -42,6 +43,7 @@ function addTaskToLS() {
 // Mostrar la tarea a la pantalla
 function displayTask() {
 	getTask();
+
 	tasks.forEach((task, index) => {
 		const newLi  = document.createElement("li");
 		const delBtn = document.createElement("button");
@@ -51,6 +53,28 @@ function displayTask() {
 		newLi.appendChild(delBtn);
 		todoList.appendChild(newLi);
 	});
+}
+
+//Eliminar Tareas
+function deleteTask(index) {
+	swal({
+		title: "Estas por eliminar esta tarea",
+		buttons: true,
+		dangerMode: true,
+	   })
+	   .then((willDelete) => {
+		if (willDelete) {
+		  swal("Esta Tarea ha sido eliminada!", {
+		    icon: "success",
+		  });
+		  getTask();		
+		  tasks.splice(index, 1);
+		  localStorage.setItem("tasks", JSON.stringify(tasks)); 	 
+		  todoList.innerHTML = "";
+		  displayTask();
+		} 
+	});
+	
 }
 
 
