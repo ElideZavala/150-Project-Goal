@@ -77,7 +77,13 @@ function deleteTask(index) {
 }
 
 // Limpiar las tareas. 
-clear.addEventListener('click', clearTask);
+clear.addEventListener('click', () => {
+	if(todoList.innerHTML !== "") {
+		clearTask();
+	} else {
+		return null;
+	}
+});
 
 function clearTask() {
 	swal({
