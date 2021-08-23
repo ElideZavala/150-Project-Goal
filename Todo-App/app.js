@@ -74,8 +74,30 @@ function deleteTask(index) {
 		  displayTask();
 		} 
 	});
-	
 }
+
+// Limpiar las tareas. 
+clear.addEventListener('click', clearTask);
+
+function clearTask() {
+	swal({
+		title: "Deseas eliminar todas las Tareas",
+		buttons: true,
+		dangerMode: true,
+	   })
+	   .then((willDelete) => {
+		if (willDelete) {
+		  swal("Todas las Tareas fuerón eliminadas!", {
+		    icon: "success",
+		  });
+		  localStorage.clear();  // <== Eliminamos todo el localStorage 
+		  todoList.innerHTML = "";
+		  displayTask();
+		} 
+	});
+}
+
+
 
 
 function mensaje(msg) {
