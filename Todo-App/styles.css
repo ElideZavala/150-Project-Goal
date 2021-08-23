@@ -177,3 +177,77 @@ li button:active {
   -webkit-transform: translate(0px,5px);
 	border-bottom: 1px solid;
 }
+
+@media(max-width: 400px) {
+
+  .add-item {
+    padding: 2rem 0;
+    margin: 1rem auto;
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+    font-family: 'Noto Serif', serif;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+  }
+
+  form button {
+    width: 10%;
+    font-size: 1.5rem;
+    padding: .5rem 0;
+    border-radius: 5px;
+    border-bottom: 3px solid rgba(112, 3, 76, 0.664);
+  }
+
+  form button:active {
+    transform: translate(0px,3px);
+    -webkit-transform: translate(0px,3px);
+  }
+
+  .container {
+    margin: 0 auto;
+  }
+
+  .add-item form input {
+    font-family: 'Volkhov', serif;
+    font-size: 1.5rem;
+  }
+
+  ol li {
+    font-size: 2rem;
+    margin: 2px 0;
+    background-color: #fff;
+    border-bottom: 3px solid rgba(4, 16, 39, 0.664);
+    border-right: 3px solid rgba(46, 57, 77, 0.664);
+    padding: .5rem;
+  }
+  
+  ol li:nth-child(odd) {
+    background-color: var(--blue);
+    color: var(--black);
+    border-bottom: 3px solid rgb(7, 72, 116);
+    border-right: 3px solid rgb(25, 116, 177);
+  }
+
+  li button { 
+    top: 1px;
+    font-size: 1.5rem;
+    padding: .5rem;
+    background-color: var(--red);
+    border-bottom: 2px solid rgba(112, 3, 76, 0.664);
+  }
+
+  .clear {
+    font-family: 'Volkhov', serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: .5rem;
+    border-bottom: 3px solid rgba(112, 3, 76, 0.664);
+  }
+
+  .clear:active {
+    transform: translate(0px,3px);
+    -webkit-transform: translate(0px,3px);
+  }
+}
