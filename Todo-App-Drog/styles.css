@@ -83,6 +83,7 @@ ul {
 /* Columnas */
 
 .drag-column {
+  flex: 1;
   margin: 0 10px;
   position: relative;
   background-color: rgba(0, 0, 0, 0.4);
