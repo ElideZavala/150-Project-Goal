@@ -1,16 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@1&family=Noto+Serif:ital@1&family=Volkhov:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:ital@1&family=IM+Fell+English:ital@1&family=Noto+Serif:ital@1&family=Volkhov:ital@1&display=swap');
 
 :root {
-  --yellow: #FFF560 ;
+  --yellow: #FFFFB5 ;
   --blue: #7dddf5 ;
   --green: #2EE0AE ;
+  --green2: #d4f0f0 ;
   --pink: #FF709D ;
   --red: #ff4040 ;
   --black: #000;
-  --column-1: #a14901;
-  --column-2: #1b6161;
-  --column-3: #089908;
-  --column-4: #ce2515;
+  --orange: #ff8e7c;
+  --orange2: #ffccb6;
+  --column-1: #ffb87a;
+  --column-2: #94b2ff;
+  --column-3: #25ced1;
+  --column-4: #ea526f;
 }
 
 * {
@@ -25,12 +28,12 @@ html {
 
 body {
   font-family: 'Volkhov', serif;
-  /* background: url("./uno.jpg"); */
+  background: url("./uno.jpg");
   background-position: 30% 0%;
   background-attachment: fixed;
   color: white;
   overflow-y: hidden;
-  background-color: #FFF560;
+  /* background-color: #60ffb5;  */
 
 }
 
@@ -86,7 +89,9 @@ ul {
   flex: 1;
   margin: 0 10px;
   position: relative;
-  background-color: rgba(0, 0, 0, 0.4);
+  /* background-color: rgba(0, 0, 0, 0.4); */
+  background-color: var(--yellow);
+  border: 4px solid var(--black);
   border-radius: 10px;
   overflow-x: hidden;
 }
@@ -144,13 +149,16 @@ ul {
 
 .header {
   display: flex;
+  padding: 1.5rem;
+  border: 2px solid var(--black);
+  color: var(--black);
   justify-content: center;
-  border-radius: 10px;
+  border-radius: 7px;
   margin: 10px;
 }
 
 .header h1 {
-  font-size: 1.25rem;
+  font-size: 2rem;
 }
 
 /* Drag and Drop */
@@ -160,14 +168,20 @@ ul {
 
 .drag-item-list {
   min-height: 50px;
+  font-family: 'Amaranth', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
 }
 
 .drag-item {
   margin: 10px;
   padding: 10px;
   height: fit-content;
-  background-color: rgba(0, 0, 0, 0.8);
-  border-radius: 10px;
+  /* background-color: rgba(0, 0, 0, 0.8); */
+  background-color: var(--green2) ;
+  color: var(--black);
+  border: 1px solid var(--black);
+  border-radius: 5px;
   line-height: 1.5rem;
   letter-spacing: 1px;
   cursor: pointer;
@@ -175,8 +189,8 @@ ul {
 
 .drag-item:focus {
   outline: none;
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: #fff;
 }
 
 /* Add Button Group */
