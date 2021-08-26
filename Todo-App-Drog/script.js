@@ -19,7 +19,7 @@ let completeListArray = [];
 let onHoldListArray = [];
 let listArrays = [];
 
-// Funcionalidad Drag
+let draggedItem;
 
 
 //Obtener los arrays desde el LocalStorage si se encuentra disponibles
@@ -48,14 +48,14 @@ function updateSavedColumns() {
 
 // Crear un elemento DOM para cada lista
 function createItemEl(columnEl, column, item, index) {
-  console.log('columnEl:', columnEl);
-  console.log('column:', column);
-  console.log('item:', item);
-  console.log('index:', index);
   // List Item
   const listEl = document.createElement('li');
   listEl.classList.add('drag-item');
-
+  listEl.textContent = item;
+  listEl.draggable = true;   // Aplicamos el arrastrar y soltar al elemento
+  listEl.setAttribute('ondragstart', 'drag(event)'); // Le pasamos el evento a la funcion. 
+  // Append 
+  columnEl.appendChild(listEl);
 }
 
 // Update Columns in DOM - Reset HTML, Filter Array, Update localStorage
@@ -67,16 +67,46 @@ function updateDOM() {
   // Backlog Column
   backlogList.textContent = '';
   backlogListArray.forEach((backlogItem, index) => {
-	  createItemEl((backlogList, 0, backlogItem, index));
+	  createItemEl(backlogList, 0, backlogItem, index);
   });
 
   // Progress Column
+  progressList.textContent = '';
+  progressListArray.forEach((progressItem, index) => {
+	  createItemEl(progressList, 0, progressItem, index);
+  });
 
   // Complete Column
+  completeList.textContent = '';
+  completeListArray.forEach((completeItem, index) => {
+	  createItemEl(completeList, 0, completeItem, index);
+  });
 
   // On Hold Column
+  onHoldList.textContent = '';
+  onHoldListArray.forEach((onHoldItem, index) => {
+	  createItemEl(onHoldList, 0, onHoldItem, index);
+  });
 
-  // Run getSavedColumns only once, Update Local Storage
-
+  // Run getSavedColumns only once, Update Local Storage}
 
 }
+
+// Cuando el elemento esta siendo arrastrado
+function drag(e) {
+	draggedItem = e.target;
+}
+
+// Permitir que los elementos caigan en la columna
+function allowDrop(e) {
+	e.preventDefault();
+}
+
+// Soltar elementos en la columna
+function drop(e) {
+	e.preventDefault()
+	
+}
+
+// On Load 
+updateDOM();
