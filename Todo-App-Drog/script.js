@@ -19,7 +19,9 @@ let completeListArray = [];
 let onHoldListArray = [];
 let listArrays = [];
 
+// Funcionalidad de Drag
 let draggedItem;
+let currentColumn; 
 
 
 //Obtener los arrays desde el LocalStorage si se encuentra disponibles
@@ -96,20 +98,28 @@ function updateDOM() {
 function drag(e) {
 	draggedItem = e.target;
 }
-
 // Permitir que los elementos caigan en la columna
 function allowDrop(e) {
 	e.preventDefault();
 }
 
 // Cuando el elemento ingresa al area de la columna
-function dragEnter(column) {
-	console.log(listColumns[column]);
+function dragEnter(column) {    // <== Mientas la este moviendo
+	listColumns[column].classList.add('over');
+	currentColumn = column;
 }
 
 // Soltar elementos en la columna
-function drop(e) {
+function drop(e) {      // <== al momento de soltar el elemento 
 	e.preventDefault()
+	//Eliminar el background Color/Padding
+	listColumns.forEach((column) => {
+		column.classList.remove('over');
+	});
+
+	// Añadir elemento a la columna
+  const parent = listColumns[currentColumn];
+  parent.appendChild(draggedItem);
 
 }
 
