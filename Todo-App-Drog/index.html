@@ -14,6 +14,7 @@
     <h1 class="main-title">Organizador de Tareas</h1>
     <div class="drag-container">
       <ul class="drag-list">
+
         <!-- columna Backlog -->
         <li class="drag-column backlog-column">
           <span class="header">
@@ -21,7 +22,7 @@
           </span>
           <!-- contenido Backlog -->
           <div id="backlog-content" class="custom-scroll">
-            <ul class="drag-item-list" id="backlog-list"></ul>
+            <ul class="drag-item-list" id="backlog-list" ondrop="drop(event)" ondragover="allowDrop(event)"></ul>
           </div>
           <!-- añadir boton de grupo -->
           <div class="add-btn-group">
@@ -45,7 +46,7 @@
           </span>
           <!-- contenido rogress -->
           <div id="progress-content" class="custom-scroll">
-            <ul class="drag-item-list" id="progress-list"></ul>
+            <ul class="drag-item-list" id="progress-list" ondrop="drop(event)" ondragover="allowDrop(event)"></ul>
           </div>
           <!-- añadir boton de grupo -->
           <div class="add-btn-group">
@@ -69,7 +70,7 @@
           </span>
           <!-- contenido Complete -->
           <div id="complete-content" class="custom-scroll">
-            <ul class="drag-item-list" id="complete-list"></ul>
+            <ul class="drag-item-list" id="complete-list" ondrop="drop(event)" ondragover="allowDrop(event)"></ul>
           </div>
           <!-- añadir boton de grupo -->
           <div class="add-btn-group">
@@ -93,7 +94,7 @@
           </span>
           <!-- contenido On hold -->
           <div id="on-hold-content" class="custom-scroll">
-            <ul class="drag-item-list" id="on-hold-list"></ul>
+            <ul class="drag-item-list" id="on-hold-list" ondrop="drop(event)" ondragover="allowDrop(event)"></ul>
           </div>
           <!-- añadir boton de grupo -->
           <div class="add-btn-group">
