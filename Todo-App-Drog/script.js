@@ -2,6 +2,7 @@ const addBtns = document.querySelectorAll('.add-btn:not(.solid)');
 const saveItemBtns = document.querySelectorAll('.solid');
 const addItemContainers = document.querySelectorAll('.add-container');
 const addItems = document.querySelectorAll('.add-item');
+
 // Lista
 const listColumns = document.querySelectorAll('.drag-item-list');
 const backlogList = document.getElementById('backlog-list');
@@ -91,7 +92,30 @@ function updateDOM() {
   });
 
   // Run getSavedColumns only once, Update Local Storage}
+  updateOnLoad = true;
+  updateSavedColumns();
 
+}
+
+// permitir que las matrices reflejen elementos de arrastrar y soltar
+function rebuildArrays() {
+  backlogListArray = [];
+  for (let i = 0; i < backlogList.children.length; i++) {
+    backlogListArray.push(backlogList.children[i].textContent);
+  };
+  progressListArray = [];
+  for (let i = 0; i < progressList.children.length; i++) {
+    progressListArray.push(progressList.children[i].textContent);
+  };
+  completeListArray = [];
+  for (let i = 0; i < completeList.children.length; i++) {
+    completeListArray.push(completeList.children[i].textContent);
+  };
+  onHoldListArray = [];
+  for (let i = 0; i < onHoldList.children.length; i++) {
+    onHoldListArray.push(onHoldList.children[i].textContent);
+  };
+  updateDOM();
 }
 
 // Cuando el elemento esta siendo arrastrado
@@ -120,8 +144,8 @@ function drop(e) {      // <== al momento de soltar el elemento
 	// Añadir elemento a la columna
   const parent = listColumns[currentColumn];
   parent.appendChild(draggedItem);
-
+  rebuildArrays();
 }
 
 // On Load 
-updateDOM();
+updateDOM();   
