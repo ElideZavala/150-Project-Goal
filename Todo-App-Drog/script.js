@@ -94,10 +94,18 @@ function updateDOM() {
   // Run getSavedColumns only once, Update Local Storage}
   updateOnLoad = true;
   updateSavedColumns();
+}
+// Mostrar  el cuadro de entrada de agregar elemento
+function showInputBox() {
 
 }
 
-// permitir que las matrices reflejen elementos de arrastrar y soltar
+// Ocultar el cuadro de entrada
+function hideInputBox() {
+  
+}
+ 
+//   permitir que las matrices reflejen elementos de arrastrar y soltar
 function rebuildArrays() {
   backlogListArray = [];
   for (let i = 0; i < backlogList.children.length; i++) {
