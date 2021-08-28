@@ -96,13 +96,17 @@ function updateDOM() {
   updateSavedColumns();
 }
 // Mostrar  el cuadro de entrada de agregar elemento
-function showInputBox() {
-
+function showInputBox(column) {
+  addBtns[column].style.visibility = 'hidden';
+  saveItemBtns[column].style.display = 'flex';
+  addItemContainers[column].style.display = 'flex';
 }
 
 // Ocultar el cuadro de entrada
-function hideInputBox() {
-  
+function hideInputBox(column) {
+  addBtns[column].style.visibility = 'visible';
+  saveItemBtns[column].style.display = 'none';
+  addItemContainers[column].style.display = 'none';
 }
  
 //   permitir que las matrices reflejen elementos de arrastrar y soltar
