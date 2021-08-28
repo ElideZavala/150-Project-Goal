@@ -57,6 +57,9 @@ function createItemEl(columnEl, column, item, index) {
   listEl.textContent = item;
   listEl.draggable = true;   // Aplicamos el arrastrar y soltar al elemento
   listEl.setAttribute('ondragstart', 'drag(event)'); // Le pasamos el evento a la funcion. 
+  listEl.contentEditable = true;
+  listEl.id = index;
+  listEl.setAttribute('onfocusout', `updateItem(${index}, ${column})`);
   // Append 
   columnEl.appendChild(listEl);
 }
@@ -95,6 +98,9 @@ function updateDOM() {
   updateOnLoad = true;
   updateSavedColumns();
 }
+
+// Actualizara el elemento - Lo eliminara si es necesario, o actualizara el valor del array.
+
 
 // Anexar a la columna u restear el Texbox
 function addToColumn(column) {
