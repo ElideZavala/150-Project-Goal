@@ -4,7 +4,7 @@
   --yellow: #FFFFB5 ;
   --blue: #7dddf5 ;
   --green: #2EE0AE ;
-  --green2: #d4f0f0 ;
+  --green2: rgb(212, 240, 240) ;
   --pink: #FF709D ;
   --red: #ff4040 ;
   --black: #000;
@@ -255,6 +255,7 @@ ul {
 
 .solid {
   display: none;
+  border: 2px solid var(--black);
 }
 
 .solid:hover {
@@ -274,13 +275,15 @@ ul {
   margin: 10px;
   padding: 5px 10px;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(212, 240, 240, 0.8);
   min-height: 100px;
   display: none;
 }
 
 .add-item {
   width: 100%;
+  font-size: 2rem;
+  font-weight: 700;
   min-height: 100px;
   height: auto;
   background-color: white;

@@ -95,6 +95,16 @@ function updateDOM() {
   updateOnLoad = true;
   updateSavedColumns();
 }
+
+// Anexar a la columna u restear el Texbox
+function addToColumn(column) {
+  const itemText = addItems[column].textContent;
+  const selectedArray = listArrays[column];
+  selectedArray.push(itemText); 
+  addItems[column].textContent = '';
+  updateDOM();
+}
+
 // Mostrar  el cuadro de entrada de agregar elemento
 function showInputBox(column) {
   addBtns[column].style.visibility = 'hidden';
@@ -107,6 +117,7 @@ function hideInputBox(column) {
   addBtns[column].style.visibility = 'visible';
   saveItemBtns[column].style.display = 'none';
   addItemContainers[column].style.display = 'none';
+  addToColumn(column);
 }
  
 //   permitir que las matrices reflejen elementos de arrastrar y soltar
