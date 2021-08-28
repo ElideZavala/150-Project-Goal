@@ -49,6 +49,14 @@ function updateSavedColumns() {
 	});
 }
 
+// Filtrar en el Array para eliminar los elementos vacios
+function filterArray(array){
+  console.log(array);
+  const filteredArray = array.filter(item => item !== null);
+  console.log(filteredArray);
+}
+
+
 // Crear un elemento DOM para cada lista
 function createItemEl(columnEl, column, item, index) {
   // List Item
@@ -75,24 +83,28 @@ function updateDOM() {
   backlogListArray.forEach((backlogItem, index) => {
 	  createItemEl(backlogList, 0, backlogItem, index);
   });
+  backlogListArray = filterArray(backlogListArray);
 
   // Progress Column
   progressList.textContent = '';
   progressListArray.forEach((progressItem, index) => {
-	  createItemEl(progressList, 0, progressItem, index);
+	  createItemEl(progressList, 1, progressItem, index);
   });
+  progressListArray = filterArray(progressListArray);
 
   // Complete Column
   completeList.textContent = '';
   completeListArray.forEach((completeItem, index) => {
-	  createItemEl(completeList, 0, completeItem, index);
+	  createItemEl(completeList, 2, completeItem, index);
   });
+  completeListArray = filterArray(completeListArray);
 
   // On Hold Column
   onHoldList.textContent = '';
   onHoldListArray.forEach((onHoldItem, index) => {
-	  createItemEl(onHoldList, 0, onHoldItem, index);
+	  createItemEl(onHoldList, 3, onHoldItem, index);
   });
+  onHoldListArray = filterArray(onHoldListArray);
 
   // Run getSavedColumns only once, Update Local Storage}
   updateOnLoad = true;
@@ -100,7 +112,15 @@ function updateDOM() {
 }
 
 // Actualizara el elemento - Lo eliminara si es necesario, o actualizara el valor del array.
-
+function updateItem(id, column) {
+  const selectedArray = listArrays[column];
+  const selectedColumnEl = listColumns[column].children;
+  if (!selectedColumnEl[id].textContent) { 
+      delete selectedArray[id];
+    }
+    console.log(selectedArray);
+    updateDOM();
+}
 
 // Anexar a la columna u restear el Texbox
 function addToColumn(column) {
