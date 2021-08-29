@@ -22,6 +22,7 @@ let listArrays = [];
 
 // Funcionalidad de Drag
 let draggedItem;
+let dragging = false;
 let currentColumn; 
 
 
@@ -51,9 +52,8 @@ function updateSavedColumns() {
 
 // Filtrar en el Array para eliminar los elementos vacios
 function filterArray(array){
-  console.log(array);
   const filteredArray = array.filter(item => item !== null);
-  console.log(filteredArray);
+  return filteredArray;
 }
 
 
@@ -115,10 +115,11 @@ function updateDOM() {
 function updateItem(id, column) {
   const selectedArray = listArrays[column];
   const selectedColumnEl = listColumns[column].children;
-  if (!selectedColumnEl[id].textContent) { 
+  if (!selectedColumnEl[id].textContent) {         
       delete selectedArray[id];
+    } else {
+      selectedArray[id] = selectedColumnEl[id].textContent;
     }
-    console.log(selectedArray);
     updateDOM();
 }
 
@@ -170,6 +171,7 @@ function rebuildArrays() {
 // Cuando el elemento esta siendo arrastrado
 function drag(e) {
 	draggedItem = e.target;
+  dragging = true;
 }
 // Permitir que los elementos caigan en la columna
 function allowDrop(e) {
@@ -193,6 +195,8 @@ function drop(e) {      // <== al momento de soltar el elemento
 	// Añadir elemento a la columna
   const parent = listColumns[currentColumn];
   parent.appendChild(draggedItem);
+  // Draging completado
+  dragging = false;
   rebuildArrays();
 }
 
