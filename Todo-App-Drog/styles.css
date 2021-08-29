@@ -298,6 +298,25 @@ ul {
   outline: none;
 }
 
+.clock {
+  position: absolute;
+  font-size: 2rem;
+  top: 1rem;
+  left: 10rem;
+  padding: 1rem;
+  background-color: var(--yellow);
+  color: var(--black);
+  font-weight: 800;
+  border: 4px solid var(--black);
+  transform: skewX(-10deg);
+}
+
+.colors {
+  position: absolute;
+  top: 2rem;
+  right: 20rem;
+}
+
 /* Media Query: Laptop */
 @media screen and (max-width: 1800px) {
   .main-title {

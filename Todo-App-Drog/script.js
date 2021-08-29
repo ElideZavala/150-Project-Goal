@@ -193,3 +193,8 @@ function drop(e) {      // <== al momento de soltar el elemento
 
 // On Load 
 updateDOM();   
+
+// Date
+
+// Theme
+
