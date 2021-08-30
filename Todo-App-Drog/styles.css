@@ -376,4 +376,30 @@ ul {
   .drag-column {
     margin: 10px;
   }
+
+  .clock {
+    font-size: .5rem;
+    left: 0rem;
+    padding: .3rem;
+    border: 3px solid var(--black);
+  }
+
+  .colors {
+    display: flex;
+    margin: 0;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    top: .3rem;
+    left: 300px;
+    right: 0px;
+  }
+  
+  .color {
+    margin: 3px;
+    height: 20px;
+    width: 20px;
+    -moz-border-radius:50px;
+    -webkit-border-radius:50px;
+    border-radius:50px;
+  }
 }
