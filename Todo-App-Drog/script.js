@@ -9,6 +9,7 @@ const backlogList = document.getElementById('backlog-list');
 const progressList = document.getElementById('progress-list');
 const completeList = document.getElementById('complete-list');
 const onHoldList = document.getElementById('on-hold-list');
+const dateEl = document.getElementById('date');
 
 // Elementos
 let updateOnLoad = false;
@@ -195,6 +196,15 @@ function drop(e) {      // <== al momento de soltar el elemento
 updateDOM();   
 
 // Date
-
+function setTime() {
+  const time = new Date();
+	const horas = time.getHours();
+	const hoursForClock = horas % 12; //Para reloj de 12 Horas. volvera a contar a partir de 12
+	const minutos = time.getMinutes();
+	const ampm = horas >= 12 ? 'PM' : 'AM';
+  
+	dateEl.innerHTML = `${hoursForClock}:${minutos < 10 ? `0${minutos}`: minutos} ${ampm}`;
+}
+setTime();
 // Theme
 

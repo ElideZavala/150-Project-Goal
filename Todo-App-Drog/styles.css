@@ -312,10 +312,13 @@ ul {
 }
 
 .colors {
+  display: flex;
+  justify-content: flex-start;
   position: absolute;
-  top: 2rem;
-  right: 20rem;
+  top: 1rem;
+  right: 10rem;
 }
+
 
 /* Media Query: Laptop */
 @media screen and (max-width: 1800px) {
