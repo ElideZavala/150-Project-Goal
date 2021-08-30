@@ -2,6 +2,7 @@ const addBtns = document.querySelectorAll('.add-btn:not(.solid)');
 const saveItemBtns = document.querySelectorAll('.solid');
 const addItemContainers = document.querySelectorAll('.add-container');
 const addItems = document.querySelectorAll('.add-item');
+const colorEl = document.querySelectorAll('.colors');
 
 // Lista
 const listColumns = document.querySelectorAll('.drag-item-list');
@@ -206,5 +207,10 @@ function setTime() {
 	dateEl.innerHTML = `${hoursForClock}:${minutos < 10 ? `0${minutos}`: minutos} ${ampm}`;
 }
 setTime();
+setInterval(setTime, 1000);
+
 // Theme
 
+function backgroundColor() {
+  console.log(colorEl)
+}
