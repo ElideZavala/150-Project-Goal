@@ -313,12 +313,44 @@ ul {
 
 .colors {
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   position: absolute;
   top: 1rem;
-  right: 10rem;
+  right: 2rem;
 }
 
+.color {
+  margin: 3px;
+  height:30px;
+  width: 30px;
+  -moz-border-radius:50px;
+  -webkit-border-radius:50px;
+  border-radius:50px;
+}
+
+.green {
+  background:  #60ffb5;
+}
+
+.red {
+  background:  #ff6787;
+}
+
+.orange {
+  background:  #fe8e7b;
+}
+
+.pink {
+  background:  #ffcfcb;
+}
+
+.purple {
+  background:  #d18bc0;
+}
+
+.purple {
+  background:  #55cbd3;
+}
 
 /* Media Query: Laptop */
 @media screen and (max-width: 1800px) {
