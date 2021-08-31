@@ -205,7 +205,7 @@ function setTime() {
 	const minutos = time.getMinutes();
 	const ampm = horas >= 12 ? 'PM' : 'AM';
   
-	dateEl.innerHTML = `${hoursForClock}:${minutos < 10 ? `0${minutos}`: minutos} ${ampm}`;
+	dateEl.innerHTML = `${hoursForClock < 10 ? `0${hoursForClock}` : hoursForClock}:${minutos < 10 ? `0${minutos}`: minutos} ${ampm}`;
 }
 setTime();
 setInterval(setTime, 1000);
