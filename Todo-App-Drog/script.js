@@ -2,7 +2,8 @@ const addBtns = document.querySelectorAll('.add-btn:not(.solid)');
 const saveItemBtns = document.querySelectorAll('.solid');
 const addItemContainers = document.querySelectorAll('.add-container');
 const addItems = document.querySelectorAll('.add-item');
-const colorEl = document.querySelectorAll('.colors');
+const colorsEl = document.querySelectorAll('.colors');
+const colorEl =  document.querySelector('.color');
 
 // Lista
 const listColumns = document.querySelectorAll('.drag-item-list');
@@ -211,6 +212,16 @@ setInterval(setTime, 1000);
 
 // Theme
 
-function backgroundColor() {
-  console.log(colorEl)
+function backgroundColor(e) {
+  divColor = e.target.classList[1]
+  
+  console.log(divColor)
+  
+  const body  = document.querySelector('body');
+  body.classList.remove('green', 'red', 'blue', 'orange', 'pink', 'purple');
+  body.classList.add(divColor);
+  console.log(body)
+
+  // color.classList.add(divColor);
+  // console.log(color)
 }

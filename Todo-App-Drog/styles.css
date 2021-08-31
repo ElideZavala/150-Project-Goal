@@ -28,12 +28,13 @@ html {
 
 body {
   font-family: 'Volkhov', serif;
-  background: url("./uno.jpg");
+  /* background: url("./uno.jpg"); */
   background-position: 30% 0%;
   background-attachment: fixed;
   color: white;
   overflow-y: hidden;
-  /* background-color: #60ffb5;  */
+  background-color: #60ffb5; 
+  background-color: #000; 
 
 }
 
