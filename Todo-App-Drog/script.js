@@ -218,7 +218,7 @@ function backgroundColor(e) {
   console.log(divColor)
   
   const body  = document.querySelector('body');
-  body.classList.remove('green', 'red', 'blue', 'orange', 'pink', 'purple');
+  body.classList.remove('green', 'red', 'blue', 'orange', 'pink', 'purple', 'black');
   body.classList.add(divColor);
   console.log(body)
 

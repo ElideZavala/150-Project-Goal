@@ -354,6 +354,9 @@ ul {
   background:  #55cbd3;
 }
 
+.black {
+  background: #000;
+}
 /* Media Query: Laptop */
 @media screen and (max-width: 1800px) {
   .main-title {
