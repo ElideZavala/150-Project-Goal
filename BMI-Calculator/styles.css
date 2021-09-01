@@ -74,6 +74,7 @@ form input,
 .btn {
   padding: 1rem;
   width: 100%;
+  font-size: 1.6rem;
 }
 
 label {
@@ -88,6 +89,7 @@ label {
   font-size: 2.2rem;
   outline: none;
   border: none;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -112,6 +114,7 @@ label {
   color: var(--white);
   font-weight: 600;
   display: none;
+  cursor: pointer;
 }
 
 .reset:active {
