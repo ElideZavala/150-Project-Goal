@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+:root {
+  --black: rgb(15, 15, 15);
+  --purple: #36174d;
+  --light-purple: #6f36bc;
+  --pink: #ff4777;
+  --light-pink: #f047ff;
+  --white: #f3effe;
+  --dark-grey: #222831;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-image: radial-gradient(circle at 76.02% 50%, #ffe5cb 0, #ffdcce 8.33%, #ffd1d0 16.67%, #ffc5cf 25%, #ffb9cb 33.33%, #ffabc4 41.67%, #f29db9 50%, #d48fac 58.33%, #bb83a0 66.67%, #a47895 75%, #91708a 83.33%, #826982 91.67%, #76637a 100%);
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Starte here */
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 40rem;
+  background-image: url('/images/inicio.png');
+  padding: 4rem;
+  background-size: cover;
+  border-radius: 5px;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+form {
+  padding: 1rem 0;
+  font-size: 1.6rem;
+}
+
+form > * {
+  padding-bottom: 1rem;
+}
+
+form input,
+.btn {
+  padding: 1rem;
+  width: 100%;
+}
+
+label {
+  font-weight: 600;
+}
+
+.btn {
+  font-size: 1.6rem;
+  background-color: var(--light-purple);
+  border-radius: 10px;
+  color: var(--white);
+  font-size: 2.2rem;
+  outline: none;
+  border: none;
+}
+
+.btn:hover {
+  background-color: var(--purple);
+}
+
+.btn:active {
+  transform: scale(.97);
+}
+
+.result {
+  padding: 1rem;
+}
+
+.reset {
+  padding: 1rem;
+  margin: 5px 0;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  background-color: var(--pink);
+  color: var(--white);
+  font-weight: 600;
+  display: none;
+}
+
+.reset:active {
+  transform: scale(.96);
+}
+
+.reset:hover {
+  background-color: var(--light-pink);
+}
