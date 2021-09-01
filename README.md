@@ -30,3 +30,9 @@
   * | 14 | [card](https://github.com/ElideZavala/150-Project-Goal/tree/main/Cards) | [ir a la página](https://dreamy-nightingale-d83580.netlify.app/) 
 
   * | 15 | [Quiz app](https://github.com/ElideZavala/150-Project-Goal/tree/main/Quiz-App) | [ir a la página](https://gallant-chandrasekhar-a56a7d.netlify.app/) 
+
+  * | 16 | [App de Clima](https://stupefied-wescoff-9ed508.netlify.app/) | [ir a la página](https://github.com/ElideZavala/150-Project-Goal/tree/main/Weather-App) 
+
+  * | 17 | [App de Tareas](https://nervous-wescoff-f40d75.netlify.app/) | [ir a la página](https://github.com/ElideZavala/150-Project-Goal/tree/main/Todo-App) 
+
+  * | 18 | [Task organizer](https://github.com/ElideZavala/150-Project-Goal/tree/main/Todo-App-Drog) | [ir a la página](https://laughing-bose-22e57c.netlify.app/) 
