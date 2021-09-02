@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap');
 
 :root {
   --black: rgb(15, 15, 15);
@@ -59,6 +59,7 @@ section {
 h1 {
   font-size: 3rem;
   text-align: center;
+  font-family: 'Noto Serif', serif;
 }
 
 form {
