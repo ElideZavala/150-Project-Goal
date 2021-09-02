@@ -9,13 +9,30 @@
 const btn = document.querySelector(".btn");
 const result = document.querySelector(".result");
 const reset = document.querySelector(".reset");
+let height = document.querySelector('.height').value;
+let weight = document.querySelector('.weight').value;
 
 btn.addEventListener('click', calcularIMC);
 
 function calcularIMC(e) {
 	e.preventDefault()
 
+	validar();
 
+	height = height / 100;
+	console.log(height);
 	
-	console.log('quio');
+	// Validate Input
+	
 }
+
+function validar() {
+	if (height === "" || isNaN(height)) {
+		return (result.innerHTML = "Favor de escribir un altura valida &#128591" );
+	} else if (weight === "" || isNaN(weight)) {
+		weight === ""
+		return (result.innerHTML = "Favor de escribir un peso valido &#128591" );
+	}
+	return height
+}
+return height, weight;
