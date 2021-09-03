@@ -9,13 +9,13 @@
 const btn = document.querySelector(".btn");
 const result = document.querySelector(".result");
 const reset = document.querySelector(".reset");
-let height = document.querySelector('.height').value;
-let weight = document.querySelector('.weight').value;
 
 btn.addEventListener('click', calcularIMC);
 
 function calcularIMC(e) {
 	e.preventDefault()
+	let height = document.querySelector('.height').value;
+	let weight = document.querySelector('.weight').value;	
 	
 	// Validate Input
 	if (height === "" || isNaN(height)) {
@@ -25,7 +25,7 @@ function calcularIMC(e) {
 		return (result.innerHTML = "Favor de escribir un peso valido &#128591" );
 	} else {
 		height = height / 100;
-		let imc = weight / Math.pow(height, 2);
+		let imc = (weight / Math.pow(height, 2)).toFixed(2); // Redondeamos a dos decimales. 
 		console.log(imc);
 	}	
 }
