@@ -18,6 +18,7 @@ function calcularIMC(e) {
 	let height = document.querySelector('.height').value;
 	let weight = document.querySelector('.weight').value;	
 	
+	result.style.display = "block";		
 	// Validar el Input
 	if (height === "" || isNaN(height)) {
 		return (result.innerHTML = "Favor de escribir un altura valida &#128591" );
@@ -27,7 +28,6 @@ function calcularIMC(e) {
 	} else {
 		height = height / 100;
 		let imc = (weight / Math.pow(height, 2)).toFixed(2); // Redondeamos a dos decimales. 
-		console.log(imc);
 
 		if (imc < 18.5) {
 			showResult(`Bajo Peso: <span>${imc}</span>`, "orange", "black");
