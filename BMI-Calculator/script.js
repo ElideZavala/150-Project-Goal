@@ -30,21 +30,22 @@ function calcularIMC(e) {
 		console.log(imc);
 
 		if (imc < 18.5) {
-			showResult(`Bajo Peso: <span>${imc}</span>`, "orange");
+			showResult(`Bajo Peso: <span>${imc}</span>`, "orange", "black");
 		} else if (imc >= 18.5 && imc < 24.9) {
-			showResult(`Normal: <span>${imc}</span>`, "green");
+			showResult(`Normal: <span>${imc}</span>`, "green", "white");
 		} else if (imc >= 25.0 && imc < 29.9) {
-			showResult(`Sobre Peso: <span>${imc}</span>`, "blue");
+			showResult(`Sobre Peso: <span>${imc}</span>`, "blue", "white");
 		} else {
-			showResult(`Obesidad: <span>${imc}</span>`, "red");
+			showResult(`Obesidad: <span>${imc}</span>`, "red", "white");
 		}		
 	}
 	result.style.display = "block";
 	reset.style.display = "block"		
 }
 
-function showResult(val, color) {
+function showResult(val, color, textColor) {
 	result.style.backgroundColor = color;
+	result.style.color = textColor;
 	return (result.innerHTML = val);
 }
 
