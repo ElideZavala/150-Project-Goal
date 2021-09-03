@@ -16,23 +16,16 @@ btn.addEventListener('click', calcularIMC);
 
 function calcularIMC(e) {
 	e.preventDefault()
-
-	validar();
-
-	height = height / 100;
-	console.log(height);
 	
 	// Validate Input
-	
-}
-
-function validar() {
 	if (height === "" || isNaN(height)) {
 		return (result.innerHTML = "Favor de escribir un altura valida &#128591" );
 	} else if (weight === "" || isNaN(weight)) {
 		weight === ""
 		return (result.innerHTML = "Favor de escribir un peso valido &#128591" );
-	}
-	return height
+	} else {
+		height = height / 100;
+		let imc = weight / Math.pow(height, 2);
+		console.log(imc);
+	}	
 }
-return height, weight;
