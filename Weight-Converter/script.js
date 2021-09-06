@@ -27,6 +27,7 @@ function convertWeight(e) {
 		pounds.value = (x * 2.2045).toFixed(2);
 		grams.value  = (x * 1000).toFixed(2);
 		ounces.value = (x * 35.274).toFixed(2);
+		kilgms.value = (x / 1000000);  
 	}
 	if (e.target.classList.contains("grams")) {
 		let x = e.target.value;
