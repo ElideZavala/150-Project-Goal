@@ -20,34 +20,34 @@
       <button onclick="document.cacl.text.value=Math.tan(document.cacl.text.value)">Tan</button>
       <button onclick="document.cacl.text.value=Math.log(document.cacl.text.value)">Log</button>
 
-      <button>x<sub>2</sub></button>
-      <button>x<sub>3</sub></button>
-      <button>&radic;</button>
-      <button>&#8731;</button>
+      <button onclick="document.cacl.text.value=Math.pow(document.cacl.text.value,2)">x<sub>2</sub></button>
+      <button onclick="document.cacl.text.value=Math.pow(document.cacl.text.value,3)">x<sub>3</sub></button>
+      <button onclick="document.cacl.text.value=Math.sqrt(document.cacl.text.value,1/2)">&radic;</button>
+      <button onclick="document.cacl.text.value=Math.sqrt(document.cacl.text.value,1/3)">&#8731;</button>
       
-      <button>1</button>
-      <button>2</button>
-      <button>3</button>
-      <button>4</button>
+      <button onclick="document.cacl.text.value+='1'">1</button>
+      <button onclick="document.cacl.text.value+='2'">2</button>
+      <button onclick="document.cacl.text.value+='3'">3</button>
+      <button onclick="document.cacl.text.value+='4'">4</button>
       
-      <button>5</button>
-      <button>6</button>
-      <button>7</button>
-      <button>8</button>
+      <button onclick="document.cacl.text.value+='5'">5</button>
+      <button onclick="document.cacl.text.value+='6'">6</button>
+      <button onclick="document.cacl.text.value+='7'">7</button>
+      <button onclick="document.cacl.text.value+='8'">8</button>
 
-      <button>9</button>
-      <button>0</button>
-      <button>.</button>
-      <button>*</button>
+      <button onclick="document.cacl.text.value+='9'">9</button>
+      <button onclick="document.cacl.text.value+='0'">0</button>
+      <button onclick="document.cacl.text.value+='.'">.</button>
+      <button onclick="document.cacl.text.value+='*'">*</button>
 
-      <button>+</button>
-      <button>-</button>
-      <button>/</button>
-      <button>%</button>
+      <button onclick="document.cacl.text.value+='+'">+</button>
+      <button onclick="document.cacl.text.value+='-'">-</button>
+      <button onclick="document.cacl.text.value+='/'">/</button>
+      <button onclick="document.cacl.text.value+='%'">%</button>
 
-      <button>=</button>
-      <button>C</button>
-      <button>DEL</button>
+      <button onclick="document.cacl.text.value+=eval(document.cacl.text.value)">=</button>
+      <button onclick="document.cacl.text.value+=''">C</button>
+      <button onclick="del()">DEL</button>
     </div>
     <script src="script.js"></script>
   </body>
