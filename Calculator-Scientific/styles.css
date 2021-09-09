@@ -37,7 +37,7 @@ p {
 }
 
 .container {
-  width: 375px;
+  width: 400px;
   height: auto;
   border: 1px solid red;
   border-radius: 10px 10px 0 0;
@@ -53,6 +53,7 @@ p {
   font-size: 32px;
   color: var(--color-sec);
   text-align: right;
+  background-color: var(--light-blue);
 }
 
 .btns {
@@ -61,17 +62,19 @@ p {
   justify-content: center;
   align-items: center;
   flex-flow: wrap;
+  padding: 10px;
 
 }
 
 button {
   text-align: center;
   width: 90px;
-  padding: 8px;
   height: 40px;
-  margin: 5px 1px;
+  margin: 5px 2px;
   outline: none;
   cursor: pointer;
   background-color: var(--blue);
   color: #fff;
+  border: 0;
+  font-size: 22px;
 }
