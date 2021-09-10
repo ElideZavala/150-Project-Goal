@@ -36,3 +36,11 @@
   * | 17 | [App de Tareas](https://nervous-wescoff-f40d75.netlify.app/) | [ir a la página](https://github.com/ElideZavala/150-Project-Goal/tree/main/Todo-App) 
 
   * | 18 | [Task organizer](https://github.com/ElideZavala/150-Project-Goal/tree/main/Todo-App-Drog) | [ir a la página](https://laughing-bose-22e57c.netlify.app/) 
+
+  * | 19 | [BMI-calculator](https://github.com/ElideZavala/150-Project-Goal/tree/main/BMI-Calculator) | [ir a la página](https://infallible-cori-860e63.netlify.app/)
+
+  * | 20 | [Convertidor de Pesos](https://github.com/ElideZavala/150-Project-Goal/tree/main/Weight-Converter) | [ir a la página](https://agitated-mclean-228d45.netlify.app/)
+
+  * | 21 | [Convertidor de Temperatura](https://github.com/ElideZavala/150-Project-Goal/tree/main/Temperature-Converter) | [ir a la página](https://elastic-varahamihira-add21e.netlify.app/)
+
+  * | 22 | [Calculadora -Incompleto](https://github.com/ElideZavala/150-Project-Goal/tree/main/Calculator-Scientific) | [ir a la página](https://sleepy-hopper-556dc9.netlify.app/)
