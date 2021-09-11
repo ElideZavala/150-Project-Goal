@@ -1,14 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:ital@1&display=swap');
 
 :root {
-  --white: #fff;
-  --black: #1c2b2d;
-  --blue: #31326f;
-  --light-blue: #005490;
-  --color-primary: #9d0191;
-  --color-sec: #db6400;
-  --grey: #eee;
-  --dark-grey: #222831;
+  --color1: #EE4540;
+  --color2: #C72C41;
+  --color3: #801336;
+  --color4: #510A32;
+  --color5: #2D142C;
 }
 
 * {
@@ -35,7 +33,73 @@ img {
 }
 
 .container {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+/* Empezar aqui */
+header {
+  background-color: var(--color2);
+  padding: 1rem;
+}
+
+header h1 {
+  font-family: 'Sarabun', sans-serif;
+  font-size: 3em;
+  line-height: 2;
+  letter-spacing: 2px;
+  color: var(--color5);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+form input {
+  position: relative;
+  text-align: center;
+  width: 20rem;
+  padding: .7rem;
+  border-radius: 0 10px 10px 0; 
+  border: none; 
+  display: flex;
+  outline: none;
+  margin-bottom: 1rem;
+}
+
+.fas {
+  position: absolute;
+  /* top: 8rem; */
+  padding: .8rem;
+  font-size: 1.5rem;
+  background-color: var(--color5);
+  color: #fff;
+  /* left: ; */
+  z-index: 1;
+}
+
+form input:focus {
+  border-bottom: 1px solid var(--color5);
+  border-right: 2px solid var(--color5);
+}
+
+.fas:hover {
+  color: red;
+}
+
+.btn {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #fff;
+  margin: .5rem;
+  background-color: var(--color3);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  color: rgb(56, 233, 218);
+}
+
+.active {
+  background-color: var(--color5);
 }
