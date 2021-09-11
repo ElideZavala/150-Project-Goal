@@ -59,7 +59,7 @@ form input {
   text-align: center;
   width: 20rem;
   padding: .7rem;
-  border-radius: 0 10px 10px 0; 
+  border-radius: 10px; 
   border: none; 
   display: flex;
   outline: none;
@@ -68,12 +68,11 @@ form input {
 
 .fas {
   position: absolute;
-  /* top: 8rem; */
   padding: .8rem;
   font-size: 1.5rem;
   background-color: var(--color5);
+  border-radius: 10px 0 0 10px;
   color: #fff;
-  /* left: ; */
   z-index: 1;
 }
 
