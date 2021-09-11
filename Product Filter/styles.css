@@ -96,9 +96,9 @@ form input:focus {
 .btn {
   font-size: 1rem;
   text-decoration: none;
-  color: #fff;
+  color: var(--color5);
   margin: .5rem;
-  background-color: var(--color2);
+  background-color: var(--color3);
   padding: 5px;
   border-radius: 5px;
 }
@@ -109,6 +109,7 @@ form input:focus {
 
 .active {
   background-color: var(--color5);
+  color: var(--color3);
 }
 
 #store-products  {
@@ -121,7 +122,7 @@ form input:focus {
 }
 
 .store-product {
-  border: 1px solid var(--color4);
+  border: 1px solid var(--color2);
   border-radius: 5px;
   max-width: 250px;
   animation: slide-up 0.5s ease;
@@ -131,12 +132,41 @@ form input:focus {
 .product-details {
   text-align: center;
   padding-bottom: 1rem;
-  background-color: var(--color3);  
+  background-color: var(--color2);  
+  border-radius: 3px;
 }
 
 .product-details h2 {
   font-size: 1.4rem;
   font-weight: 700;
+}
+
+.product-details p {
+  font-size: 1.2rem; 
+  color: var(--color5);
+  padding-bottom: 1rem;
+  font-weight: 900;
+}
+
+.product-details a {
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  background-color: var(--color4);
+  color: #000;
+  padding: .5rem 1rem;
+  border-radius: 4px;
+}
+
+.product-details a:hover {
+  background-color: var(--color5);
+  color: #fff;
+} 
+
+.product-details p span {
+  text-decoration: line-through;
+  color: rgb(250, 88, 88);
+  font-weight: 500;
 }
 
 @keyframes slide-up {
