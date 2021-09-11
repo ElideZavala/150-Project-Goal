@@ -29,8 +29,8 @@ p {
 }
 
 img {
-  width: 70%;
-  height: 60%;
+  width: 100%;
+  height: 70%;
 }
 
 .container {
@@ -116,7 +116,7 @@ form input:focus {
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr ));
   /* row-gap: 2rem;
   column-gap: 2rem; */
-  grid-gap: 2rem;
+  grid-gap: 2.5rem;
   padding: 2rem 0;
 }
 
@@ -126,6 +126,10 @@ form input:focus {
   max-width: 250px;
   animation: slide-up 0.5s ease;
   transform: all 0.3s;
+}
+
+.store-product:hover {
+  transform: scale(1.2);
 }
 
 .product-details {
