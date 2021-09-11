@@ -29,7 +29,8 @@ p {
 }
 
 img {
-  width: 30%;
+  width: 70%;
+  height: 60%;
 }
 
 .container {
@@ -101,4 +102,23 @@ form input:focus {
 
 .active {
   background-color: var(--color5);
+}
+
+#store-products  {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr ));
+  row-gap: 2rem;
+  column-gap: 2rem;
+  grid-gap: 2rem;
+  padding: 2rem 0;
+}
+
+@media screen and (max-width: 600px) {
+  #store-products  {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr ));
+    row-gap: 2rem;
+    column-gap: 2rem;
+    padding: 2rem 0;
+  } 
 }
