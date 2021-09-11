@@ -2,11 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Sarabun:ital@1&display=swap');
 
 :root {
-  --color1: #EE4540;
-  --color2: #C72C41;
-  --color3: #801336;
-  --color4: #510A32;
-  --color5: #2D142C;
+  --color1: #51E2F5;
+  --color2: #9DF9EF;
+  --color3: #EDF7F5;
+  --color4: #FFA886;
+  --color5: #A28289;
 }
 
 * {
@@ -41,19 +41,26 @@ img {
 
 /* Empezar aqui */
 header {
-  background-color: var(--color2);
+  background-color: var(--color4);
   padding: 1rem;
 }
 
 header h1 {
   font-family: 'Sarabun', sans-serif;
   font-size: 3em;
+  font-weight: 900;
   line-height: 2;
   letter-spacing: 2px;
-  color: var(--color5);
+  /* color: var(--color1); */
+  color: rgb(68, 67, 67);
   text-align: center;
   text-transform: uppercase;
 }
+
+header h1::first-letter {
+  font-size: 1.3em;
+  color: var(--color1);
+} 
 
 form input {
   position: relative;
@@ -64,7 +71,7 @@ form input {
   border: none; 
   display: flex;
   outline: none;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
 }
 
 .fas {
@@ -91,7 +98,7 @@ form input:focus {
   text-decoration: none;
   color: #fff;
   margin: .5rem;
-  background-color: var(--color3);
+  background-color: var(--color2);
   padding: 5px;
   border-radius: 5px;
 }
@@ -107,18 +114,38 @@ form input:focus {
 #store-products  {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr ));
-  row-gap: 2rem;
-  column-gap: 2rem;
+  /* row-gap: 2rem;
+  column-gap: 2rem; */
   grid-gap: 2rem;
   padding: 2rem 0;
 }
 
+.store-product {
+  border: 1px solid var(--color4);
+  border-radius: 5px;
+  max-width: 250px;
+  animation: slide-up 0.5s ease;
+  transform: all 0.3s;
+}
+
+.product-details {
+  text-align: center;
+  padding-bottom: 1rem;
+  background-color: var(--color3);  
+}
+
+.product-details h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+@keyframes slide-up {
+  0% { transform: translateY(2rem); }
+  100% { transform: translateY(0rem); }
+}
+
 @media screen and (max-width: 600px) {
   #store-products  {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr ));
-    row-gap: 2rem;
-    column-gap: 2rem;
-    padding: 2rem 0;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr ));
   } 
 }
