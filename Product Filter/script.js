@@ -21,6 +21,25 @@ for (let i = 0; i < btns.length; i++) {
 			}
 		})
 	});
-
-
 }
+
+// Filtrar Busqueda 
+const search = document.getElementById('search');
+const productName = document.querySelectorAll('.product-details h2');
+const noResult = document.querySelector('.no-result');
+
+
+const filterProducts = (e) => {
+	const text = e.target.value.toLowerCase();
+
+	productName.forEach( product => {
+		const item = product.textContent;
+
+		if (item.toLowerCase().indexOf) {
+
+		}
+	})
+}
+
+search.addEventListener("keyup", filterProducts);
+
