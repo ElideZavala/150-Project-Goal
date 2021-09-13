@@ -48,3 +48,13 @@ const filterProducts = (e) => {
 
 search.addEventListener("keyup", filterProducts);
 
+// Tema Oscuro
+const toggleDarkMode = document.querySelector('.toggle-darkmode');
+const toggleText = document.querySelector('.toggle-text');
+
+let darkMode = localStorage.getItem('darkMode');
+
+// Modo oscuro
+const enableDarkMode = () => {
+	
+}

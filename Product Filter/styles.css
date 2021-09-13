@@ -9,6 +9,14 @@
   --color5: #A28289;
 }
 
+.darkMode {
+  --color-light: #eee;
+  --color-dark: #222831;
+  --color-orange: #ffa886;
+  --background: var(--color-dark);
+  --foreground: var(--color-light);
+}
+
 * {
   margin: 0;
   padding: 0;
