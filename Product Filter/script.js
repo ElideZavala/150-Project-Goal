@@ -38,8 +38,10 @@ const filterProducts = (e) => {
 		//Convertimos el item en minuscula y verificamos si el metodo a verificar coincide con el nomre del producto
 		if (item.toLowerCase().indexOf(text) != -1) {
 			product.parentElement.parentElement.style.display = "block";
+			noResult.style.display = "none"
 		} else {
 			product.parentElement.parentElement.style.display = "none";
+			noResult.style.display = "block"
 		}
 	})
 }
