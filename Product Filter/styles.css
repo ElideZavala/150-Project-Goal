@@ -73,7 +73,7 @@ form input {
   margin-bottom: 1.2rem;
 }
 
-.fas {
+.fa-heart {
   position: absolute;
   padding: .8rem;
   font-size: 1.5rem;
@@ -88,7 +88,7 @@ form input:focus {
   border-right: 2px solid var(--color5);
 }
 
-.fas:hover {
+.fa-heart:hover {
   color: red;
 }
 
@@ -126,6 +126,25 @@ form input:focus {
   max-width: 250px;
   animation: slide-up 0.5s ease;
   transform: all 0.3s;
+}
+
+.toggle-darkmode {
+  position: absolute;
+  top: 2rem;
+  right: 2.5rem;
+  font-size: 2rem;
+  border: 1px solid #000;
+  border-radius: 3px;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.toggle-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-right: 3px;
 }
 
 .store-product:hover {
