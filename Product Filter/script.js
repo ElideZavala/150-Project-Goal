@@ -56,5 +56,30 @@ let darkMode = localStorage.getItem('darkMode');
 
 // Modo oscuro
 const enableDarkMode = () => {
-	
+	document.body.classList.add('darkmode');
+	toggleText.textContent = 'Tema Normal';
+	localStorage.setItem("darkMode", "enabled");
 }
+
+// Eliminar el Dark Mode
+const disableDarkMode = () => {
+	document.body.classList.remove('darkmode');
+	toggleText.textContent = 'Tema Oscuro';
+	localStorage.setItem("darkMode", null);
+}
+
+// Guardar el DarkMode History 
+if (darkMode === "enabled") {
+	enableDarkMode();
+}
+
+// Add Event Listener
+toggleDarkMode.addEventListener('click', () => {
+	let darkMode = localStorage.getItem('darkMode');
+
+	if (darkMode !== "enabled") {
+		enableDarkMode();
+	} else {
+		disableDarkMode();
+	}
+})
