@@ -228,9 +228,64 @@ form input:focus {
   100% { transform: translateY(0); }
 }
 
+@media screen and (max-width: 800px) {
+  #store-products  {
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr ));
+    padding: 1rem;
+  } 
+}
+
+@media screen and (max-width: 650px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+}
+
 @media screen and (max-width: 600px) {
   #store-products  {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr ));
     padding: 1rem;
   } 
+
+  header h1 {
+    font-size: 2.3rem;
+  }
+
+  .toggle-text {
+    font-size: .8rem;
+  }
+
+  .toggle-darkmode {
+    top: 1rem;
+    right: 2.5rem;
+    font-size: 1rem;
+  }
+
+  form input {
+    width: 20rem;
+    padding: .4rem;
+    margin-bottom: 1rem;
+  }
+  
+  .fa-heart {
+    position: absolute;
+    padding: 7px;
+    font-size: 1rem;;
+  }
+
+  .btn {
+    font-size: .8rem;
+    margin: .5rem;
+    padding: 4px;;
+    font-size: .9rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+
+  .toggle-darkmode {
+    top: 0rem;
+    right: 0rem;
+    font-size: 1rem;
+  }
 }
