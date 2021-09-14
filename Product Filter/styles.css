@@ -132,13 +132,14 @@ form input:focus {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr ));
   grid-gap: 2rem;
-  padding: 4rem 0;
+  padding: 4rem 0rem;
 }
 
 .store-product {
   border: 1px solid var(--color2);
   border-radius: 5px;
-  max-width: 250px;
+  max-width: 300px;
+  max-height: 400px;
   animation: slide-up 0.5s ease;
   transform: all 0.3s;
   color: var(--color6);
