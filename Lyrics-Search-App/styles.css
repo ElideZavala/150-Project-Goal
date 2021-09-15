@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital@1&family=Rubik&display=swap');
 
 :root {
   --color1: #010B5D; 
@@ -41,10 +41,10 @@ body::after {
   transform: translateX(-50%);
 }
 
-p {
+/* p {
   font-size: 1.6rem;
   line-height: 1.5;
-}
+} */
 
 img {
   width: 100%;
@@ -102,4 +102,19 @@ form button {
 
 form button:hover {
   border: 2px solid var(--color4);
+}
+
+section .container {
+  display: block;
+  margin-right: 0 auto;
+  font-family: 'Rubik', sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+  color: #fff;
+  padding: 3rem 0;
+}
+
+.song {
+  width: 70;
 }
