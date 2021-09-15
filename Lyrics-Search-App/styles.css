@@ -1,14 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital@1&display=swap');
 
 :root {
-  --white: #fff;
-  --black: #1c2b2d;
-  --blue: #31326f;
-  --light-blue: #005490;
-  --color-primary: #9d0191;
-  --color-sec: #db6400;
-  --grey: #eee;
-  --dark-grey: #222831;
+  --color1: #010B5D; 
+  --color2: #FD7282; 
+  --color3: #5C1576; 
+  --color4: #F4B0B0; 
+  --color5: #FC47BB; 
 }
 
 * {
@@ -22,7 +20,25 @@ html {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Pacifico', cursive;
+  background: url(./images/01.jpg) no-repeat ;
+  background-size: cover;
+  background-attachment: fixed; 
+  height: 100vh;
+  position: relative;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 900px;
+  background: rgba(0, 0, 0, .6);
+  background-attachment: fixed;
+  z-index: -1;
+  transform: translateX(-50%);
 }
 
 p {
@@ -38,4 +54,38 @@ img {
   max-width: 900px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+header .container {
+  padding: 4rem 0;
+  text-align: center;
+  background-color: var(--color2);
+  border-radius: 0 8rem 8rem 5rem;
+  box-shadow: 0 5px 10px rgba(236, 31, 12, 0.5), 0 15px 40px rgba(236, 16, 16, 0.2);
+  transition: 0.5s cubit-bezier(0.4, 0.2, 0.2, 1);
+  transform: rotateY(0deg);
+	transform-style: preserve-3d;
+}
+
+header h1 {
+  font-size: 3rem;
+  color: var(--color1);
+  /* padding-top: 1rem; */
+}
+
+form input,
+form button {
+  outline: none;
+  border: none;
+  padding: 1rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-family: 'Old Standard TT', serif;
+  border-radius: 3px;
+}
+
+form input {
+  width: 50%;
+  /* border-radius: 1rem 0 1rem 0 */
+  margin-right: 3px;
 }
