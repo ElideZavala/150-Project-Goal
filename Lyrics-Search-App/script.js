@@ -1,0 +1,23 @@
+// Variables
+const form = document.getElementById('form');
+const search = document.getElementById('search');
+const result = document.getElementById('result');
+
+const apiURL = "http://api.lyrics.ovh";
+
+// Obtener el valor delinput 
+form.addEventListener('submit', e => {
+	e.preventDefault();
+	searchValue = search.value.trim();
+
+	if(!searchValue) {
+ 		alert("Nada que buscar")  // <== Crear Una funcion de mensajes 
+ 	} else {
+		beginSearch(searchValue)
+	}
+})
+ 
+// Creamos la function de Busqueda 
+async function beginSearch(searchValue); {
+	
+}
