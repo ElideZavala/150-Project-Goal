@@ -18,6 +18,18 @@ form.addEventListener('submit', e => {
 })
  
 // Creamos la function de Busqueda 
-async function beginSearch(searchValue); {
-	
+async function beginSearch(searchValue) {
+	const searchResult = await fetch(`${apiURL}/suggest/${searchValue}`);
+	const data = await searchResult.json;
+	console.log(data);
+	// displayData(data);
 }
+
+// Mostrar Resultado de la Busqueda. 
+// function displayData(data) {
+// 	result.innerHTML = `
+// 		<ul class="songs">
+		
+// 		</ul>
+// 	`
+// }
