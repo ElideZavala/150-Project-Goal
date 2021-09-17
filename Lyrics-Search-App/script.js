@@ -2,6 +2,7 @@
 const form = document.getElementById('form');
 const search = document.getElementById('search');
 const result = document.getElementById('result');
+const contentEl = document.querySelector('header');
 
 const apiURL = "https://api.lyrics.ovh";
 
@@ -11,7 +12,8 @@ form.addEventListener('submit', e => {
 	searchValue = search.value.trim();
 
 	if(!searchValue) {
- 		alert("Nada que buscar")  // <== Crear Una funcion de mensajes 
+ 		// alert("Nada que buscar")  // <== Crear Una funcion de mensajes 
+		mensaje("Nada que buscar")
  	} else {
 		beginSearch(searchValue)
 	}
@@ -21,7 +23,7 @@ form.addEventListener('submit', e => {
 async function beginSearch(searchValue) {
 	const searchResult = await fetch(`${apiURL}/suggest/${searchValue}`);
 	const data = await searchResult.json();
-	// console.log(data);
+	console.log(data);
 	displayData(data);
 }
 
@@ -29,16 +31,15 @@ async function beginSearch(searchValue) {
 function displayData(data) {
 	result.innerHTML = `
 		<ul class="songs">
-			${data
-				.data.map(song => `
-							<li>
-								<div>
-									<strong> ${song.artist.name}</strong> - ${song.title}	
-								</div>
+			${data.data
+				.map(song => `<li>
+							<div>
+								<strong> ${song.artist.name}</strong> - ${song.title}	
+							</div>
 								<span data-artist="${song.artist.name}"
 								data-songtitle="${song.title}">Obtener Letra</span>
-							</li>	
-				`)
+							</li>`
+						)
 				.join('')}
 		</ul>
 	`
@@ -59,11 +60,27 @@ result.addEventListener('click', e => {
 
 async function getLyrics(artist, songTitle) {
 	const response = await fetch(`${apiURL}/v1/${artist}/${songTitle}`);
-
+ 
 	const data = await response.json();
 
-	const lyrics = data.lyrics.replace(/(\r\n|\r|\n)/g, '<br>');
-
-	result.innerHTML = `<h2><strong>${artist}</strong> - ${songTitle} </h2>
-	<p>${lyrics}</p>`
+	try {
+		console.log(data)
+		const lyrics = data.lyrics.replace(/(\r\n|\r|\n)/g, '<br>');
+		result.innerHTML = `<h2><strong>${artist}</strong> - ${songTitle} </h2>
+		<p>${lyrics}</p>`
+	} catch (error) {
+		console.log(error);
+		mensaje('Letra no encontrada');
+	}
 }                
+
+function mensaje(msg) {
+	const parrafo = document.createElement('p')
+	parrafo.innerText = msg;
+	parrafo.classList = 'mesag'
+	contentEl.appendChild(parrafo);
+
+	setTimeout(() => {
+		parrafo.remove();
+	}, 3000);
+}
