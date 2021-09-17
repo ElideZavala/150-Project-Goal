@@ -115,6 +115,34 @@ section .container {
   padding: 3rem 0;
 }
 
-.song {
-  width: 70;
+.songs {
+  width: 70%;
 }
+
+.songs {
+  width: 50%;
+  list-style: none;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.songs li {
+  font-size: 2rem;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  border-bottom: 1px solid var(--color4);
+}
+
+.songs li span {
+  font-size: 1.4rem;
+  background-color: var(--color5);
+  padding: 5px;
+  margin: 5px;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
