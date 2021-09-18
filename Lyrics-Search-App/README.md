@@ -2,7 +2,7 @@
 `JavaScript && CSS`
 
 # Vista la Página
-![vista.jpg]
+![image](vista.jpg)
 
 [Ir a la Página]()
 
