@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Karla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Gluten&family=Karla&display=swap');
 
 :root {
   --color1: #F26627;
@@ -60,12 +60,13 @@ img {
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
+  z-index: 100;
 }
 
 .line {
   width: inherit;
   height: 5px;
-  background-color: var(--color2);
+  background-color: var(--color3);
   border-radius: 25px;
 }
 
@@ -84,7 +85,7 @@ img {
 .banner-btn {
   width: 350px;
   height: 100px;
-  background: linear-gradient(var(--color2), var(--color1));
+  background: linear-gradient(var(--color4), var(--color5));
   border: none;
   outline: none;
   font-family: 'Courgette', cursive;
@@ -107,7 +108,7 @@ img {
   content: '';
   width: 100%;
   height: 15px;
-  background-color: var(--color1);
+  background-color: var(--color5);
   position: absolute;
   bottom: 0;
   right: 0;
@@ -119,10 +120,66 @@ img {
   content: '';
   width: 15px;
   height: 100%;
-  background-color: var(--color2);
+  background-color: var(--color4);
   position: absolute;
   top: 0;
   right: 0;
   transform: rotateY(-90deg);
   transform-origin: right;
+}
+
+.top-nav {
+  height: 15vh;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(images/nav.jpg) no-repeat 50% 0;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  z-index: 50;
+}
+
+.nav-list {
+  list-style: none;
+  width: 80%;
+  margin: auto;
+  height: inherit;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.nav-list li {
+  perspective: 500px;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-family: 'Gluten', cursive;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: var(--color3);
+  background-color: var(--color2);
+  letter-spacing: 1px;
+  padding: 5px 10px;
+  display: block;
+  position: relative;
+  transform-style: preserve-3d;
+  transform-origin: top;
+  transition: transform .3s;
+}
+
+.nav-link:hover {
+  transform: rotateX(90deg);
+}
+
+.nav-link::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  bottom: -100%;
+  background-color: var(--color2);
+  padding: inherit;
+  color: var(--color5);
+  transform: rotateX(-90deg);
+  transform-origin: top;
 }
