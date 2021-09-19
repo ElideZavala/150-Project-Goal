@@ -1,14 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Karla&display=swap');
 
 :root {
-  --white: #fff;
-  --black: #1c2b2d;
-  --blue: #31326f;
-  --light-blue: #005490;
-  --color-primary: #9d0191;
-  --color-sec: #db6400;
-  --grey: #eee;
-  --dark-grey: #222831;
+  --color1: #F26627;
+  --color2: #F9A26C;
+  --color3: #EFEEEE;
+  --color4: #9BD7D1;
+  --color5: #325D79;
 }
 
 * {
@@ -68,7 +65,7 @@ img {
 .line {
   width: inherit;
   height: 5px;
-  background-color: #16c3cf;
+  background-color: var(--color2);
   border-radius: 25px;
 }
 
@@ -81,4 +78,13 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.banner-btn {
+  width: 350px;
+  height: 100px;
+  background: linear-gradient(var(--color2), var(--color1));
+  border: none;
+  border: none;
+  
 }
