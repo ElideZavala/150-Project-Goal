@@ -204,6 +204,10 @@ img {
   justify-content: space-between;
 }
 
+.icon-item {
+  perspective:  1000px;
+}
+
 .icon-link {
   width: 200px;
   height: 200px;
@@ -214,6 +218,30 @@ img {
   align-items: center;
   text-decoration: none;
   border-radius: 50%;
+  transform-style: preserve-3d;
+  transition: transform .5s;
+}
+
+.icon-link:hover {
+  transform: rotateY(35deg);
+}
+
+.icon-link::before {
+  content: '';
+  height: 20px;
+  width: 5px;
+  background-color: #FFF;
+  position: absolute;
+  top: 0;
+}
+
+.icon-link::after {
+  content: '';
+  height: 20px;
+  width: 5px;
+  background-color: #FFF;
+  position: absolute;
+  bottom: 0;
 }
 
 .icon-link i {
@@ -226,4 +254,10 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 3px solid #fff;
+  text-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+}
+
+.icon-link:hover i {
+  transform: rotateY(-75deg);
 }
