@@ -220,10 +220,11 @@ img {
   border-radius: 50%;
   transform-style: preserve-3d;
   transition: transform .5s;
+  box-shadow: 0px 0px 25px yellow;
 }
 
 .icon-link:hover {
-  transform: rotateY(35deg);
+  transform: rotateY(60deg);
 }
 
 .icon-link::before {
@@ -256,8 +257,45 @@ img {
   align-items: center;
   border: 3px solid #fff;
   text-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+  overflow: hidden;
+  position: relative;
+  transition: all .5s;
 }
 
 .icon-link:hover i {
   transform: rotateY(-75deg);
+  text-shadow: 10px 10px 20px rgba(0, 0, 0, .7);
+}
+
+.icon-link i::after {
+  content: '';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: -130%;
+  right: -130%;
+  border-radius: 100%;
+  z-index: -1;
+  transition: all .5s;
+}
+
+.icon-item:nth-child(1) .icon-link i::after {
+  background-color: #3b5999;
+}
+
+.icon-item:nth-child(2) .icon-link i::after {
+  background-color: #cd201f;
+}
+
+.icon-item:nth-child(3) .icon-link i::after {
+  background-color: #55acee;
+}
+
+.icon-item:nth-child(4) .icon-link i::after {
+  background-color: #dd4b39;
+}
+
+.icon-link:hover i::after {
+  top: 0;
+  right: 0;
 }
