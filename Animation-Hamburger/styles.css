@@ -44,6 +44,7 @@ img {
   position: fixed;
   top: 20px;
   left: 50px;
+  z-index: 100;
 }
 
 .logo img {
@@ -69,6 +70,7 @@ img {
   background-color: var(--color3);
   border-radius: 25px;
   transform-origin: right;
+  transition: transform .5s;
 }
 
 .line-2 {
@@ -148,8 +150,13 @@ img {
   background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(images/nav.jpg) no-repeat 50% 0;
   background-size: cover;
   position: fixed;
-  top: 0;
+  top: -15vh;
   z-index: 50;
+  transition: top .4s;
+}
+
+.change .top-nav {
+  top: 0;
 }
 
 .nav-list {
@@ -204,6 +211,11 @@ img {
   background-position: 20% 40%;
   background-size: cover;
   position: fixed;
+  bottom: -85vh;
+  transition: bottom .4s;
+}
+
+.change .bottom-nav {
   bottom: 0;
 }
 
