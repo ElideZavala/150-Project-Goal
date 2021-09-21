@@ -68,11 +68,25 @@ img {
   height: 5px;
   background-color: var(--color3);
   border-radius: 25px;
+  transform-origin: right;
 }
 
 .line-2 {
   height: 3px;
 }
+
+.line-1 {
+  transform: rotateZ(-45deg);
+}
+
+.line-2 {
+  transform: translate(5px, 20px);
+}
+
+.line-3 {
+  transform: rotateZ(45deg);
+}
+
 
 .btn-wrapper {
   position: absolute;
