@@ -75,15 +75,15 @@ img {
   height: 3px;
 }
 
-.line-1 {
+.change .line-1 {
   transform: rotateZ(-45deg);
 }
 
-.line-2 {
+.change .line-2 {
   transform: translate(5px, 20px);
 }
 
-.line-3 {
+.change .line-3 {
   transform: rotateZ(45deg);
 }
 
