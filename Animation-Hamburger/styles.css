@@ -109,7 +109,7 @@ img {
   font-size: 35px;
   text-transform: uppercase;
   letter-spacing: 4px;
-  color: rgb(238, 235, 44);
+  color: rgb(147, 238, 44);
   text-shadow: 0 10px 10px #000;
   cursor: pointer;
   transform: rotateX(50deg) rotateZ(30deg);
@@ -137,6 +137,7 @@ img {
 .banner-btn::after {
   content: '';
   width: 15px;
+  height: 100%;
   background-image: url(images/pinos.jpg);
   background-size: cover;
   position: absolute;
@@ -332,4 +333,61 @@ img {
   .icons {
     width: 80%;
   }
+}
+
+@media(max-width: 1200px) {
+  .top-nav {
+    background: #010101;
+  }
+
+  .nav-list {
+    /* justify-content: center; */
+  }
+
+  .nav-link {
+    font-size: 20px;
+  }
+
+  .icons {
+    width: 70%;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .icon-link {
+    width: 180px;
+    height: 180px;
+    margin: 20px;
+  }
+
+  .icon-link i {
+    width: 130px;
+    height: 130px;
+    font-size: 40px;
+  }
+}
+
+@media(max-width: 900px) {
+  .banner-btn {
+    width: 300px;
+    height: 80px;
+    font-size: 30px;
+  }
+
+  .top-nav {
+    height: 25vh;
+    top: -25vh;
+  }
+
+  .bottom-nav {
+    height: 75vh;
+    bottom: -75vh;
+  }
+
+  .nav-list { 
+    width: 70%;
+    flex-wrap: wrap;
+  }
+
 }
