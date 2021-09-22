@@ -341,7 +341,7 @@ img {
   }
 
   .nav-list {
-    /* justify-content: center; */
+    justify-content: center;
   }
 
   .nav-link {
@@ -466,5 +466,19 @@ img {
   .banner-btn {
     width: 260px;
     height: 60px;
+  }
+
+  .top-nav {
+    height: 35vh;
+    top: -35vh;
+  }
+
+  .bottom-nav {
+    height: 65vh;
+    bottom: -65vh;
+  }
+
+  .nav-list {
+    width: 50%;
   }
 }
