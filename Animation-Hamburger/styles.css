@@ -182,7 +182,7 @@ img {
   font-size: 20px;
   text-transform: uppercase;
   color: var(--color3);
-  background-color: var(--color1);
+  /* background-color: var(--color1); */
   letter-spacing: 1px;
   padding: 5px 10px;
   display: block;
@@ -388,6 +388,27 @@ img {
   .nav-list { 
     width: 70%;
     flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .nav-link {
+    margin: 3px 0;
+  }
+
+  .icons {
+    width: 95%;
+  }
+
+  .icon-link {
+    width: 140px;
+    height: 140px;
+  }
+
+  .icon-link i {
+    width: 90px;
+    height: 90px;
+    font-size: 30px;
   }
 
 }
