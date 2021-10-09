@@ -167,3 +167,42 @@ body {
   background-color: #111;
   transform: translateY(-14vw) rotateX(-90deg);
 }
+
+.control {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+
+.fas {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  animation: glow ease-in-out 1s alternate infinite;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px white, 0 0 20px rgb(197, 105, 82), 0 0 30px rgb(245, 255, 108), 0 0 40px rgb(144, 253, 93), 0 0 50px rgb(82, 142, 251), 0 0 60px rebeccapurple, 0 0 70px rgb(217, 82, 251);
+  }
+  to {
+    text-shadow: 0 0 20px white, 0 0 30px rgb(197, 105, 82), 0 0 40px rgb(245, 255, 108), 0 0 50px rgb(144, 253, 93), 0 0 60px rgb(82, 142, 251), 0 0 70px rebeccapurple, 0 0 80px rgb(217, 82, 251);
+  }
+}
+
+.left-arrow {
+  top: 50%;
+  left: -35%;
+}
+
+.right-arrow {
+  top: 50%;
+  right: -35%;
+  /* left: 135%; */
+}
+
+.play-pause {
+  top: 140%;
+  left: 120%;
+}
