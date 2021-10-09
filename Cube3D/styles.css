@@ -55,7 +55,7 @@ body {
   background-color: #ccc;
   transform-style: preserve-3d;
   position: relative;
-  transform: rotateY(0deg);
+  transform: rotateY(180deg);
 }
 
 .cube-2 {
@@ -95,6 +95,24 @@ body {
 }
 .back {
   transform: translateZ(-21vw) rotateY(180deg);
+}
+
+.cube-1 .back {
+  background: url(./images/tigre.jpg) no-repeat 50% 0;
+  background-size: cover;
+  border: none;
+}
+
+.cube-2 .back {
+  background: url(./images/tigre.jpg) no-repeat 50% -7vw;
+  background-size: cover;
+  border: none;
+}
+
+.cube-3 .back {
+  background: url(./images/tigre.jpg) no-repeat 50% -14vw;
+  background-size: cover;
+  border: none;
 }
 
 .left {
