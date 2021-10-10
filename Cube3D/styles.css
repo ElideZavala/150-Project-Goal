@@ -171,15 +171,28 @@ body {
 .control {
   position: absolute;
   transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  /* border: 1px solid #fff; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  padding: 25px;
   z-index: 100;
+  transition: background-color .3s;
 }
 
+.control:hover {
+  background-color: rgba(42, 38, 36, .8);
+}
 
 .fas {
   color: #fff;
   font-size: 30px;
   font-weight: 700;
   animation: glow ease-in-out 1s alternate infinite;
+  cursor: pointer;
 }
 
 @keyframes glow {
