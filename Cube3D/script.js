@@ -21,8 +21,23 @@ leftArrow.addEventListener('mouseover', () => {
 	cubesTurn();
 });
 
+leftArrow.addEventListener('mouseout', () => {
+	x -= 25;
+	cubesTurn();
+});
+
 rightArrow.addEventListener('click', () => {
 	x -= 90;
+	cubesTurn();
+});
+
+rightArrow.addEventListener('mouseover', () => {
+	x -= 25;
+	cubesTurn();
+});
+
+rightArrow.addEventListener('mouseout', () => {
+	x += 25;
 	cubesTurn();
 });
 

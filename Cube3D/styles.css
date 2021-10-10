@@ -207,6 +207,10 @@ body {
   background-color: rgba(42, 38, 36, .8);
 }
 
+.control i {
+  pointer-events: none;
+}
+
 .fas {
   color: #fff;
   font-size: 30px;
