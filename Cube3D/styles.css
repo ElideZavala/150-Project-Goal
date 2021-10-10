@@ -66,11 +66,19 @@ body {
   height: 33.3333333%;
   transform-style: preserve-3d;
   position: relative;
-  transform: rotateY(-90deg);
+}
+
+.cube-1 {
+  transition: transform .4s;
 }
 
 .cube-2 {
   z-index: 10;
+  transition: transform .4s .2s;
+}
+
+.cube-3 {
+  transition: transform .4s .4s;
 }
 
 .fase {
