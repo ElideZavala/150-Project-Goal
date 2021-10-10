@@ -49,6 +49,18 @@ body {
   perspective: 1300px;
 }
 
+.viewport::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  background-color: #000;
+  z-index: -1;
+  top: 140%;
+  /* left: -10%; */
+  filter: blur(50px);
+}
+
 .cube {
   width: 100%;
   height: 33.3333333%;
@@ -217,5 +229,5 @@ body {
 
 .play-pause {
   top: 140%;
-  left: 120%;
+  left: 50%;
 }
