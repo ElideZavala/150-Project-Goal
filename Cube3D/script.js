@@ -1,9 +1,11 @@
-const leftArrow = document.querySelector('.left-arrow');
+const leftArrow  = document.querySelector('.left-arrow');
 const rightArrow = document.querySelector('.right-arrow');
 const playsPause = document.querySelector('.play-pause');
 const cubes = document.querySelectorAll('.cube');
 
-let x = 0, bool = false, interval ;
+let x = 0;
+let bool = false;
+let interval;
 
 function cubesTurn() {
 	Array.from(cubes).forEach( cube => {
