@@ -30,7 +30,7 @@ function playPause() {
 			interval = setInterval(() => {
 				x -= 90;
 				cubesTurn();	
-			}, 3000)
+			}, 2500)
 			changePlayPause();
 			bool = true;
 		} else {
@@ -43,6 +43,9 @@ function playPause() {
 leftArrow.addEventListener('click', () => {
 	x += 90;
 	cubesTurn();
+	if(bool) {
+		playPause();
+	}
 });
 
 leftArrow.addEventListener('mouseover', () => {
@@ -58,6 +61,9 @@ leftArrow.addEventListener('mouseout', () => {
 rightArrow.addEventListener('click', () => {
 	x -= 90;
 	cubesTurn();
+	if(bool) {
+		playPause();
+	}
 });
 
 rightArrow.addEventListener('mouseover', () => {
