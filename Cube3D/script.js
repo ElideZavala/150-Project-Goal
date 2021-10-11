@@ -12,6 +12,12 @@ function cubesTurn() {
 	})
 } 
 	
+function changePlayPause() {
+	const i = document.querySelector('.play-pause i');
+	const clase = i.classList;
+	console.log(clase)
+}
+
 function playPause() {
 		if(!bool) {
 			interval = setInterval(() => {
@@ -55,6 +61,6 @@ rightArrow.addEventListener('mouseout', () => {
 	cubesTurn();
 });
 
-playPause.addEventListener('click', {
+playsPause.addEventListener('click', () => {
 	playsPause();
 })
