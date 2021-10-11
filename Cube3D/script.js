@@ -1,8 +1,9 @@
 const leftArrow = document.querySelector('.left-arrow');
 const rightArrow = document.querySelector('.right-arrow');
+const playsPause = document.querySelector('.play-pause');
 const cubes = document.querySelectorAll('.cube');
 
-let x = 0;
+let x = 0, bool = false, interval ;
 
 function cubesTurn() {
 	Array.from(cubes).forEach( cube => {
@@ -10,6 +11,19 @@ function cubesTurn() {
 		console.log(x)
 	})
 } 
+	
+function playPause() {
+		if(!bool) {
+			interval = setInterval(() => {
+				x -= 90;
+				cubesTurn();	
+			}, 1000)
+			bool = true;
+		} else {
+			clearInterval(interval)
+			bool = false;
+		}
+}
 
 leftArrow.addEventListener('click', () => {
 	x += 90;
@@ -41,3 +55,6 @@ rightArrow.addEventListener('mouseout', () => {
 	cubesTurn();
 });
 
+playPause.addEventListener('click', {
+	playsPause();
+})

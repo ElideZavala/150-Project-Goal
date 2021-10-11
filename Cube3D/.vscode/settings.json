@@ -18,6 +18,10 @@
 		"menu.selectionForeground": "#AB47BC",
 		"menubar.selectionForeground": "#AB47BC",
 		"editor.findMatchBorder": "#AB47BC",
-		"selection.background": "#AB47BC40"
-	}
+		"selection.background": "#AB47BC40",
+		"activityBar.background": "#302F08",
+		"titleBar.activeBackground": "#43420B",
+		"titleBar.activeForeground": "#FBFBEA"
+	},
+	"liveServer.settings.port": 5501
 }
