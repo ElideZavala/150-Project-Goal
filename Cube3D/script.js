@@ -8,14 +8,19 @@ let x = 0, bool = false, interval ;
 function cubesTurn() {
 	Array.from(cubes).forEach( cube => {
 		cube.style.transform = `rotateY(${x}deg)`
-		console.log(x)
 	})
 } 
 	
 function changePlayPause() {
 	const i = document.querySelector('.play-pause i');
-	const clase = i.classList;
-	console.log(clase)
+	const clase = i.classList[2];
+	if(clase === 'fa-caret-square-right') {
+		i.classList.remove('fa-caret-square-right');
+		i.classList.add('fa-pause-circle');
+	} else {
+		i.classList.remove('fa-pause-circle');
+		i.classList.add('fa-caret-square-right');
+	}
 }
 
 function playPause() {
@@ -23,10 +28,12 @@ function playPause() {
 			interval = setInterval(() => {
 				x -= 90;
 				cubesTurn();	
-			}, 1000)
+			}, 3000)
+			changePlayPause();
 			bool = true;
 		} else {
 			clearInterval(interval)
+			changePlayPause();
 			bool = false;
 		}
 }
@@ -62,5 +69,5 @@ rightArrow.addEventListener('mouseout', () => {
 });
 
 playsPause.addEventListener('click', () => {
-	playsPause();
+	playPause();
 })
