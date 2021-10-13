@@ -75,7 +75,7 @@ header p::before {
   width: 0px;
   overflow: hidden;
   border-right: 5px solid var(--color2);
-  white-space: wrap;
+  white-space: nowrap;
   animation: move 15s linear both;
 }
 
