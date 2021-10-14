@@ -174,5 +174,5 @@ header p::before {
 }
 
 .keys:hover .hints {
-  opacity: 1;
+  opacity: 1 ;
 }
