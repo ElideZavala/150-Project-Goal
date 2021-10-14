@@ -1,5 +1,5 @@
 const keys = document.querySelectorAll('.key');
-const note = document.querySelectorAll('.key-pressed');
+const note = document.querySelector('.key-pressed');
 
 window.addEventListener('keydown', playNote); 
 
@@ -11,5 +11,6 @@ function playNote(e)   {
 
 	const keyNode = key.dataset.note;
 	// console.log(keyNode);
-	
+	key.classList.add("playing");
+	note.innerHTML =
 }
