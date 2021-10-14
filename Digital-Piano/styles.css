@@ -7,7 +7,7 @@
   --color3: #ff7194;
   --color4: #9471ff;
   --color-white:#eee;
-  --gray: #696868;
+  --gray: #d1cfcf;
 }
 
 * {
@@ -113,4 +113,36 @@ header p::before {
     width: 10%;
     height: 100%;
     background-color: #fff;
+}
+
+.key.sharp {
+  position: absolute;
+  top: 0;
+  width: 6%;
+  height: 60%;
+  background-color: var(--color-black);
+  color: var(--gray);
+  z-index: 3;
+}
+
+.key[data-key="87"] {
+  left: 7%;
+}
+.key[data-key="69"] {
+  left: 17%;
+}
+.key[data-key="84"] {
+  left: 37%;
+}
+.key[data-key="89"] {
+  left: 47%;
+}
+.key[data-key="85"] {
+  left: 57%;
+}
+.key[data-key="79"] {
+  left: 77%;
+}
+.key[data-key="80"] {
+  left: 87%;
 }
