@@ -17,9 +17,7 @@
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
-  background: rgb(171,248,231);
-  background: linear-gradient(119deg, rgba(171,248,231,1) 15%, rgba(135,120,199,1) 96%);  
+  font-family: "Open Sans", sans-serif;  
 }
 
 p {
@@ -40,7 +38,8 @@ img {
 section.main { 
   width: 100%;
   height: 100vh;
-  /* background-color: var(--color-black); */
+  background: rgb(171,248,231);
+  background: linear-gradient(119deg, rgba(171,248,231,1) 15%, rgba(135,120,199,1) 96%);
   text-align: center;
 }
 
@@ -53,7 +52,6 @@ header h1 {
   font-weight: 700;
   font-size: 5rem;
   color: var(--color4);
-  padding-top: 2rem;
   text-shadow: 3px 0 3px var(--color3);
 }
 
@@ -86,10 +84,10 @@ header p::before {
 }
 
 .key-pressed {
+  position: relative;
   color: var(--color1);
-  text-shadow: 0 0 25px var(--color4) ;
+  text-shadow: 0 0 25px var(--color4);
   font-size: 12rem;
-  margin: 3rem 0;
 }
 
 .keys {
@@ -108,10 +106,22 @@ header p::before {
   z-index: 2;
 }
 
+.other {
+  position: absolute;
+  top: -10%;
+  left: -15%;
+  width: 130%;
+  height: 110%;
+  background-color: var(--color3);
+  border-radius: 10rem;
+  border: 2px solid var(--color4);
+  /* z-index: 0; */
+}
+
 .key:not(.sharp)  {
     float: left;
     width: 10%;
-    height: 100%;
+    height: 90%;
     background-color: #fff;
 }
 
@@ -145,4 +155,24 @@ header p::before {
 }
 .key[data-key="80"] {
   left: 87%;
+}
+
+
+.playing {
+  transform: scale(0.9);
+  border-color: var(--color2);
+}
+
+.hints {
+  display: block;
+  width: 100%;
+  opacity: 0;
+  position: absolute;
+  bottom: 7px;
+  transition: all .3s ease;
+  font-size: 2rem;
+}
+
+.keys:hover .hints {
+  opacity: 1;
 }
