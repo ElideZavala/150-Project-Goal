@@ -9,8 +9,20 @@ function playNote(e)   {
 
 	if(!key) return;
 
-	const keyNode = key.dataset.note;
+	const keyNote = key.dataset.note;
 	// console.log(keyNode);
 	key.classList.add("playing");
-	note.innerHTML =
+	note.innerHTML = keyNote;
+	audio.currentTime = 0;
+	audio.play();
+}
+
+//Eliminar la clase de reproduccion
+keys.forEach((key) => {
+	key.addEventListener("transitionend", removeTransition);
+})
+
+function removeTransition(e) {
+	if (e.propertyName !== "transform") return;
+	this.classList.remove("playing");
 }
