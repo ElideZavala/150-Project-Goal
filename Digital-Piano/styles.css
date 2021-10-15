@@ -212,6 +212,10 @@ header p::before {
   font-size: 2rem;
 }
 
+.light {
+  color: var(--light);
+}
+
 .keys:hover .hints {
   opacity: 1 ;
 }
