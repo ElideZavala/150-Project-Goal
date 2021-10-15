@@ -67,7 +67,7 @@ header p {
 }
 
 header p::before {
-  content: "Coloque el cursor sobre la techa para obtener mas información.";
+  content: "Coloque el cursor sobre la tecla para obtener mas información.";
   text-align: center;
   color: var(--color2);
   text-shadow: none;
