@@ -19,6 +19,11 @@
 
 body {
   font-family: "Open Sans", sans-serif;  
+  background: rgb(171,248,231);
+  background: linear-gradient(119deg, rgba(171,248,231,1) 15%, rgba(135,120,199,1) 96%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 p {
@@ -39,8 +44,6 @@ img {
 section.main { 
   width: 100%;
   height: 100vh;
-  background: rgb(171,248,231);
-  background: linear-gradient(119deg, rgba(171,248,231,1) 15%, rgba(135,120,199,1) 96%);
   text-align: center;
 }
 
@@ -59,7 +62,7 @@ header h1 {
 header p {
   font-size: 2.5rem;
   position: relative;
-  text-shadow: -1px -px 0 #fff, -1px -1px 0 #fff;
+  /* text-shadow: -1px 0 0 #fff, -1px -1px 0 #fff; */
   color: transparent;
 }
 
@@ -81,6 +84,7 @@ header p::before {
 @keyframes move {
   to {
     width: 1150px;
+    /* width: auto; */
   }
 }
 
@@ -210,4 +214,17 @@ header p::before {
 
 .keys:hover .hints {
   opacity: 1 ;
+}
+
+@media(max-width: 1200px) {
+  header p {
+    font-size: 2rem;
+  }
+
+  @keyframes move {
+    to {
+      width: 920px;
+      /* width: auto; */
+    }
+  }
 }
