@@ -280,3 +280,76 @@ header p::before {
     font-size: 1.5rem;
   }
 }
+
+@media(max-width: 800px) {
+  header h1 {
+    font-size: 3.5rem;
+  }
+
+  header p {
+    font-size: 1.2rem;
+  }
+
+  @keyframes move {
+    to {
+      width: 550px;
+    }
+  }
+
+  .key-pressed {
+    font-size: 6.2rem;
+  }
+
+  .container {
+    max-width: 450px;
+    padding: 0px;
+  }
+
+  .keys {
+    height: 18rem;
+  }
+
+  .key.sharp {
+    height: 45%;
+  }
+
+  .hints {
+    font-size: 1.2rem;
+  }
+}
+
+@media(max-width: 600px) {
+  header h1 {
+    font-size: 3rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  @keyframes move {
+    to {
+      width: 460px;
+    }
+  }
+
+  .key-pressed {
+    font-size: 5rem;
+  }
+
+  .container {
+    max-width: 350px;
+  }
+
+  .keys {
+    height: 15rem;
+  }
+
+  .key.sharp {
+    height: 45%;
+  }
+
+  .hints {
+    font-size: 1rem;
+  }
+}
