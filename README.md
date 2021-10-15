@@ -44,3 +44,7 @@
   * | 21 | [Convertidor de Temperatura](https://github.com/ElideZavala/150-Project-Goal/tree/main/Temperature-Converter) | [ir a la página](https://elastic-varahamihira-add21e.netlify.app/)
 
   * | 22 | [Calculadora -Incompleto(Falta darle estilo que se vea bonita)](https://github.com/ElideZavala/150-Project-Goal/tree/main/Calculator-Scientific) | [ir a la página](https://sleepy-hopper-556dc9.netlify.app/)
+
+  * | 23 | [Cubo 3D](https://github.com/ElideZavala/150-Project-Goal/tree/main/Cube3D) | [ir a la página](https://sad-franklin-323e23.netlify.app/)
+
+  * | 24 | [Digital-piano](https://github.com/ElideZavala/150-Project-Goal/tree/main/Digital-Piano) | [ir a la página](https://vigilant-mclean-1ad013.netlify.app/)

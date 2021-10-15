@@ -194,6 +194,7 @@ header p::before {
 
 
 .playing {
+  /* transform: scale(0.95); */
   transform: scale(0.95);
   transform-origin: top;
   box-shadow: 4px 45px 108px 2px var(--light);
