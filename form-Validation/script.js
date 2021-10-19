@@ -3,6 +3,7 @@ const username = document.getElementById("username");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
 const password2 = document.getElementById("password2");
+const formControl = input.parentElement;
 
 form.addEventListener("submit", (e) => {
 
@@ -12,15 +13,21 @@ form.addEventListener("submit", (e) => {
 function checkRequired(inputAll) {
 	inputAll.forEach( input => {
 		if (input.value.trim() === "") {
-			showError()
+			showError(input, `${getFieldName}Nombre del Usuario es requerido`);
 		} else {
-			showSuccess();
+			showSuccess(input);
 		}
 	});
 }
 
 // Mostrar Mensaje de error
 function showError(input, message) {
-	const formControl = input.parentElement;
 	formControl.className = "form-control error";
+	const small = document.querySelector('small'); 
+	small.innerText = message;
+}
+
+// Mostrar Mensaje de exito
+function showSuccess() {
+	formControl.className = "form-control success";
 }
