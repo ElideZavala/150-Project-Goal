@@ -76,5 +76,18 @@ form h2 {
 }
 
 .form-control input {
+  display: block;
   border: 2px solid var(--colorGray);
+  border-radius: 3px;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.4rem;
+}     
+
+.form-cotrol input:focus {
+  border:rgba( 0, 0, 0, .2);
+}
+
+.form-control.success input {
+  border-color: green;
 }
