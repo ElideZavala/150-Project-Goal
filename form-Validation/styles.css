@@ -13,10 +13,6 @@
   box-sizing: border-box;
 }
 
-html {
-  font-size: 10px;
-}
-
 body {
   font-family: "Open Sans", sans-serif;
 }
@@ -90,4 +86,30 @@ form h2 {
 
 .form-control.success input {
   border-color: green;
+}
+
+.form-control.error input {
+  border-color: red;
+}
+
+.form-control small {
+  color: red;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.form-control.error small {
+  visibility: visible;
+}
+
+form button {
+  width: 100%;
+  background-color: var(--color3);
+  border: none;
+  outline: none;
+  color: var(--color2);
+  font-weight: 700;
+  font-size: 1.5rem;
 }
