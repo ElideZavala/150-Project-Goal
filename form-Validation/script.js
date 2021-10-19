@@ -6,13 +6,15 @@ const password2 = document.getElementById("password2");
 
 form.addEventListener("submit", (e) => {
 	e.preventDefault();
+
+	checkRequired([username, email, password, password2]);
 });
 
 // Checar los campos requeridos
 function checkRequired(inputAll) {
 	inputAll.forEach( input => {
 		if (input.value.trim() === "") {
-			showError(input, `${getFieldName(input)}Nombre del Usuario es requerido`);
+			showError(input, `${getFieldName(input)} es requerido`);
 		} else {
 			showSuccess(input);
 		}
@@ -23,7 +25,7 @@ function checkRequired(inputAll) {
 function showError(input, message) {
 	const formControl = input.parentElement;
 	formControl.className = "form-control error";
-	const small = document.querySelector('small'); 
+	const small = formControl.querySelector('small'); 
 	small.innerText = message;
 }
 
@@ -34,6 +36,6 @@ function showSuccess(input) {
 }
 
 // GetFieldName 
-function GetFieldName(input) {
+function getFieldName(input) {
 	return input.id.charAt(0).toUpperCase() + input.id.slice(1);
 }
