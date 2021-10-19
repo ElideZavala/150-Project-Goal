@@ -29,6 +29,17 @@ function showError(input, message) {
 	small.innerText = message;
 }
 
+// Longitud
+function checkLenght(input, min, max) {
+	if(input.value.lenght < min ) {
+		showError(input, `${getFieldName(input)} debe ser mínimo ${min} caracteres`);
+	} else if (input.value.lenght > max ) {
+		showError(input, `${getFieldName(input)} debe ser menos que ${max} caracteres`);
+	} else {
+		showSuccess(input);
+	}
+}
+
 // Mostrar Mensaje de exito 
 function showSuccess(input) {
 	const formControl = input.parentElement;
