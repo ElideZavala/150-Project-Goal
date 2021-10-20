@@ -6,8 +6,8 @@ const password2 = document.getElementById("password2");
 
 form.addEventListener("submit", (e) => {
 	e.preventDefault();
-
 	checkRequired([username, email, password, password2]);
+	checkLength(username, 6, 16);
 });
 
 // Checar los campos requeridos
@@ -30,10 +30,10 @@ function showError(input, message) {
 }
 
 // Longitud
-function checkLenght(input, min, max) {
-	if(input.value.lenght < min ) {
-		showError(input, `${getFieldName(input)} debe ser mínimo ${min} caracteres`);
-	} else if (input.value.lenght > max ) {
+function checkLength(input, min, max) {
+	if(input.value.length < min ) {
+		showError(input, `${getFieldName(input)} debe tener mínimo ${min} caracteres`);
+	} else if (input.value.length > max ) {
 		showError(input, `${getFieldName(input)} debe ser menos que ${max} caracteres`);
 	} else {
 		showSuccess(input);

@@ -96,6 +96,7 @@ form h2 {
 
 .form-control small {
   color: red;
+  font-weight: 600;
   position: absolute;
   bottom: 0;
   left: 0;
