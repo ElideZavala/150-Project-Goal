@@ -124,3 +124,10 @@ form button {
 form button:active {
    transform: scale(.95);
 }
+
+.login {
+  color: #000;
+  font-size: 2rem;
+  font-family: 'Petit Formal Script', cursive;
+  text-align: center;
+}
