@@ -148,3 +148,19 @@ form button:active {
 .form-list {
   list-style-type: none;
 }
+
+.pb-danger {
+  background-color: red;
+}
+
+.pb-warning {
+  background-color: yellow; 
+}
+
+.pb-primary {
+  background-color: var(--color1);
+}
+
+.pb-success {
+  background-color: green;
+}
