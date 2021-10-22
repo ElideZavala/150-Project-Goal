@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/1935d064dd.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section class="main">
+      <div class="container box">
+        <form action="" id="form">
+          <h2>Crear una cuenta</h2>
+          
+          <div class="form-control">
+            <label for="">Contraseña</label>
+            <input type="password" id="password" placeholder="Ingresa una Contraseña">
+            <small>Error Mensaje</small>
+
+            <!-- Icono de Vista -->
+            <span class="show-pass">
+              <i class="fas fa-eye" id="eye"></i>
+            </span>
+
+            <!-- Barra Progresiva -->
+            <div class="progress">
+              <div class="progress-bar" id="password-strength"></div>
+            </div>
+
+            <!-- Lista de opciones -->
+            <ul class="form-list">
+              <li>
+                <span class="low-upper-case">
+                  <i class="fas fa-circle"></i>
+                  &nbsp;Minúscula & Mayuscula 
+                </span>
+              </li>
+              <li>
+                <span class="number">
+                  <i class="fas fa-circle"></i>
+                  &nbsp;Número (0-9)
+                </span>
+              </li>
+              <li>
+                <span class="special-char">
+                  <i class="fas fa-circle"></i>
+                  &nbsp;Caracteres Especiales (!@#$%^&*)
+                </span>
+              </li>
+              <li>
+                <span class="eight-char">
+                  <i class="fas fa-circle"></i>
+                  &nbsp; Por lo menos 8 Caracteres
+                </span>
+              </li>
+            </ul>
+
+          </div>
+
+          <button>Enter</button>
+        </form>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

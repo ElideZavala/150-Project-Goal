@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap');
+
+:root {
+  --color1:  #67adff;
+  --color2:  #67f9ff;
+  --color3:  #6d67ff;
+  --colorGray: #5c5656;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* A darle */
+.main {
+  height: 100vh;
+  background: rgb(109,103,255);
+  background: radial-gradient(circle, rgba(109,103,255) 13%, rgba(103,249,255) 82%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  background-color: var(--color1);
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba( 0, 0, 0, .3);
+  width: 35rem;
+}
+
+form {
+  padding: 2rem;
+}
+
+form h2 {
+  font-family: 'Petit Formal Script', cursive;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form-control {
+  margin-bottom: 1rem;
+  padding-bottom: 1.5rem;
+  position: relative;
+}
+
+.form-control label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--colorGray);
+}
+
+.form-control input {
+  display: block;
+  border: 2px solid var(--colorGray);
+  border-radius: 3px;
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.2rem;
+}     
+
+.form-cotrol input:focus {
+  border:rgba( 0, 0, 0, .2);
+}
+
+.form-control.success input {
+  border-color: green;
+}
+
+.form-control.error input {
+  border-color: red;
+}
+
+.form-control small {
+  color: red;
+  font-weight: 600;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.form-control.error small {
+  visibility: visible;
+}
+
+form button {
+  width: 100%;
+  background-color: var(--color3);
+  border: none;
+  outline: none;
+  color: var(--color2);
+  font-weight: 700;
+  font-size: 1.6rem;
+  padding: 1rem;
+  margin-top: 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:active {
+   transform: scale(.95);
+}
+
+.login {
+  color: #000;
+  font-size: 2rem;
+  font-family: 'Petit Formal Script', cursive;
+  text-align: center;
+}
