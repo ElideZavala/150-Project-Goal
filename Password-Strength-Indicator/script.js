@@ -7,5 +7,15 @@ let lowUpperCase = document.querySelector(".low-upper-case i"),
 	specialChar = document.querySelector(".special-Char i"),
 	eightChar = document.querySelector(".eight-char i"),
 	showPassword = document.querySelector(".show-pass"),
-	eyeIcon = document.querySelector("#eye"),
+	eyeIcon = document.querySelector("#eye");
 
+showPassword.addEventListener("click", toggle);
+eyeIcon.addEventListener("click", toggleEye);
+password.addEventListener("keyup", () => {
+	let pass = password.value;
+	checkStrength(pass);
+});
+
+function toggle() {
+	
+}
