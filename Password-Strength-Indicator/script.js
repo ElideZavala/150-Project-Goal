@@ -4,7 +4,7 @@ let state;
 
 let lowUpperCase = document.querySelector(".low-upper-case i"),
 	number = document.querySelector(".number i"),
-	specialChar = document.querySelector(".special-Char i"),
+	specialChar = document.querySelector(".special-char i"),
 	eightChar = document.querySelector(".eight-char i"),
 	showPassword = document.querySelector(".show-pass"),
 	eyeIcon = document.querySelector("#eye");
@@ -39,12 +39,23 @@ function checkStrength(password) {
 	// Checar minusculas y mayusculas
 	if (password.match(/([a-z].*[A-Z])|([A-Z].*[a-z])/)) {
 		strength += 1
-		// lowUpperCase.classList.remove("fa-circle");
-		// lowUpperCase.classList.add("fa-check");
 		addCheck(lowUpperCase);
 	} else {
-		lowUpperCase.classList.add("fa-circle");
-		lowUpperCase.classList.remove("fa-check");
+		removeCheck(lowUpperCase);
+	}
+	// Corprobar los números
+	if (password.match(/([0-9])/)) {
+		strength += 1
+		addCheck(number);
+	} else {
+		removeCheck(number);
+	}
+	// Corprobar los caracteres especiales
+	if (password.match(/([!,%,&,@,#,$,^,*,?,_,~])/)) {
+		strength += 1
+		addCheck(specialChar);
+	} else {
+		removeCheck(specialChar);
 	}
 }
 
@@ -52,4 +63,10 @@ function checkStrength(password) {
 function addCheck(charRequired) {
 	charRequired.classList.remove("fa-circle");
 	charRequired.classList.add("fa-check");
+}
+
+// Eliminar Icono de Verificación
+function removeCheck(charRequired) {
+	charRequired.classList.add("fa-circle");
+	charRequired.classList.remove("fa-check");
 }
