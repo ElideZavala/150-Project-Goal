@@ -11,10 +11,10 @@ let lowUpperCase = document.querySelector(".low-upper-case i"),
 
 showPassword.addEventListener("click", toggle);
 eyeIcon.addEventListener("click", toggleEye);
-// password.addEventListener("keyup", () => {
-// 	let pass = password.value;
-// 	checkStrength(pass);
-// });
+password.addEventListener("keyup", () => {
+	let pass = password.value;
+	checkStrength(pass);
+});
 
 // Toggle visibilidad de password
 function toggle() {
@@ -32,4 +32,24 @@ function toggleEye() {
 	eyeIcon.classList.toggle("fa-eye-slash");
 }
 
-// Checare
+// Comprobar la seguridad de la contraseña
+function checkStrength(password) {
+	let strength = 0;
+
+	// Checar minusculas y mayusculas
+	if (password.match(/([a-z].*[A-Z])|([A-Z].*[a-z])/)) {
+		strength += 1
+		// lowUpperCase.classList.remove("fa-circle");
+		// lowUpperCase.classList.add("fa-check");
+		addCheck(lowUpperCase);
+	} else {
+		lowUpperCase.classList.add("fa-circle");
+		lowUpperCase.classList.remove("fa-check");
+	}
+}
+
+// Agregar Icono de Verificación
+function addCheck(charRequired) {
+	charRequired.classList.remove("fa-circle");
+	charRequired.classList.add("fa-check");
+}
