@@ -65,9 +65,25 @@ function checkStrength(password) {
 		removeCheck(eightChar);
 	}
 
+	// passwordStrength.classList.remove("pb-danger", "pb-warning", "pb-primary", "pb-success");
+	// passwordStrength.classList.add("")
 	// Actualizar progreso de la barra
 	if (strength == 1) {
-		
+		passwordStrength.classList.remove("pb-danger", "pb-warning", "pb-primary", "pb-success");
+		passwordStrength.classList.add("pb-danger");
+		passwordStrength.style = "width: 25%";
+	} else if (strength == 2) {
+		passwordStrength.classList.remove("pb-danger", "pb-warning", "pb-primary", "pb-success");
+		passwordStrength.classList.add("pb-warning");
+		passwordStrength.style = "width: 50%";
+	} else if (strength == 3) {
+		passwordStrength.classList.remove("pb-danger", "pb-warning", "pb-primary", "pb-success");
+		passwordStrength.classList.add("pb-primary");
+		passwordStrength.style = "width: 75%";
+	} else if (strength == 4) {
+		passwordStrength.classList.remove("pb-danger", "pb-warning", "pb-primary", "pb-success");
+		passwordStrength.classList.add("pb-success");
+		passwordStrength.style = "width: 100%";
 	}
 }
 

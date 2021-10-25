@@ -163,11 +163,11 @@ form button:active {
 }
 
 .pb-primary {
-  background-color: var(--color1);
+  background-color: rgb(33, 33, 251);
 }
 
 .pb-success {
-  background-color: green;
+  background-color: rgb(21, 253, 21);
 }
 
 .fa-circle {
