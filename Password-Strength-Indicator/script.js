@@ -69,22 +69,30 @@ function checkStrength(password) {
 	// passwordStrength.classList.add("")
 	// Actualizar progreso de la barra
 	if (strength == 1) {
-		passwordStrength.classList.remove("pb-danger", "pb-warning", "pb-primary", "pb-success");
+		removePassStrength()
 		passwordStrength.classList.add("pb-danger");
 		passwordStrength.style = "width: 25%";
 	} else if (strength == 2) {
-		passwordStrength.classList.remove("pb-danger", "pb-warning", "pb-primary", "pb-success");
+		removePassStrength()
 		passwordStrength.classList.add("pb-warning");
 		passwordStrength.style = "width: 50%";
 	} else if (strength == 3) {
-		passwordStrength.classList.remove("pb-danger", "pb-warning", "pb-primary", "pb-success");
+		removePassStrength()
 		passwordStrength.classList.add("pb-primary");
 		passwordStrength.style = "width: 75%";
 	} else if (strength == 4) {
-		passwordStrength.classList.remove("pb-danger", "pb-warning", "pb-primary", "pb-success");
+		removePassStrength()
 		passwordStrength.classList.add("pb-success");
 		passwordStrength.style = "width: 100%";
+	} else {
+		removePassStrength()
+		passwordStrength.style = "width: 5%";
 	}
+}
+
+// Eliminar clases del password
+function removePassStrength() {
+	passwordStrength.classList.remove("pb-danger", "pb-warning", "pb-primary", "pb-success");
 }
 
 // Agregar Icono de Verificación

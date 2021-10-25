@@ -156,18 +156,22 @@ form button:active {
 
 .pb-danger {
   background-color: red;
+  box-shadow: 0 0 10px red;
 }
 
 .pb-warning {
   background-color: yellow; 
+  box-shadow: 0 0 10px yellow;
 }
 
 .pb-primary {
   background-color: rgb(33, 33, 251);
+  box-shadow: 0 0 10px rgb(33, 33, 251);
 }
 
 .pb-success {
   background-color: rgb(21, 253, 21);
+  box-shadow: 0 0 10px rgb(21, 253, 21);
 }
 
 .fa-circle {
