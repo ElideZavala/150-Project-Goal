@@ -57,6 +57,18 @@ function checkStrength(password) {
 	} else {
 		removeCheck(specialChar);
 	}
+	// Checar si la contraseña es > 8.
+	if (password.length > 7) {
+		strength += 1
+		addCheck(eightChar);
+	} else {
+		removeCheck(eightChar);
+	}
+
+	// Actualizar progreso de la barra
+	if (strength == 1) {
+		
+	}
 }
 
 // Agregar Icono de Verificación
