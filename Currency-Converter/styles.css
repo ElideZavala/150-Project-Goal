@@ -31,7 +31,11 @@ p {
 }
 
 img {
-  width: 100%;
+  width: 10%;
+}
+
+.switch-cur {
+  width: 3%;
 }
 
 .container {
