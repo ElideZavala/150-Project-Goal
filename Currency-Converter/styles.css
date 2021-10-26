@@ -1,14 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
 
 :root {
-  --white: #fff;
-  --black: #1c2b2d;
-  --blue: #31326f;
-  --light-blue: #005490;
-  --color-primary: #9d0191;
-  --color-sec: #db6400;
-  --grey: #eee;
-  --dark-grey: #222831;
+  --color1: #c21333;
+  --color2: #1d202b;
+  --color3: #1f212c;
+  --color4: #d8d8c8;
+  --color5: #ed9c20; 
+  --color6: #a46b78; 
 }
 
 * {
@@ -42,4 +40,28 @@ img {
   max-width: 900px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+/* Aqui empezamos */
+section.main {
+  width: 100%; height: 100vh;
+  background-color: var(--color2);
+  display: flex; 
+  flex-direction: column; justify-content: center; align-items: center;
+}
+
+h1 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  padding-bottom: 1rem;
+  color: var(--color6);
+  text-shadow: 0 0 5px var(--color6);
+}
+
+.box {
+  background-color: var(--color1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3), 0 0 10px var(--color1);
+  border-radius: 20px;
+  width: 35rem;
+  padding: 4rem;
 }
