@@ -78,17 +78,23 @@ h1 {
 .base-convert-1 {
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: -10%;
   width: 20%; height: 100%;
   background-color: var(--color1);
-  border-radius: 0 80% 0 0;
+  border-radius: 60%;
+  box-shadow: 0 0 10px var(--color1);
 }
 
 .base-convert-2 {
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: -10%;
   width: 20%; height: 100%;
   background-color: var(--color1);
-  border-radius: 80% 0 0 0;
+  border-radius: 60%;
+  box-shadow: 0 0 10px var(--color1);
+}
+
+.base-convert p {
+  font-weight: 700;
 }
