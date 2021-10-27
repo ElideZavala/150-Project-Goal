@@ -65,3 +65,30 @@ h1 {
   width: 35rem;
   padding: 4rem;
 }
+
+.base-convert {
+  background-color: var(--color3);
+  color: var(--color4);
+  padding: 1rem;
+  text-align: center;
+  border-radius: 5px;
+  position: relative;
+}
+
+.base-convert-1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 20%; height: 100%;
+  background-color: var(--color1);
+  border-radius: 0 80% 0 0;
+}
+
+.base-convert-2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 20%; height: 100%;
+  background-color: var(--color1);
+  border-radius: 80% 0 0 0;
+}
