@@ -53,8 +53,18 @@ h1 {
   font-family: 'Teko', sans-serif;
   font-weight: 400;
   padding-bottom: 1rem;
-  color: var(--color6);
+  color: var(--color1);
   text-shadow: 0 0 5px var(--color6);
+  animation: glow ease-in-out 1s alternate infinite;
+}
+
+@keyframes glow {
+  from {
+		text-shadow: 0 0 5px white,  0 0 10px white,  0 0 15px #e60073, 0 0 20px #e60073, 0 0 25px;
+	}
+	to {
+		text-shadow: 0 0 10px white,  0 0 15px white,  0 0 20px #e60073, 0 0 25px #e60073, 0 0 30px;
+	}
 }
 
 .box {
@@ -109,6 +119,8 @@ h1 {
 .text {
   font-family: 'Archivo Black', sans-serif;
   display: flex;
+  text-shadow: 0 0 10px var(--color5);
+  padding-left: 3rem;
   justify-content: space-between;
   border-bottom: 2px solid var(--color6);
   margin: 1rem 0;
@@ -117,7 +129,7 @@ h1 {
 }
 
 .text:nth-child(2) {
-  padding-right: 7.7rem;;
+  padding-right: 4rem;;
 }
 
 .main-convert {
@@ -149,6 +161,7 @@ h1 {
   justify-content: center;
 }
 
+
 .currency img {
   width: 40px;
   /* margin: 0 5px; */
@@ -174,6 +187,10 @@ h1 {
   padding: 5px;
   border-radius: 3px;
   background-color: var(--color3);
+  color: var(--color4);
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
   outline: none;
   border: none;
 }
