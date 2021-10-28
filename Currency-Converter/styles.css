@@ -26,7 +26,7 @@ p {
 }
 
 img {
-  width: 10%;
+  width: 20%;
 }
 
 .switch-cur {
@@ -114,4 +114,63 @@ h1 {
   margin: 1rem 0;
   font-weight: 600;
   color: var(--color4);
+}
+
+.text:nth-child(2) {
+  padding-right: 7.7rem;;
+}
+
+.main-convert {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cur-box {
+  width: 30%;
+}
+
+.switch-cur {
+  width: 30%;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.currency  {
+  box-shadow: 1px 1px 24px var(--color5);
+  border-radius: 10px;
+  padding: 5px;
+  margin: 5px;
+  width: 9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.currency img {
+  width: 40px;
+  /* margin: 0 5px; */
+  margin-right: 5px;
+}
+
+.currency select {
+   border: none;
+   outline: none;
+   cursor: pointer;
+   background-color: rgba(29, 32, 43, .8);
+   color: var(--color4);
+   font-weight: 700;
+   border-radius: 5px;
+   padding: 3px;
+   font-weight: 700;
+}
+
+.cur-box input {
+  width: 9.2rem;
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
 }

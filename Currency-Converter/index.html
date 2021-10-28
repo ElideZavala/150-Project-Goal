@@ -1,77 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script
-      src="https://kit.fontawesome.com/1935d064dd.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body> 
-    <section class="main">
-      <h1>Conversor de Divisas</h1>
-      <div class="container box">
-        <div class="converter">
-          <!-- Base para la conversión -->
-          <div class="base-convert">
-            <p>Tipo de cambio</p>
-            <span class="base">1 USD = 3GBP</span>
-            <div class="base-convert-1"></div>
-            <div class="base-convert-2"></div>
-          </div>
-        </div>
-        <!-- Base de texto -->
-        <div class="text">
-          <p>De</p>
-          <p>A</p>
-        </div>
-        <!-- Convertion Principal -->
-        <div class="main-convert">
-          <div class="cur-box">
-            <div class="currency from">
-              <img src="images/estados-unidos.png" alt="">
-              <select class="cur-1">
-                <option value="MXN">MXN</option>
-                <option value="USD" selected>USD</option>
-                <option value="EUR">EUR</option>
-                <option value="GBP">GBP</option>
-                <option value="CAD">CAD</option>
-                <option value="BRL">BRL</option>
-                <option value="PEN">PEN</option>
-              </select>
-            </div>
-            <input type="text" class="cur-1-input" placeholder="0">
 
-            <!-- Cambiar Boton -->
-            <div class="switch-cur">
-              <img src="./images/exchange.png" alt="">
-              <!-- <i class="fas fa-exchange-alt"></i> -->
-            </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script src="https://kit.fontawesome.com/1935d064dd.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
 
-            <!-- A -->
-
-            <div class="cur-box">
-              <div class="currency to">
-                <img src="images/mexico.png" alt="">
-                <select class="cur-2">
-                  <option value="MXN" selected> MXN</option>
-                  <option value="USD">USD</option>
-                  <option value="EUR">EUR</option>
-                  <option value="GBP">GBP</option>
-                  <option value="CAD">CAD</option>
-                  <option value="BRL">BRL</option>
-                  <option value="PEN">PEN</option>
-                </select>
-              </div>
-              <input type="text" class="cur-1-input" placeholder="0.00">
-          </div>
+<body>
+  <section class="main">
+    <h1>Conversor de Divisas</h1>
+    <div class="container box">
+      <div class="converter">
+        <!-- Base para la conversión -->
+        <div class="base-convert">
+          <p>Tipo de cambio</p>
+          <span class="base">1 USD = 21MXN</span>
+          <div class="base-convert-1"></div>
+          <div class="base-convert-2"></div>
         </div>
       </div>
-    </section>
+      <!-- Base de texto -->
+      <div class="text">
+        <p>De</p>
+        <p>A</p>
+      </div>
+      <!-- Convertion Principal -->
+      <div class="main-convert">
+        <!-- De -->
+        <div class="cur-box">
+          <div class="currency from">
+            <img src="images/estados-unidos.png" alt="">
+            <select class="cur-1">
+              <option value="MXN">MXN</option>
+              <option value="USD" selected>USD</option>
+              <option value="EUR">EUR</option>
+              <option value="GBP">GBP</option>
+              <option value="CAD">CAD</option>
+              <option value="BRL">BRL</option>
+              <option value="PEN">PEN</option>
+            </select>
+          </div>
+          <input type="text" class="cur-1-input" placeholder="0">
+        </div>
+        <!-- Cambiar Boton -->
+        <div class="switch-cur">
+          <img src="./images/exchange.png" alt="">
+          <!-- <i class="fas fa-exchange-alt"></i> -->
+      </div>
 
-    <script src="script.js"></script>
-  </body>
+        <!-- A -->
+
+        <div class="cur-box">
+          <div class="currency to">
+            <img src="images/mexico.png" alt="">
+            <select class="cur-2">
+              <option value="MXN" selected> MXN</option>
+              <option value="USD">USD</option>
+              <option value="EUR">EUR</option>
+              <option value="GBP">GBP</option>
+              <option value="CAD">CAD</option>
+              <option value="BRL">BRL</option>
+              <option value="PEN">PEN</option>
+            </select>
+          </div>
+          <input type="text" class="cur-1-input" placeholder="0.00">
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="script.js"></script>
+</body>
+
 </html>
