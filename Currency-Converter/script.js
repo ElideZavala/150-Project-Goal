@@ -14,10 +14,21 @@ const key = "1a95d122f8f26d493d0973bf"
 async function getExchangeRate() {
 	const valueCur1 = cur1.value;
 	const valueCur2 = cur2.value; 
-
 	const response = await fetch(`${apiURL}${key}/latest/${valueCur1}`);
 	const data = await response.json();
-	console.log(data);
+	const rate = data.conversion_rates[valueCur2];
+	// Mostramos el valor de la Moneda.
+	baseRate.textContent = `1 ${valueCur1} = ${rate.toFixed(2)} ${valueCur2}`
+	// Conversion de las monedas indicada. 
+	valueCur2.value = (valueCur1.value * rate).toFixed(2);
 }
 
 getExchangeRate();
+cur1.addEventListener("change", () => {
+	getExchangeRate();
+});
+cur2.addEventListener("change", () => {
+	getExchangeRate();
+});
+cur1Input.addEventListener("input", getExchangeRate);
+cur2Input.addEventListener("input", getExchangeRate);
