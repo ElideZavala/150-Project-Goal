@@ -58,6 +58,7 @@ async function getExchangeRate() {
 getExchangeRate();
 cur1.addEventListener("change", () => {
 	getExchangeRate();
+	getFlag();
 });
 cur2.addEventListener("change", () => {
 	getExchangeRate();
@@ -79,7 +80,8 @@ function getFlag() {
 	countries.forEach( country => {
 		// console.log(country.name)
 		if (cur1.value == country.name) {
-			console.log(country.name)
+			const imgSrc = document.querySelector(".from img");
+			imgSrc.setAttribute("src", country.flagURL)
 		}
 	})
 }
