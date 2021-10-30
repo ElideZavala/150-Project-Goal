@@ -34,7 +34,60 @@ const countries = [
 	{
 		name: "PEN",
 		flagURL: "./images/peru.png"
-	}
+	},
+	{
+		name: "PEN",
+		flagURL: "./images/peru.png"
+	},
+	{
+		name: "ARS",
+		flagURL: "./images/argentina.png"
+	},
+	{
+		name: "AUD",
+		flagURL: "./images/australia.png"
+	},
+	{
+		name: "CNY",
+		flagURL: "./images/porcelana.png"
+	},
+	{
+		name: "CLP",
+		flagURL: "./images/chile.png"
+	},
+	{
+		name: "COP",
+		flagURL: "./images/colombia.png"
+	},
+	{
+		name: "CRC",
+		flagURL: "./images/costa-rica.png"
+	},
+	{
+		name: "JPY",
+		flagURL: "./images/japon.png"
+	},
+	{
+		name: "NZD",
+		flagURL: "./images/nueva-zelanda.png"
+	},
+	{
+		name: "RUB",
+		flagURL: "./images/rusia.png"
+	},
+	{
+		name: "SEK",
+		flagURL: "./images/suecia.png"
+	},
+	{
+		name: "CHF",
+		flagURL: "./images/suiza.png"
+	},
+	{
+		name: "UYU",
+		flagURL: "./images/uruguay.png"
+	},
+
 ]
 
 // https://v6.exchangerate-api.com/v6/YOUR-API-KEY/latest/USD
