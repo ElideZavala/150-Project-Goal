@@ -62,6 +62,7 @@ cur1.addEventListener("change", () => {
 });
 cur2.addEventListener("change", () => {
 	getExchangeRate();
+	getFlag();
 });
 cur1Input.addEventListener("input", getExchangeRate);
 cur2Input.addEventListener("input", getExchangeRate);
@@ -81,6 +82,10 @@ function getFlag() {
 		// console.log(country.name)
 		if (cur1.value == country.name) {
 			const imgSrc = document.querySelector(".from img");
+			imgSrc.setAttribute("src", country.flagURL)
+		}
+		if (cur2.value == country.name) {
+			const imgSrc = document.querySelector(".to img");
 			imgSrc.setAttribute("src", country.flagURL)
 		}
 	})
