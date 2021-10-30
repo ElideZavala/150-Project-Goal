@@ -48,3 +48,9 @@
   * | 23 | [Cubo 3D](https://github.com/ElideZavala/150-Project-Goal/tree/main/Cube3D) | [ir a la página](https://sad-franklin-323e23.netlify.app/)
 
   * | 24 | [Digital-piano](https://github.com/ElideZavala/150-Project-Goal/tree/main/Digital-Piano) | [ir a la página](https://vigilant-mclean-1ad013.netlify.app/)
+
+  * | 25 | [form validation](https://github.com/ElideZavala/150-Project-Goal/tree/main/form-Validation) | [ir a la página](https://confident-jang-7c5335.netlify.app/)
+
+  * | 26 | [Password de alta seguridad](https://github.com/ElideZavala/150-Project-Goal/tree/main/Password-Strength-Indicator) | [ir a la página](https://friendly-swartz-d04394.netlify.app/)
+
+  * | 27 | [Convertidor de Divisas](https://github.com/ElideZavala/150-Project-Goal/tree/main/Currency-Converter) | [ir a la página](https://goofy-boyd-fd4881.netlify.app/)
