@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+:root {
+  --white: #eee;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Aqui Empezamos */
+section.main {
+  width: 100%; height: 100vh;
+  background: rgb(247,146,160);
+  background: radial-gradient(circle, rgba(247,146,160,1) 14%, rgba(40,107,50,1) 83%);
+}
+.fab-btn {
+  position: absolute;
+  right: 3rem; bottom: 1.5rem;
+  width: 5.5rem; height: 5.5rem;
+  background-color: tomato;
+  border-radius: 50%;
+  color: var(--white);
+  display: flex; justify-content: center; align-items: center;
+  cursor: pointer;
+  font-size: 2rem;
+  text-shadow: 0 0 5px var(--white); box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  transition: all .3s;
+}
+
+.fab-btn i {
+  transition: all .3s;
+}
+
+.fab-btns .fab-btn {
+  width: 4rem; height: 4rem;
+  right: 3.8rem; bottom: 2.3rem;
+  font-size: 1.5rem;
+}
+
+.fab-btns.show .fab-btn:nth-child(1) {
+  bottom: 8rem;
+  background-color: #3b5999;
+}
+.fab-btns.show .fab-btn:nth-child(2) {
+  bottom: 13rem;
+  background-color: #55acee;
+}
+.fab-btns.show .fab-btn:nth-child(3) {
+  bottom: 18rem;
+  background-color: #25d366;
+}
+.fab-btns.show .fab-btn:nth-child(4) {
+  bottom: 23rem;
+  background-color: #8a4e00;
+}
+
+.fab-btns.show + .fab-btn i {
+  transform: rotate(135deg);
+}
