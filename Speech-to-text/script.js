@@ -40,6 +40,7 @@ if(speechRecognition) {
 	});
 
 	// Ontener resultados del reconocimiento de voz. 
+	recognition.continuous = true;
 	let content = "";
 	recognition.addEventListener("result", e => {
 		console.log(e)
@@ -49,10 +50,7 @@ if(speechRecognition) {
 		searchInput.value = content;
 		searchInput.focus();
 	}); 
-
-
-} 
-else {
+} else {
 	// Ocultamos el boton de voz en dado caso de que no sea soportado
 	speechBtnDiv.style.visibility = "hidden";
  }
