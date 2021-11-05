@@ -46,7 +46,7 @@ if(speechRecognition) {
 	recognition.addEventListener("result", e => {
 		console.log(e)
 		const current = e.resultIndex;
-		const transcript = e.result[current][0].transcript;
+		const transcript = e.results[current][0].transcript;
 		content += transcript;
 		searchInput.value = content;
 		searchInput.focus();
