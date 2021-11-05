@@ -1,6 +1,6 @@
-const searchForm   = document.getElementById("search-form");
-const searchInput  = document.getElementById("search-input");
-const speechBtnDiv = document.getElementById("speech-btn");
+const searchForm   = document.querySelector("#search-form");
+const searchInput  = document.querySelector("#search-input");
+const speechBtnDiv = document.querySelector("speech-btn");
 const micBtn = document.querySelector(".btn .fas");
 const instruction  = document.querySelector(".instruction");
 
@@ -11,6 +11,7 @@ if(speechRecognition) {
 	console.log("Speech Recognition es soportado");
 
 	const recognition = new speechRecognition();
+
 	micBtn.addEventListener("click", micBtnClicked);
 	function micBtnClicked(e) {
 		e.preventDefault();
