@@ -9,3 +9,14 @@
 #### ``Codigo para verificar si el navergador es compatible con  speechRecognition``
 
     const speechRecognition = window.speechRecognition || window.webkitSpeechRecognition
+
+#### ``Como utilizar SpeechRecognition``
+
+    const recognition = new speechRecognition();  <== Utilizamos los metódos
+
+**Realizamos las peticiones correspondientes** ⏬ :arrow_down:
+
+![image](nota1.jpg) 
+
+
+![image](nota2.jpg) 
