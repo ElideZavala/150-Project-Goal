@@ -1,6 +1,6 @@
 const searchForm   = document.querySelector("#search-form");
 const searchInput  = document.querySelector("#search-input");
-const speechBtnDiv = document.querySelector("speech-btn");
+const speechBtnDiv = document.querySelector("#speech-btn");
 const micBtn = document.querySelector(".btn .fas");
 const instruction  = document.querySelector(".instruction");
 
@@ -43,12 +43,12 @@ if(speechRecognition) {
 	// Ontener resultados del reconocimiento de voz. 
 	recognition.continuous = true;
 	// let content = "";
-	recognition.addEventListener("result", e => {
+	recognition.addEventListener("result", (e) => {
 		console.log(e)
 		const current = e.resultIndex;
 		const transcript = e.results[current][0].transcript;
 
-		if (transcript.toLowerCase().trim() === "parar grabación") {
+		if (transcript.toLowerCase().trim() === "parar") {
 			recognition.stop();
 		} else if (!searchInput.value)  {
 			searchInput.value = transcript;

@@ -18,19 +18,29 @@
       <div class="col-md-6">
         <h1 class="text-center py-3 bg-success text-light rounded">Buscador de texto</h1>
         <form 
-          action="https://www.google.com.mx/search" 
+          action="https://www.google.com/search" 
           id="search-form" 
           method="get" 
           target="_blank"
         >
-        <span>Busqueda de comando de voz: detener la grabación, restablecer el formulario</span>
-          <input name="q" id="search-input" placeholder="Buscar en google" autocomplete="off" autofocus type="text"
-            class="form-control fs-3 mt-2">
-          <div id="speech-btn" class="speech-btn pt-1 d-flex justify-content-between align-items-center">
-            <p class="instruction">Presiona Ctrl + x o da Click en el icono de microfono para empezar</p>
-            <button class="btn btn-danger">
-              <i class="fas fa-microphone"></i>
-            </button>
+        <span>Busqueda de comando de voz: parar, restablecer formulario</span>
+        <input 
+          name="q" 
+          id="search-input" 
+          placeholder="Buscar en google" 
+          autocomplete="off" 
+          autofocus
+          type="text"
+          class="form-control fs-3 mt-2" 
+        />
+        <div 
+          id="speech-btn" 
+          class="speech-btn pt-1 d-flex justify-content-between align-items-center"
+        >
+          <p class="instruction fs-5">Presiona Ctrl + x o da Click en el icono de microfono para empezar</p>
+          <button class="btn btn-danger">
+            <i class="fas fa-microphone"></i>
+          </button>
           </div>
         </form>
       </div>
