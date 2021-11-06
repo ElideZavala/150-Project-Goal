@@ -42,14 +42,25 @@ if(speechRecognition) {
 
 	// Ontener resultados del reconocimiento de voz. 
 	recognition.continuous = true;
-	let content = "";
+	// let content = "";
 	recognition.addEventListener("result", e => {
 		console.log(e)
 		const current = e.resultIndex;
 		const transcript = e.results[current][0].transcript;
-		content += transcript;
-		searchInput.value = content;
-		searchInput.focus();
+
+		if (transcript.toLowerCase().trim() === "parar grabación") {
+			recognition.stop();
+		} else if (!searchInput.value)  {
+			searchInput.value = transcript;
+		} else {
+			if (transcript.toLowerCase().trim() === "buscar") {
+				searchForm.submit();	
+			} else if (transcript.toLowerCase().trim() === "restablecer formulario"){
+				searchInput.value = "";
+			} else {
+				searchInput.value = transcript;
+			}
+		}
 	}); 
 } else {
 	// Ocultamos el boton de voz en dado caso de que no sea soportado
