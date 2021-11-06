@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --grey: #eee;
+  --dark-grey: #222831;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-image: linear-gradient(145deg, #eee4b1 0, #e6e7b2 4.17%, #dfe9b5 8.33%, #d7ebb9 12.5%, #cfecbd 16.67%, #c7eec2 20.83%, #bfefc8 25%, #b7f0cf 29.17%, #b0f1d5 33.33%, #aaf2dc 37.5%, #a4f2e4 41.67%, #a0f2eb 45.83%, #9df2f2 50%, #9bf2f9 54.17%, #9cf1ff 58.33%, #9df0ff 62.5%, #a1efff 66.67%, #a6edff 70.83%, #adecff 75%, #b4eaff 79.17%, #bde8ff 83.33%, #c6e5ff 87.5%, #d0e3ff 91.67%, #d9e1ff 95.83%, #e3deff 100%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.box {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.box h1 {
+  font-weight: 700;
+}
+
+.form-control {
+  border: solid 2px yellow;
+  background-color: rgb(235, 228, 228);
+  font-weight: 700;
+}
+
+.instruction {
+  background-color: rgb(0, 195, 255);
+  padding: 3px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 700;
+}
