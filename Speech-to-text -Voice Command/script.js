@@ -26,7 +26,7 @@ if(speechRecognition) {
 	recognition.addEventListener("start", () => {
 		micBtn.classList.remove("fa-microphone");
 		micBtn.classList.add("fa-microphone-slash");
-		instruction.textContent = "Grabando...",
+		instruction.textContent = "Grabando... Presiona ctrl + m para parar.",
 		searchInput.focus();
 		console.log("Speech Recognition Enabled");
 	})
