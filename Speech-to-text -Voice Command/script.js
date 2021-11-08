@@ -62,6 +62,18 @@ if(speechRecognition) {
 			}
 		}
 	}); 
+
+	// Agregar evento de keyboard
+	document.addEventListener("keydown", e => {
+		if(e.ctrlKey && e.key === "x") { 
+			// e.shiftKey
+			recognition.start();	
+		} 
+		if(e.ctrlKey && e.key === "m") { 
+			recognition.stop();	
+		}
+	});
+
 } else {
 	// Ocultamos el boton de voz en dado caso de que no sea soportado
 	speechBtnDiv.style.visibility = "hidden";
