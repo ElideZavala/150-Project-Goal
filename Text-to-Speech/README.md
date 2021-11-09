@@ -6,9 +6,11 @@
 
 :computer: [Ir a la Página](https://jovial-nobel-86aba6.netlify.app/) :computer:
 
-#### ``Codigo para verificar si el navergador es compatible con  speechRecognition``
+#### ``Codigo para verificar si el navergador es compatible con  speechSynthesis``
 
-    const speechRecognition = window.speechRecognition || window.webkitSpeechRecognition
+    const speechSynthesis = window.speechSynthesis;
+
+    const speechSynthesis = window.speechRecognition || window.webkitSpeechRecognition
 
 #### ``Como utilizar SpeechRecognition``
 
