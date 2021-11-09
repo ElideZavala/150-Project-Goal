@@ -29,7 +29,7 @@ if(speechRecognition) {
 		instruction.textContent = "Grabando... Presiona ctrl + m para parar.",
 		searchInput.focus();
 		console.log("Speech Recognition Enabled");
-	})
+	});
 
 	// Parar el reconociminto de voz
 	recognition.addEventListener("end", () => {
