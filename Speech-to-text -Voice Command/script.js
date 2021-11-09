@@ -1,13 +1,14 @@
 const searchForm   = document.querySelector("#search-form");
 const searchInput  = document.querySelector("#search-input");
+
 const speechBtnDiv = document.querySelector("#speech-btn");
 const micBtn = document.querySelector(".btn .fas");
 const instruction  = document.querySelector(".instruction");
 
-const speechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition ;
+const speechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 
 // Verificar la compativilidad con otros navegadores. 
-if(speechRecognition) {
+if (speechRecognition) {
 	console.log("Speech Recognition es soportado");
 
 	const recognition = new speechRecognition();
@@ -26,10 +27,10 @@ if(speechRecognition) {
 	recognition.addEventListener("start", () => {
 		micBtn.classList.remove("fa-microphone");
 		micBtn.classList.add("fa-microphone-slash");
-		instruction.textContent = "Grabando... Presiona ctrl + m para parar.",
+		instruction.textContent = "Grabando... Presiona ctrl + m para parar",
 		searchInput.focus();
 		console.log("Speech Recognition Enabled");
-	});
+	})
 
 	// Parar el reconociminto de voz
 	recognition.addEventListener("end", () => {
