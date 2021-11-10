@@ -1,14 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
 
 :root {
-  --white: #fff;
-  --black: #1c2b2d;
-  --blue: #31326f;
-  --light-blue: #005490;
-  --color-primary: #9d0191;
-  --color-sec: #db6400;
-  --grey: #eee;
-  --dark-grey: #222831;
+  --blue1: #71c7ec;
+  --blue2: #1ebbd7;
+  --blue3: #189ad3;
+  --blue4: #107dac;
+  --blue5: #005073;
+
 }
 
 * {
@@ -23,6 +21,10 @@ html {
 
 body {
   font-family: "Open Sans", sans-serif;
+  background-image: linear-gradient( 135deg, #FFD3A5 10%, #FD6585 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 p {
@@ -31,11 +33,51 @@ p {
 }
 
 img {
-  width: 100%;
+  width: 50%;
 }
 
 .container {
   max-width: 900px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+/* start Here */
+section .main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+.intro-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.intro-text > * {
+  margin-bottom: 1rem;
+}
+
+.intro-text p:nth-child(1) {
+  font-weight: 600;
+}
+
+.intro-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--blue5);
+}
+
+.intro-text h1 span.typed-word {
+  font-weight: 400;
+  color: var(--blue3);
+  text-shadow: 0 0 5px var(--blue2);
 }
