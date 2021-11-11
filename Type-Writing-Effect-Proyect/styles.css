@@ -43,7 +43,7 @@ img {
 }
 
 /* start Here */
-section .main {
+section.main {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -137,4 +137,5 @@ section .main {
 
  .intro-img img { 
    width: 70%;
+   border-radius: 30px;
  }
