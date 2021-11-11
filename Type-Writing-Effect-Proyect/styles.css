@@ -54,6 +54,7 @@ section .main {
 .intro {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  /* border-bottom: 2px solid var(--blue3); */
 }
 
 .intro-text {
@@ -85,8 +86,12 @@ section .main {
 .cursor {
   display: inline-block;
   background-color: var(--blue3);
-  width: 3px;
+  width: 2px;
   animation: blink 1s infinite;
+ }
+
+ .cursor.typed {
+   animation: none;
  }
 
  @keyframes blink {
@@ -105,4 +110,31 @@ section .main {
     100% { 
       background-color: var(--blue2); 
     }
+ }
+
+ span {
+   margin: 1rem 0;
+ }
+
+ .btn { 
+   font-size: 1.4rem;
+   text-decoration: none;
+   border-radius: 50px;
+   padding: 8px 1rem;
+   background-color: var(--blue2);
+   color: #fff;
+   text-shadow: 0 0 8px #fff;
+   transition: all 2s;
+ }
+
+ .btn:hover {
+   background-color: var(--blue5);
+ }
+
+ .intro-img {
+   text-align: center;
+ }
+
+ .intro-img img { 
+   width: 70%;
  }
