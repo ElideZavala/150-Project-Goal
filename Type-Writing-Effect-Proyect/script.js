@@ -1,7 +1,7 @@
 const typedWord = document.querySelector(".typed-word");
 const cursor    = document.querySelector(".cursor");
 
-const wordArray = ["Amante de la tecnología", "Creador de Páginas Web", "FullStack Js"];
+const wordArray = ["Amante de la tecnología", "Creador de Páginas Web", "FullStack Jr"];
 
 let wordArrayIndex = 0;
 let letterIndex = 0;
@@ -29,7 +29,13 @@ function erase() {
 		typedWord.textContent = wordArray[wordArrayIndex].substring(0, letterIndex -1);
 		letterIndex--;
 		setTimeout(erase, erasingDelay);
-	}
+	} else {
+		wordArrayIndex++
+		while (wordArrayIndex >= wordArray.length) {
+			wordArrayIndex = 0;
+		}
+		setTimeout(type, typingDelay);
+	} 
 }
 
 
