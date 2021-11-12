@@ -10,7 +10,7 @@ const typingDelay = 200;
 const erasingDelay = 100;
 const newWordDelay = 2000;
 
-// Typing Function
+// Escribir Function
 function type() {
 	if(letterIndex < wordArray[wordArrayIndex].length) {
 		typedWord.textContent += wordArray[wordArrayIndex].charAt(letterIndex);
@@ -23,7 +23,19 @@ function type() {
 	}
 }
 
+// Borrar Function
+function erase() {
+	if (letterIndex > 0) {
+		typedWord.textContent = wordArray[wordArrayIndex].substring(0, letterIndex -1);
+		letterIndex--;
+		setTimeout(erase, erasingDelay);
+	}
+}
+
+
+
 type();
+
 
 
 
