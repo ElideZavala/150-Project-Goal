@@ -139,4 +139,5 @@ section.main {
  .intro-img img { 
    width: 70%;
    border-radius: 30px;
+   object-fit: cover;
  }

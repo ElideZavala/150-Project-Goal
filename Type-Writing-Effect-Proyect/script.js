@@ -13,13 +13,19 @@ const newWordDelay = 2000;
 // Escribir Function
 function type() {
 	if(letterIndex < wordArray[wordArrayIndex].length) {
+
+		if(!cursor.classList.contains("typing")) {
+			cursor.classList.add("typing");
+		}
+
 		typedWord.textContent += wordArray[wordArrayIndex].charAt(letterIndex);
 		letterIndex++;
 
 		// Ejecutar la function type en cierto tiempo.
 		setTimeout(type, typingDelay);
 	} else {
-		setTimeout(erase, typingDelay);
+		cursor.classList.remove("typing");
+		setTimeout(erase, newWordDelay);
 	}
 }
 
@@ -30,6 +36,7 @@ function erase() {
 		letterIndex--;
 		setTimeout(erase, erasingDelay);
 	} else {
+		cursor.classList.remove("typing");
 		wordArrayIndex++
 		while (wordArrayIndex >= wordArray.length) {
 			wordArrayIndex = 0;
@@ -38,7 +45,9 @@ function erase() {
 	} 
 }
 
-
+document.addEventListener("DOMContentLoaded", () => {
+	setTimeout(type, newWordDelay);
+})
 
 type();
 
