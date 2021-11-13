@@ -54,3 +54,7 @@
   * | 26 | [Password de alta seguridad](https://github.com/ElideZavala/150-Project-Goal/tree/main/Password-Strength-Indicator) | [ir a la página](https://friendly-swartz-d04394.netlify.app/)
 
   * | 27 | [Convertidor de Divisas](https://github.com/ElideZavala/150-Project-Goal/tree/main/Currency-Converter) | [ir a la página](https://goofy-boyd-fd4881.netlify.app/)
+
+  * | 28 | [Convertidor de voz a texto](https://github.com/ElideZavala/150-Project-Goal/tree/main/Speech-to-text) | [ir a la página](https://jovial-nobel-86aba6.netlify.app/)
+
+  * | 28 | []() | [ir a la página]()

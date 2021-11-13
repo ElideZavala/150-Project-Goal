@@ -1,9 +1,9 @@
-const searchForm   = document.querySelector("#search-form");
-const searchInput  = document.querySelector("#search-input");
+const searchForm = document.querySelector("#search-form");
+const searchInput = document.querySelector("#search-input");
 
 const speechBtnDiv = document.querySelector("#speech-btn");
 const micBtn = document.querySelector(".btn .fas");
-const instruction  = document.querySelector(".instruction");
+const instruction = document.querySelector(".instruction");
 
 const speechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 
@@ -14,14 +14,14 @@ if (speechRecognition) {
 	const recognition = new speechRecognition();
 
 	micBtn.addEventListener("click", micBtnClicked);
-	function micBtnClicked(e) {
-		e.preventDefault();
-		if (micBtn.classList.contains("fa-microphone")) {
-			recognition.start(); // Empezar 
-		} else {
-			recognition.stop(); 
-		}
-	}
+     function micBtnClicked(e) {
+     e.preventDefault();
+     if (micBtn.classList.contains("fa-microphone")) {
+       recognition.start();
+     } else {
+       recognition.stop();
+     }
+   }
 
 	// Iniciar el reconociminto de voz
 	recognition.addEventListener("start", () => {
@@ -47,7 +47,7 @@ if (speechRecognition) {
 	recognition.addEventListener("result", (e) => {
 		console.log(e)
 		const current = e.resultIndex;
-		const transcript = e.results[current][0].transcript;
+          const transcript = e.results[current][0].transcript;
 
 		if (transcript.toLowerCase().trim() === "parar") {
 			recognition.stop();
