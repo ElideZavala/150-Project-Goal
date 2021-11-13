@@ -57,4 +57,4 @@
 
   * | 28 | [Convertidor de voz a texto](https://github.com/ElideZavala/150-Project-Goal/tree/main/Speech-to-text) | [ir a la página](https://jovial-nobel-86aba6.netlify.app/)
 
-  * | 28 | []() | [ir a la página]()
+  * | 29 | [Buscador por medio de voz](https://github.com/ElideZavala/150-Project-Goal/tree/main/Speech-to-text%20-Voice%20Command) | [ir a la página]()
