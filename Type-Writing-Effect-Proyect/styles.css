@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
 
 :root {
   --blue1: #71c7ec;
@@ -68,9 +69,23 @@ section.main {
 }
 
 .intro-text p:nth-child(1) {
-  font-weight: 600;
+  display: block;
+  text-align: center;
+  font-weight: 800;
+  font-family: 'Roboto Mono', monospace;
 }
 
+.intro-text p:nth-child(1)::before {
+  content: "<";
+}
+
+.intro-text p:nth-child(1)::after {
+  content: "/>";
+}
+
+.intro-text p:last-of-type {
+  margin-bottom: 2rem;
+}
 .intro-text h1 {
   font-size: 3rem;
   font-weight: 700;
@@ -87,7 +102,7 @@ section.main {
   display: inline-block;
   background-color: var(--blue3);
   width: 2px;
-  margin-left: 2px;
+  margin-left: 5px;
   animation: blink 1s infinite;
  }
 
@@ -126,8 +141,18 @@ section.main {
    color: #fff;
    text-shadow: 0 0 8px #fff;
    transition: all 2s;
+   box-shadow: 0 0 10px var(--blue3);
+   /* width: 30%; */
  }
 
+ .btn:nth-child(1) {
+   width: 30%;
+ }
+
+ .btn:nth-child(2) {
+  width: 30%;
+  margin-left: 2rem;
+}
  .btn:hover {
    background-color: var(--blue5);
  }
@@ -137,7 +162,8 @@ section.main {
  }
 
  .intro-img img { 
-   width: 70%;
-   border-radius: 30px;
+   width: 60%;
+   border-radius: 15px;
+   box-shadow: 0 0 30px #FFD3A5;
    object-fit: cover;
  }
