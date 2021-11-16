@@ -37,7 +37,7 @@ img {
 }
 
 .btn {
-  font-size: 2rem;
+  font-size: 1.6rem;
   padding: 0.9vh 0.8vh;
   /* border-radius: 5px; */
   border: 2px solid #ff007e;
@@ -73,16 +73,62 @@ img {
   border-left: calc(2px + .90vh) solid transparent;
   box-shadow: -3px 0 3px #ff0100;
   border-color: #ff0100;
-  transform: translateX(110%);
+  /* transform: translateX(110%); */
 }
 
 alert.show {
-  animation: ;
+  animation: slide-in 1s ease forwards;
 }
 
 @keyframes slide-in {
   0% { transform: translateX(100%); }
   40% { transform: translateX(-10%); }
-  0% { transform: translateX(0%); }
+  80% { transform: translateX(0%); }
+  100% { transform: translateX(-1rem); }
+}
+
+alert.hide {
+  animation: slide-out 1s ease forwards;
+}
+
+@keyframes slide-out {
   0% { transform: translateX(-1rem); }
+  40% { transform: translateX(0%); }
+  80% { transform: translateX(-10%); }
+  100% { transform: translateX(110%); }
+}
+
+.fa-exclamation-circle {
+  position: absolute;
+  left: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ff0100;
+  font-size: 3rem;
+}
+
+.msg {
+  padding: 0 3rem;
+  font-size: 1.5rem;
+  color: #ff0028;
+}
+
+.close-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  padding: 2rem 1.8rem;
+  cursor: pointer;  
+}
+
+.close-btn:hover {
+  background: rgba(243, 161, 167, .5);
+}
+
+.close-btn .fas {
+  color: #ff0028;
+  font-size: 2rem;
 }
