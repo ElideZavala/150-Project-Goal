@@ -1,15 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
 
-:root {
-  --white: #fff;
-  --black: #1c2b2d;
-  --blue: #31326f;
-  --light-blue: #005490;
-  --color-primary: #9d0191;
-  --color-sec: #db6400;
-  --grey: #eee;
-  --dark-grey: #222831;
-}
 
 * {
   margin: 0;
@@ -19,8 +9,7 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  background-color: #000;
-  color: #eee;
+  background-image: linear-gradient( 135deg, #2AFADF 10%, #4C83FF 100%);
 }
 
 p {
@@ -44,5 +33,36 @@ img {
   display: flex; justify-content: center; align-items: center;
   flex-direction: column;
   overflow: hidden;
+}
 
+.btn {
+  font-size: 2rem;
+  padding: 0.9vh 0.8vh;
+  /* border-radius: 5px; */
+  border: 2px solid #ff007e;
+  box-shadow: 0 8px 10px #ff8100;
+  background-color: #ff0100;
+  color: rgb(221, 212, 212);
+  outline: none;
+  margin: 1rem 0;
+} 
+
+.btn-warning {
+  background-color: #ff5616;
+  border: 2px solid #ff0028;
+  box-shadow: 0 8px 10px #ff00a7;
+}
+
+.alert {
+  background: #f8d7da;
+  padding: 4vh 8vh;
+  min-width: 40rem;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  border-radius: 5px;
+  border-left: calc(2px + .90vh) solid transparent;
+  box-shadow: -3px 0 3px #ff0100;
+  border-color: #ff0100;
+  transform: translateX(102%);
 }
