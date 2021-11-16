@@ -33,6 +33,7 @@ img {
   display: flex; justify-content: center; align-items: center;
   flex-direction: column;
   overflow: hidden;
+  position: relative;
 }
 
 .btn {
@@ -43,9 +44,17 @@ img {
   box-shadow: 0 8px 10px #ff8100;
   background-color: #ff0100;
   color: rgb(221, 212, 212);
+  cursor: pointer;
   outline: none;
   margin: 1rem 0;
+  /* transition: border 3s ease; */
 } 
+
+.btn:active {
+  transform: scale(.97);
+  border: none;
+  box-shadow: 0 10px 12px inherit;
+}
 
 .btn-warning {
   background-color: #ff5616;
@@ -64,5 +73,16 @@ img {
   border-left: calc(2px + .90vh) solid transparent;
   box-shadow: -3px 0 3px #ff0100;
   border-color: #ff0100;
-  transform: translateX(102%);
+  transform: translateX(110%);
+}
+
+alert.show {
+  animation: ;
+}
+
+@keyframes slide-in {
+  0% { transform: translateX(100%); }
+  40% { transform: translateX(-10%); }
+  0% { transform: translateX(0%); }
+  0% { transform: translateX(-1rem); }
 }
