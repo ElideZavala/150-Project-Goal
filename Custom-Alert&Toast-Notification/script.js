@@ -22,6 +22,27 @@ class ShowAlert {
 		msg.style.color = this.color;
 		closeIcon.style.color = this.color;
 
-		alertBox.classList.add("show";)
+		alertBox.classList.add("show");
+		alertBox.classList.remove("hide");
+		setTimeout(() => {
+			alertBox.classList.remove("show");
+			alertBox.classList.hide("hide");
+		}, 5000);
+		closeBtn.addEventListener("click", () => {
+			alertBox.classList.remove("show");
+			alertBox.classList.hide("hide");
+		});
 	}
 }
+
+// warning
+const warning = new ShowAlert("#ff5616","#ff0028", "#ff00a7");
+
+// danger
+const danger = new ShowAlert("#ff0100","#ff8100", "#ddd4d4");
+
+main.addEventListener("click", (e) => {
+	if(e.target.classList.contains("btn-danger")) {
+		danger.trigger("Alerta: esta es una Alerta de Peligro");
+	}
+})
