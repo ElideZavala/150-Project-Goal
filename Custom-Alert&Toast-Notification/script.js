@@ -3,7 +3,7 @@ const alertBox = document.querySelector(".alert");
 const exclamationIcon = document.querySelector(".fa-exclamation-circle");
 const msg = document.querySelector(".msg");
 const closeBtn = document.querySelector(".close-btn");
-const closeIcon = document.querySelector(".fa-time");
+const closeIcon = document.querySelector(".fa-times");
 
 // Mostrar classes de alerta. 
 class ShowAlert {
@@ -13,7 +13,7 @@ class ShowAlert {
 		this.color = color;
 	} 
 
-	trigger(menssage) {
+	trigger(message) {
 		alertBox.style.background = this.state; 
 		alertBox.style.borderColor = this.borderColor; 
 		msg.textContent = message;
@@ -26,11 +26,11 @@ class ShowAlert {
 		alertBox.classList.remove("hide");
 		setTimeout(() => {
 			alertBox.classList.remove("show");
-			alertBox.classList.hide("hide");
+			alertBox.classList.add("hide");
 		}, 5000);
 		closeBtn.addEventListener("click", () => {
 			alertBox.classList.remove("show");
-			alertBox.classList.hide("hide");
+			alertBox.classList.add("hide");
 		});
 	}
 }
