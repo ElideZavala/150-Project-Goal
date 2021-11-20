@@ -43,6 +43,8 @@ const danger = new ShowAlert("#ff0100","#ff8100", "#ddd4d4");
 
 main.addEventListener("click", (e) => {
 	if(e.target.classList.contains("btn-danger")) {
-		danger.trigger("Alerta: esta es una Alerta de Peligro");
+		danger.trigger("Alerta: !esta es una Alerta de Peligro!");
+	} else if(e.target.classList.contains("btn-warning")) {
+		warning.trigger("Alerta: !esta es una Alerta de Advertenvia!");
 	}
-})
+});

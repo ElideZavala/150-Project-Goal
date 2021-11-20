@@ -73,7 +73,7 @@ img {
   border-left: calc(2px + .90vh) solid transparent;
   box-shadow: -3px 0 3px #ff0100;
   border-color: #ff0100;
-  /* transform: translateX(110%); */
+  transform: translateX(110%);
 }
 
 alert.show {
