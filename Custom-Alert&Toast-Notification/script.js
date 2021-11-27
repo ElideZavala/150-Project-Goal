@@ -36,7 +36,7 @@ class ShowAlert {
 }
 
 // warning
-const warning = new ShowAlert("#ff5616","#ff0028", "#ff00a7");
+const warning = new ShowAlert("#ff5616","#ff0028", "#ddd4d4");
 // danger
 const danger = new ShowAlert("#ff0100","#ff8100", "#ddd4d4");
 

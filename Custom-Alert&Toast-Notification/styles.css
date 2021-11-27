@@ -76,7 +76,7 @@ img {
   transform: translateX(110%);
 }
 
-alert.show {
+.alert.show {
   animation: slide-in 1s ease forwards;
 }
 
@@ -95,7 +95,7 @@ alert.show {
   }
 }
 
-alert.hide {
+.alert.hide {
   animation: slide-out 1s ease forwards;
 }
 
