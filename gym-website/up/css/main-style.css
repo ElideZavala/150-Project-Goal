@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Roboto:ital@0;1&display=swap");
 *,
 *::before,
 *::after {
@@ -7,21 +8,45 @@
 }
 
 html {
-  --color-primary: #d62828;
+  --color-primary: #eae2b7;
+  --color-primary-m: #eae2b7aa;
   --color-secondary: #f77f00;
+  --color-secondary-m: #f78000b8;
   --color-tertiary:#003049;
+  --color-tertiary-m:#002f49c4;
   --color-quaternary: #fcbf49;
-  --color-fiftieth: #eae2b7;
+  --color-quaternary-m: #fcc0499f;
+  --color-fiftieth: #d62828;
+  --color-fiftieth-m: #d62828d1;
 }
 
 html[data-theme=dark] {
   --color-primary: #000814;
+  --color-primary-m: #000814c8;
   --color-secondary: #001d3d;
+  --color-secondary-m: #001d3dc4;
   --color-tertiary:#003566;
+  --color-tertiary-m:#003566cc;
   --color-quaternary: #ffc300;
+  --color-quaternary-m: #ffc400bc;
   --color-fiftieth: #ffd60a;
+  --color-fiftieth-m: #ffd60abb;
+}
+
+:root {
+  font-size: 62.5%;
 }
 
 body {
-  background-color: black;
+  font-family: "Cinzel", serif;
+  line-height: 1.9;
+  background-color: var(--color-primary);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: [container-start] 1fr [center-start] repeat(6, [col-start] minmax(-webkit-min-content, 16.66667rem) [col-end]) [center-end] 1fr [container-end];
+  grid-template-columns: [container-start] 1fr [center-start] repeat(6, [col-start] minmax(min-content, 16.66667rem) [col-end]) [center-end] 1fr [container-end];
+  grid-template-rows: -webkit-min-content 100vh repeat(9, -webkit-min-content);
+  grid-template-rows: min-content 100vh repeat(9, min-content);
 }/*# sourceMappingURL=main-style.css.map */
