@@ -8,16 +8,16 @@
 }
 
 html {
-  --color-primary: #eae2b7;
-  --color-primary-m: #eae2b7aa;
+  --color-primary: #d62828;
+  --color-primary-m: #d62828d1;
   --color-secondary: #f77f00;
   --color-secondary-m: #f78000b8;
   --color-tertiary:#003049;
   --color-tertiary-m:#002f49c4;
   --color-quaternary: #fcbf49;
   --color-quaternary-m: #fcc0499f;
-  --color-fiftieth: #d62828;
-  --color-fiftieth-m: #d62828d1;
+  --color-fiftieth: #eae2b7;
+  --color-fiftieth-m: #eae2b7aa;
 }
 
 html[data-theme=dark] {
@@ -45,8 +45,6 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: [container-start] 1fr [center-start] repeat(6, [col-start] minmax(-webkit-min-content, 16.66667rem) [col-end]) [center-end] 1fr [container-end];
   grid-template-columns: [container-start] 1fr [center-start] repeat(6, [col-start] minmax(min-content, 16.66667rem) [col-end]) [center-end] 1fr [container-end];
-  grid-template-rows: -webkit-min-content 100vh repeat(9, -webkit-min-content);
   grid-template-rows: min-content 100vh repeat(9, min-content);
 }/*# sourceMappingURL=main-style.css.map */
