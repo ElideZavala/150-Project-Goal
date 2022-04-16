@@ -12,14 +12,9 @@ body {
 }
 
 .container {
-	display: grid;  // 6 * 16.66667 = 100.00002 * 10 = 1000.00002px // 
-	grid-template-columns: 
-		[container-start] 1fr 
-		[center-start] repeat(6, 
-		[col-start] minmax(min-content, 16.66667rem) 
-		[col-end]) 
-		[center-end] 1fr
-		[container-end]
-	;
+	display: grid; // 6 * 16.66667 = 100.00002 * 10 = 1000.00002px // 
+	grid-template-columns:
+		[container-start] 1fr [center-start] repeat(6,
+			[col-start] minmax(min-content, 16.66667rem) [col-end]) [center-end] 1fr [container-end];
 	grid-template-rows: min-content 100vh repeat(9, min-content);
 }
