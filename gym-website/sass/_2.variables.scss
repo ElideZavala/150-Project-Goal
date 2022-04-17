@@ -27,3 +27,30 @@ html[data-theme="dark"] {
 	--color-quinary: #ffd60a;
 	--color-quinary-m: #ffd60abb;
 }
+
+// *-*-*-*-*-*-*-*-*-*- Font Weights *-*-*-*-*-*-*-*-*-*-*-*-
+$font-weights: (
+	'font-weight-thin': 100,
+	'font-weight-light': 300,
+	'font-weight-regular': 400,
+	'font-weight-medium': 500,
+	'font-weight-bold': 700,
+	'font-weight-black': 900,
+);
+
+@function font-weight($font-weight-style) {
+	@return map-get($font-weights, $font-weight-style)
+};
+
+// *-*-*-*-*-*-*-*-*-*- Font Size *-*-*-*-*-*-*-*-*-*-*-*-*
+$font-sizes: (
+	'font-size-small': calc(1.2rem + 0.5vw),
+	'font-size-regular': calc(1.5rem + 1vw),
+	'font-size-medium': calc(1.5rem + 2vw),
+	'font-size-large': calc(1.5rem + 5vw),
+	'font-size-xlarge': calc(2.5rem + 5vw),
+);
+
+@function font-size($font-size-style) {
+	@return map-get($font-sizes, $font-size-style) 
+};

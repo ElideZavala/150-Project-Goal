@@ -49,6 +49,19 @@ body {
   grid-template-rows: min-content 100vh repeat(9, min-content);
 }
 
+li {
+  list-style: none;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: var(--color-quinary);
+  font-weight: 300;
+  letter-spacing: 0.2rem;
+  font-size: calc(1.2rem + 0.5vw);
+}
+
 .header {
   background-color: var(--color-secondary);
   grid-column: container-start/container-end;

@@ -18,3 +18,16 @@ body {
 			[col-start] minmax(min-content, 16.66667rem) [col-end]) [center-end] 1fr [container-end];
 	grid-template-rows: min-content 100vh repeat(9, min-content);
 }
+
+li { 
+	list-style: none;
+}
+
+a:link,
+a:visited {
+	text-decoration: none;
+	color: var(--color-quinary);
+	font-weight: font-weight(font-weight-light);
+	letter-spacing: 0.2rem;
+	font-size: font-size(font-size-small);
+}
