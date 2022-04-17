@@ -71,9 +71,61 @@ i {
 }
 
 .header {
-  background-color: var(--color-secondary);
   grid-column: container-start/container-end;
-  height: 600px;
+}
+.header.open .header__menu--line {
+  background-color: transparent;
+}
+.header.open .header__menu--line::before {
+  transform: rotate(45deg);
+}
+.header.open .header__menu--line::after {
+  transform: rotate(-45deg);
+}
+.header.open .header__menu--line::before, .header.open .header__menu--line::after {
+  top: 0;
+}
+.header__overlay {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background-color: red;
+  opacity: 0;
+  display: none;
+  z-index: 10;
+}
+.header__nav {
+  width: 100%;
+  height: 7rem;
+  line-height: 7rem;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: var(--color-primary);
+  text-transform: uppercase;
+}
+.header__nav--log {
+  padding: 1rem;
+}
+.header__nav--log img {
+  height: 5rem;
+  width: 5rem;
+}
+.header__nav--links {
+  display: flex;
+}
+.header__nav--links__item a:link,
+.header__nav--links__item a:visited {
+  margin-right: 2vw;
+  padding: 0 1.5rem;
+  display: block;
+  position: relative;
+  transform-style: preserve-3d;
+  transform-origin: top;
+  transition: transform 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.header__nav--links__item a:hover,
+.header__nav--links__item a:active {
+  transform: rotateX(90deg);
 }
 
 .showcase {
