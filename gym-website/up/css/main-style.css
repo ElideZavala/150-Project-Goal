@@ -33,6 +33,10 @@ html[data-theme=dark] {
   --color-quinary-m: #ffd60abb;
 }
 
+i {
+  color: var(--color-primary);
+}
+
 :root {
   font-size: 62.5%;
 }
@@ -46,7 +50,7 @@ body {
 .container {
   display: grid;
   grid-template-columns: [container-start] 1fr [center-start] repeat(6, [col-start] minmax(min-content, 16.66667rem) [col-end]) [center-end] 1fr [container-end];
-  grid-template-rows: min-content 100vh repeat(9, min-content);
+  grid-template-rows: min-content 90vh repeat(9, min-content);
 }
 
 li {
@@ -60,6 +64,10 @@ a:visited {
   font-weight: 300;
   letter-spacing: 0.2rem;
   font-size: calc(1.2rem + 0.5vw);
+}
+
+i {
+  font-size: calc(1.5rem + 2vw);
 }
 
 .header {

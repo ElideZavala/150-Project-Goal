@@ -54,3 +54,7 @@ $font-sizes: (
 @function font-size($font-size-style) {
 	@return map-get($font-sizes, $font-size-style) 
 };
+
+i {
+	color: var(--color-primary)
+}
