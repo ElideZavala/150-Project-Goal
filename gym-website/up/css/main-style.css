@@ -16,8 +16,8 @@ html {
   --color-tertiary-m:#002f49c4;
   --color-quaternary: #fcbf49;
   --color-quaternary-m: #fcc0499f;
-  --color-fiftieth: #eae2b7;
-  --color-fiftieth-m: #eae2b7aa;
+  --color-quinary: #eae2b7;
+  --color-quinary-m: #eae2b7aa;
 }
 
 html[data-theme=dark] {
@@ -29,8 +29,8 @@ html[data-theme=dark] {
   --color-tertiary-m:#003566cc;
   --color-quaternary: #ffc300;
   --color-quaternary-m: #ffc400bc;
-  --color-fiftieth: #ffd60a;
-  --color-fiftieth-m: #ffd60abb;
+  --color-quinary: #ffd60a;
+  --color-quinary-m: #ffd60abb;
 }
 
 :root {
@@ -51,6 +51,54 @@ body {
 
 .header {
   background-color: var(--color-secondary);
+  grid-column: container-start/container-end;
+  height: 600px;
+}
+
+.showcase {
+  background-color: var(--color-tertiary);
+  grid-column: container-start/container-end;
+  height: 100vh;
+}
+
+.motto {
+  background-color: var(--color-quaternary);
+  grid-column: container-start/container-end;
+  height: 600px;
+}
+
+.features {
+  background-color: var(--color-quinary);
+  grid-column: container-start/container-end;
+  height: 600px;
+}
+
+.trainers {
+  background-color: var(--color-tertiary);
+  grid-column: center-start/center-end;
+  height: 600px;
+}
+
+.testimonials {
+  background-color: var(--color-quaternary);
+  grid-column: container-start/container-end;
+  height: 600px;
+}
+
+.clients {
+  background-color: var(--color-secondary);
+  grid-column: container-start/container-end;
+  height: 600px;
+}
+
+.register {
+  background-color: var(--color-tertiary);
+  grid-column: container-start/container-end;
+  height: 600px;
+}
+
+.footer {
+  background-color: var(--color-quaternary);
   grid-column: container-start/container-end;
   height: 600px;
 }/*# sourceMappingURL=main-style.css.map */
