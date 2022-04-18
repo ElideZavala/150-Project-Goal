@@ -88,8 +88,8 @@ i {
 .header__overlay {
   width: 100%;
   height: 100vh;
+  background-color: var(--color-tertiary);
   position: fixed;
-  background-color: red;
   opacity: 0;
   display: none;
   z-index: 10;
@@ -159,13 +159,39 @@ i {
   background-color: var(--color-quinary);
   border-radius: 2.5rem;
   box-shadow: inset 0 0 0.6rem 0.1rem rgb(158, 157, 157);
-  transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in-out;
 }
 .header__nav--links__toggle-container input:checked[type=checkbox] {
   background-color: lightsalmon;
 }
 .header__nav--links__toggle-container input:not(:checked)[type=checkbox] {
   background-color: var(--color-tertiary);
+}
+.header__nav--links__toggle-container input[type=checkbox]::before,
+.header__nav--links__toggle-container input[type=checkbox]::after {
+  content: "";
+  position: absolute;
+  top: 0.8rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: var(--color-quinary);
+  box-shadow: 0 0.1rem 0.3rem 0.1rem hsla(0deg, 0%, 50%, 0.35);
+  transition: all 0.5s ease-in-out;
+}
+.header__nav--links__toggle-container input[type=checkbox]::before {
+  left: 0.5rem;
+}
+.header__nav--links__toggle-container input[type=checkbox]::after {
+  right: 0.5rem;
+}
+.header__nav--links__toggle-container input:checked[type=checkbox]::before {
+  left: 37%;
+  box-shadow: none;
+}
+.header__nav--links__toggle-container input:checked[type=checkbox]::after {
+  right: 37%;
+  box-shadow: none;
 }
 
 @keyframes upwards {
