@@ -72,6 +72,20 @@
 				a:active {
 					transform: rotateX(90deg);
 				}
+
+				a:link::after,
+				a:visited::after {
+					content: attr(data-text); // agregamos el atributo de nuestro index.
+					position: absolute;
+					background-color: var(--color-tertiary);
+					left: 0;
+					bottom: -100%;
+					width: 100%;
+					transform: rotateX(-90deg);
+					transform-origin: top;
+					padding: inherit;
+					box-shadow: 0 0 15px var(--color-tertiary-m);
+				}
 			}
 		}
 	}
