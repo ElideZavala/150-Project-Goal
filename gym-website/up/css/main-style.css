@@ -140,7 +140,36 @@ i {
   padding: inherit;
   box-shadow: 0 0 15px var(--color-tertiary-m);
 }
-
+.header__nav--links__item:nth-child(odd) {
+  animation: downwards 1s forwards;
+}
+.header__nav--links__item:nth-child(even) {
+  animation: upwards 1s forwards;
+}
+.header__nav--links__toggle-container {
+  display: flex;
+  align-items: center;
+}
+@keyframes upwards {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes downwards {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .showcase {
   background-color: var(--color-tertiary);
   grid-column: container-start/container-end;

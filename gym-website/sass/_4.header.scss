@@ -87,6 +87,54 @@
 					box-shadow: 0 0 15px var(--color-tertiary-m);
 				}
 			}
+
+			// direction => downwards. 
+			&__item:nth-child(odd) {  // los que tengan odd
+				animation: downwards 1s forwards;
+			}
+
+			// direction => Upwards.
+			&__item:nth-child(even) {  // los que tengan odd
+				animation: upwards 1s forwards;
+			}
+
+			// Dark Mode Toggle Button
+			&__toggle-container {
+				display: flex;
+				align-items: center;
+				
+				input[type='checkbox'] {
+					
+				}
+			}
 		}
+	}
+}
+
+// UpWards.
+@keyframes upwards {
+	from {
+		transform: translateY(-100%);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+// DownWards. 
+@keyframes downwards {
+	// Starting point. 
+	from {
+		transform: translateY(100%);
+		opacity: 0;
+	}
+
+	// Ending Point. 
+	to {
+		transform: translateY(0);
+		opacity: 1;
 	}
 }
