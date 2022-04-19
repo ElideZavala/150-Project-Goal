@@ -160,6 +160,20 @@
 		}
 	}
 
+	// *-*-*-*-*-*-*-*-*-*- The 1300px Mark Break Point *-*-*-*-*-*-*-*-*-*-*-*-*
+	@include media-desktop {
+		&__nav {
+			&--links {
+				&__item {
+					a:link,
+					a:visited {
+						font-size: 1.7rem;
+					}
+				}
+			}
+		}
+	}
+
 	// *-*-*-*-*-*-*-*-*-*- The 800px Mark Break Point *-*-*-*-*-*-*-*-*-*-*-*-*
 
 	@include media-tablet {
@@ -257,7 +271,8 @@
 		}
 
 		&__overlay {
-			
+			display: block;
+			opacity: 0.8;
 		}
 	}
 }

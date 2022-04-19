@@ -190,6 +190,12 @@ i {
   right: 37%;
   box-shadow: none;
 }
+@media screen and (min-width: 1300px) {
+  .header__nav--links__item a:link,
+.header__nav--links__item a:visited {
+    font-size: 1.7rem;
+  }
+}
 @media screen and (max-width: 800px) {
   .header__nav {
     position: fixed;
@@ -268,6 +274,10 @@ i {
   }
   .header__menu--line::after {
     top: 1.3rem;
+  }
+  .header__overlay {
+    display: block;
+    opacity: 0.8;
   }
 }
 
