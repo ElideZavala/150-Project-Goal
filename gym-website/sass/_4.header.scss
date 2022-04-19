@@ -226,15 +226,15 @@
 			position: fixed;
 			top: 2rem;
 			right: 2rem;
-			background: var(--color-primary);
+			// background: var(--color-primary);
 			padding: 2.5rem;
 			z-index: 20;
 			cursor: pointer;
 
-			&--line
+			&--line,
 			&--line::before,
 			&--line::after {
-				content: '';
+				content: "";
 				position: absolute;
 				width: 3.5rem;
 				height: 0.2rem;
@@ -246,6 +246,18 @@
 				margin: auto;
 				transition: all 0.5s ease-in-out;
 			}
+
+			&--line::before {
+				 top: -2.2rem; 
+			}
+
+			&--line::after {
+				top: 1.3rem; 
+		  }
+		}
+
+		&__overlay {
+			
 		}
 	}
 }
