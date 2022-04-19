@@ -1,3 +1,10 @@
+// *-*-*-*-*-*-*-*-*-*- The 800px Mark Break Point *-*-*-*-*-*-*-*-*-*-*-*-*
+@mixin media-tablet {
+	@media screen and (max-width: break-point(break-point-tablet)) {
+		@content;
+	}
+}
+
 @import "1.reset";
 @import "2.variables";
 @import "3.utilities";

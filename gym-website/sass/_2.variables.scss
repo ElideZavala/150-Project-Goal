@@ -55,6 +55,15 @@ $font-sizes: (
 	@return map-get($font-sizes, $font-size-style) 
 };
 
-i {
-	color: var(--color-primary)
-}
+// i {
+// 	color: var(--color-primary)
+// }
+
+// *-*-*-*-*-*-*-*-*-*- Break Points *-*-*-*-*-*-*-*-*-*-*-*-*
+$break-points: ( 
+	"break-point-tablet": 800px,
+);
+
+@function break-point($break-point-limit) {
+	@return map-get($break-points, $break-point-limit)
+};

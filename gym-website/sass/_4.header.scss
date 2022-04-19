@@ -113,6 +113,7 @@
 					border-radius: 2.5rem;
 					box-shadow: inset 0 0 0.6rem 0.1rem rgb(158, 157, 157);
 					transition: all 0.5s ease-in-out;
+					cursor: pointer;
 				}
 
 				// checked seleccionado.
@@ -157,6 +158,65 @@
 				}
 			}
 		}
+	}
+
+	// *-*-*-*-*-*-*-*-*-*- The 800px Mark Break Point *-*-*-*-*-*-*-*-*-*-*-*-*
+
+	@include media-tablet {
+		// perspective: 70rem;
+		&__nav {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 25rem;
+			height: 100vh;
+			line-height: initial; // colocara el valor inicial antes que le coloquemos
+			flex-direction: column;
+			text-align: center;
+			z-index: 20;
+			// transform: perspective(70rem) rotateY(0.5turn);
+			transform-origin: top left;
+			transition: transform 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+
+			&--links {
+				height: 80%;
+				flex-direction: column;
+				justify-content: space-evenly;
+
+				&__item {
+					animation: initial;
+
+					a:link,
+					a:visited {
+						transform-origin: left;
+						margin-left: initial;
+						padding: 2rem;
+						font-size: 1.2rem;
+					}
+					a:hover,
+					a:active {
+						transform: rotateY(90deg);
+					}
+
+					a:link::after,
+					a:visited::after {
+						top: 0;
+						bottom: 100%;
+						left: 100%;
+						width: 107%;
+						height: 100%;
+						transform-origin: left;
+						transform: rotateY(-90deg);
+					}
+				}
+
+				&__toggle-container {
+					justify-content: center;
+				}
+			}			
+		}
+
+		&.open
 	}
 }
 
