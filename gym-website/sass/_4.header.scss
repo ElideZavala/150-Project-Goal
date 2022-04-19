@@ -174,7 +174,7 @@
 			flex-direction: column;
 			text-align: center;
 			z-index: 20;
-			// transform: perspective(70rem) rotateY(0.5turn);
+			transform: perspective(70rem) rotateY(0.5turn);
 			transform-origin: top left;
 			transition: transform 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 
@@ -216,7 +216,37 @@
 			}			
 		}
 
-		&.open
+		&.open nav {
+			transform: rotateY(0);
+		}
+
+		&__menu {
+			height: 4rem;
+			width: 4rem;
+			position: fixed;
+			top: 2rem;
+			right: 2rem;
+			background: var(--color-primary);
+			padding: 2.5rem;
+			z-index: 20;
+			cursor: pointer;
+
+			&--line
+			&--line::before,
+			&--line::after {
+				content: '';
+				position: absolute;
+				width: 3.5rem;
+				height: 0.2rem;
+				background-color: var(--color-quinary);
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+				transition: all 0.5s ease-in-out;
+			}
+		}
 	}
 }
 
