@@ -159,10 +159,10 @@ i {
   cursor: pointer;
 }
 .header__nav--links__toggle-container input:checked[type=checkbox] {
-  background-color: lightsalmon;
+  background-color: rgba(214, 40, 40, 0.8196078431);
 }
 .header__nav--links__toggle-container input:not(:checked)[type=checkbox] {
-  background-color: var(--color-tertiary);
+  background-color: var(--color-secondary);
 }
 .header__nav--links__toggle-container input[type=checkbox]::before,
 .header__nav--links__toggle-container input[type=checkbox]::after {
@@ -347,4 +347,12 @@ i {
   background-color: var(--color-quaternary);
   grid-column: container-start/container-end;
   height: 600px;
+}
+
+html.transition,
+html.transition *,
+html.transition *::before,
+html.transition *::after {
+  transition: all 0.5s !important;
+  transition-delay: 0 !important;
 }/*# sourceMappingURL=main-style.css.map */

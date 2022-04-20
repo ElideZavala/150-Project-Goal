@@ -24,3 +24,13 @@
 @import "10.clients";
 @import "11.register";
 @import "12.footer";
+
+// *-*-*-*-*-* Dark Mode Smooth Transition For ALL HTML Elements *-*-*-*-*-*-*
+html.transition,
+html.transition *,
+html.transition *::before,
+html.transition *::after {
+	transition: all 0.5s !important; 	// !important tiene la mas alta especificidad
+	transition-delay: 0 !important ; 	// en todo el mundo de CSS. 
+}
+

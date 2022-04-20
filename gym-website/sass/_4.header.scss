@@ -28,7 +28,6 @@
 		height: 100vh;
 		background-color: var(--color-tertiary);
 		position: fixed;
-		// background-color: red;
 		opacity: 0;
 		display: none;
 		z-index: 10;
@@ -118,12 +117,12 @@
 
 				// checked seleccionado.
 				input:checked[type='checkbox'] {
-					background-color: lightsalmon;
+					background-color: #d62828d1;
 				}
 
 				// checked NO seleccionado.
 				input:not(:checked)[type='checkbox'] {
-					background-color: var(--color-tertiary);
+					background-color: var(--color-secondary);
 				}
 				
 				input[type='checkbox']::before,
