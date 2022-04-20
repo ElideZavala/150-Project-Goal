@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Roboto:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Cinzel:wght@600&family=Roboto:ital@0;1&display=swap");
 *,
 *::before,
 *::after {
@@ -309,6 +309,7 @@ i {
 .showcase {
   background-color: var(--color-tertiary);
   grid-column: container-start/container-end;
+  background-image: url("../up/img/showcase/showcase-bg.jpg");
 }
 
 .motto {

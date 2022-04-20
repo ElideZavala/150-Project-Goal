@@ -25,6 +25,46 @@
 @import "11.register";
 @import "12.footer";
 
+// *-*-*-*-*-**-*-*-*-*-*-* placeholder Styles *-*-*-*-*-*-**-*-*-*-*-*-*
+// Background Properties 
+%bg {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+// Background Properties
+%sec-padding {
+	padding: 6vh 4vw;
+}
+
+// Styles for Section heading (h2)
+%sec-heading {
+	font-size: font-size(font-size-medium);
+	font-weight: font-weight(font-weight-light);
+	letter-spacing: 0.2rem;
+	color: var(--color-quinary);
+}
+
+// Styles for Section heading (h2)
+%sec-para {
+	font-size: font-size(font-size-small);
+	color: var(--color-quinary);
+	font-family: "Belsamiq Sans", cursive;
+	letter-spacing: 0.2rem;
+}
+
+// Style for Section h3
+%sec-h3 {
+	font-size: font-size(font-size-small);
+	color: var(--color-quinary);
+}
+
+// Style for Section h4
+%sec-h4 {
+	color: var(--color-quinary);
+}
+
 // *-*-*-*-*-* Dark Mode Smooth Transition For ALL HTML Elements *-*-*-*-*-*-*
 html.transition,
 html.transition *,
