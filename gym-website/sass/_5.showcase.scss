@@ -16,6 +16,7 @@
 	&__content {
 		display: flex;
 		flex-direction: column;
+		z-index: 10;
 
 		&--title {
 			text-align: center;
@@ -61,7 +62,6 @@
 					background-color: var(--color-primary);
 				}
 			}
-
 			a:link:last-child,
 			a:visited:last-child {
 				// background-color: var(--color-secondary);
@@ -96,6 +96,42 @@
 			a:hover:last-child::before,
 			a:active:last-child::before {
 				transform: scale(1);
+			}
+		}
+	}
+
+	// *-*-*-*-*-*-*-*-*-*-*-* The 800px Mark Break Point *-*-*-*-*-*-*-*-*-*-*-*-*
+	@include media-tablet {
+		&__content {
+			&--title {
+				text-align: left;
+			}
+
+			&--links {
+				justify-content: flex-start;
+			}
+		}
+	}
+
+	// *-*-*-*-*-*-*-*-*-*-*-* The 600px Mark Break Point *-*-*-*-*-*-*-*-*-*-*-*-*
+	@include media-medium {
+		padding: 4rem;
+
+		&__content {
+			&--title {
+				font-size: font-size(font-size-xlarge);
+				font-weight: font-weight(font-weight-regular);
+			}
+
+			&--para {
+				font-size: 2rem;
+			}
+
+			&--links { 
+				a:link,
+				a:visited {
+					font-size: font-size(font-size-small);
+				}
 			}
 		}
 	}

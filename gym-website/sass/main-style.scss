@@ -12,6 +12,13 @@
 	}
 }
 
+// *-*-*-*-*-*-*-*-*-*- The 600px Mark Break Point *-*-*-*-*-*-*-*-*-*-*-*-*
+@mixin media-medium {
+	@media screen and (max-width: break-point(break-point-medium)) {
+		@content;
+	}
+}
+
 // Al seleccionar un texto. 
 ::selection {
 	background-color: var(--color-primary);

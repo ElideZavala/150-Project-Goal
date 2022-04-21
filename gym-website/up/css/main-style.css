@@ -321,6 +321,7 @@ i {
 .showcase__content {
   display: flex;
   flex-direction: column;
+  z-index: 10;
 }
 .showcase__content--title {
   text-align: center;
@@ -392,6 +393,30 @@ i {
 .showcase__content--links a:hover:last-child::before,
 .showcase__content--links a:active:last-child::before {
   transform: scale(1);
+}
+@media screen and (max-width: 800px) {
+  .showcase__content--title {
+    text-align: left;
+  }
+  .showcase__content--links {
+    justify-content: flex-start;
+  }
+}
+@media screen and (max-width: 600px) {
+  .showcase {
+    padding: 4rem;
+  }
+  .showcase__content--title {
+    font-size: calc(2.5rem + 5vw);
+    font-weight: 400;
+  }
+  .showcase__content--para {
+    font-size: 2rem;
+  }
+  .showcase__content--links a:link,
+.showcase__content--links a:visited {
+    font-size: calc(1.2rem + 0.5vw);
+  }
 }
 
 .motto {
