@@ -12,6 +12,12 @@
 	}
 }
 
+// Al seleccionar un texto. 
+::selection {
+	background-color: var(--color-primary);
+	color: var(--color-quinary);
+}
+
 @import "1.reset";
 @import "2.variables";
 @import "3.utilities";

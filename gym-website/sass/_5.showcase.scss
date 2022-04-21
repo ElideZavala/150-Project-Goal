@@ -1,5 +1,32 @@
 .showcase {
-	background-color: var(--color-tertiary);
+	// background-color: var(--color-tertiary);
 	grid-column: container-start / container-end;
-	background-image: url("../up/img/showcase/showcase-bg.jpg");
+	background-image: linear-gradient(
+		var(--color-tertiary-m),
+		var(--color-tertiary-m),
+		), 
+		url("../img/showcase/1.jpg");
+	@extend %bg;
+	@extend %sec-padding;
+
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+
+		&--title {
+			text-align: center;
+			font-size: font-size(font-size-large);
+			font-weight: font-weight(font-weight-light);
+			background-image: linear-gradient(135deg, var(--color-quaternary), var(--color-quinary));
+
+			-webkit-background-clip: text;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+			text-transform: uppercase;
+		}
+	}
 }

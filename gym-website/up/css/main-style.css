@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Cinzel:wght@600&family=Roboto:ital@0;1&display=swap");
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-quinary);
+}
+
 *,
 *::before,
 *::after {
@@ -10,12 +15,12 @@
 html {
   --color-primary: #d62828;
   --color-primary-m: #d62828d1;
-  --color-secondary:#003049;
-  --color-secondary-m:#002f49c4;
+  --color-secondary: #fcbf49;
+  --color-secondary-m: #fcc0499f;
+  --color-quaternary:#003049;
+  --color-quaternary-m:#002f49c4;
   --color-tertiary: #f77f00;
-  --color-tertiary-m: #f78000b8;
-  --color-quaternary: #fcbf49;
-  --color-quaternary-m: #fcc0499f;
+  --color-tertiary-m: #f780008a;
   --color-quinary: #eae2b7;
   --color-quinary-m: #eae2b7aa;
 }
@@ -24,7 +29,7 @@ html[data-theme=dark] {
   --color-primary: #000814;
   --color-primary-m: #000814c8;
   --color-secondary:#003566;
-  --color-secondary-m:#003566cc;
+  --color-secondary-m:#0035668c;
   --color-tertiary: #001d3d;
   --color-tertiary-m: #001d3dc4;
   --color-quaternary: #ffc300;
@@ -167,7 +172,7 @@ i {
   background-color: rgba(214, 40, 40, 0.8196078431);
 }
 .header__nav--links__toggle-container input:not(:checked)[type=checkbox] {
-  background-color: var(--color-secondary);
+  background-color: var(--color-quaternary);
 }
 .header__nav--links__toggle-container input[type=checkbox]::before,
 .header__nav--links__toggle-container input[type=checkbox]::after {
@@ -307,9 +312,25 @@ i {
   }
 }
 .showcase {
-  background-color: var(--color-tertiary);
   grid-column: container-start/container-end;
-  background-image: url("../up/img/showcase/showcase-bg.jpg");
+  background-image: linear-gradient(var(--color-tertiary-m), var(--color-tertiary-m)), url("../img/showcase/1.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.showcase__content {
+  display: flex;
+  flex-direction: column;
+}
+.showcase__content--title {
+  text-align: center;
+  font-size: calc(1.5rem + 5vw);
+  font-weight: 300;
+  background-image: linear-gradient(135deg, var(--color-quaternary), var(--color-quinary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
 }
 
 .motto {
@@ -352,6 +373,16 @@ i {
   background-color: var(--color-quaternary);
   grid-column: container-start/container-end;
   height: 600px;
+}
+
+.showcase {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.showcase {
+  padding: 6vh 4vw;
 }
 
 html.transition,
