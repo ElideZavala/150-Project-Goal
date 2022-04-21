@@ -135,4 +135,24 @@
 			}
 		}
 	}
+
+	// *-*-*-*-*-*-*-*-*-*-*-* The 400px Mark Break Point *-*-*-*-*-*-*-*-*-*-*-*-*
+	@include media-small {
+		&__content {
+			&--links {
+				flex-direction: column;
+				align-items: flex-start;
+
+				a:link,
+				a:visited {
+					display: inline-block;
+				}
+
+				a:link:first-child,
+				a:visited:first-child {
+					margin-bottom: 5vw;
+				}
+			}
+		}
+	}
 }

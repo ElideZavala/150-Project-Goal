@@ -19,6 +19,16 @@
 	}
 }
 
+// *-*-*-*-*-*-*-*-*-*- The 400px Mark Break Point *-*-*-*-*-*-*-*-*-*-*-*-*
+@mixin media-small {
+	@media screen and (max-width: break-point(break-point-small)) {
+		@content;
+	}
+}
+
+// *-*-*-*-*-*-*-*-*-*-------------------------------------------*-*-*-*-*-*-*-*-*-*-*-*-*
+
+
 // Al seleccionar un texto. 
 ::selection {
 	background-color: var(--color-primary);

@@ -418,6 +418,20 @@ i {
     font-size: calc(1.2rem + 0.5vw);
   }
 }
+@media screen and (max-width: 400px) {
+  .showcase__content--links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .showcase__content--links a:link,
+.showcase__content--links a:visited {
+    display: inline-block;
+  }
+  .showcase__content--links a:link:first-child,
+.showcase__content--links a:visited:first-child {
+    margin-bottom: 5vw;
+  }
+}
 
 .motto {
   background-color: var(--color-quaternary);
