@@ -16,7 +16,7 @@ html {
   --color-primary: #d62828;
   --color-primary-m: #d62828d1;
   --color-secondary: #fcbf49;
-  --color-secondary-m: #fcc0499f;
+  --color-secondary-m: #fcc0498d;
   --color-quaternary:#003049;
   --color-quaternary-m:#002f49c4;
   --color-tertiary: #f77f00;
@@ -336,6 +336,62 @@ i {
   font-size: calc(1.5rem + 1vw);
   font-weight: 300;
   color: var(--color-quaternary);
+}
+.showcase__content--links {
+  display: flex;
+  justify-content: center;
+}
+.showcase__content--links a:link,
+.showcase__content--links a:visited {
+  font-size: calc(1.2rem + 0.5vw);
+  padding: calc(0.5rem + 1vh) calc(1rem + 1vw);
+  text-transform: uppercase;
+  position: relative;
+  border-radius: 0.5rem;
+  z-index: 1;
+  transition: all 0.5s ease-in-out;
+}
+.showcase__content--links a:link:first-child,
+.showcase__content--links a:visited:first-child {
+  border: 0.2rem solid var(--color-primary);
+  margin-right: calc(1rem + 2vw);
+  box-shadow: inset 0 0 1em var(--color-primary-m), 0 0 1em var(--color-primary-m);
+}
+.showcase__content--links a:link:first-child::before,
+.showcase__content--links a:visited:first-child::before {
+  background-color: var(--color-primary);
+}
+.showcase__content--links a:link:last-child,
+.showcase__content--links a:visited:last-child {
+  border: 0.2rem solid var(--color-secondary);
+  color: var(--color-quaternary);
+  margin-right: calc(1rem + 2vw);
+  box-shadow: inset 0 0 1em var(--color-secondary-m), 0 0 1em var(--color-secondary-m);
+}
+.showcase__content--links a:link:last-child::before,
+.showcase__content--links a:visited:last-child::before {
+  background-color: var(--color-secondary);
+}
+.showcase__content--links a:link:first-child::before,
+.showcase__content--links a:visited:first-child::before,
+.showcase__content--links a:link:last-child::before,
+.showcase__content--links a:visited:last-child::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  z-index: -1;
+  transform: scale(0);
+  transition: all 0.5s ease-in-out;
+}
+.showcase__content--links a:hover:first-child::before,
+.showcase__content--links a:active:first-child::before,
+.showcase__content--links a:hover:last-child::before,
+.showcase__content--links a:active:last-child::before {
+  transform: scale(1);
 }
 
 .motto {
