@@ -332,6 +332,11 @@ i {
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;
 }
+.showcase__content--para {
+  font-size: calc(1.5rem + 1vw);
+  font-weight: 300;
+  color: var(--color-quaternary);
+}
 
 .motto {
   background-color: var(--color-quaternary);

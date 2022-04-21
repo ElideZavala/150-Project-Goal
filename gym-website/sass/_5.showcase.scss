@@ -28,5 +28,11 @@
 			-webkit-text-fill-color: transparent;
 			text-transform: uppercase;
 		}
+
+		&--para { 
+			font-size: font-size(font-size-regular);
+			font-weight: font-weight(font-weight-light);
+			color: var(--color-quaternary)
+		}
 	}
 }
