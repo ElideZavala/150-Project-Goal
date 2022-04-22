@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Cinzel:wght@600&family=Roboto:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=PT+Sans&family=Roboto:ital@0;1&display=swap");
 ::selection {
   background-color: var(--color-primary);
   color: var(--color-quinary);
@@ -434,11 +434,66 @@ i {
 }
 
 .motto {
-  background-color: var(--color-quaternary);
   grid-column: container-start/container-end;
-  height: 600px;
+  background-image: url("../img/motto/1.jpg");
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-gap: 2rem;
+  place-content: center;
 }
-
+.motto__content {
+  display: grid;
+  grid-row-gap: 4vh;
+  background-color: var(--color-tertiary-m);
+  padding: 2rem;
+}
+.motto__content--link:link, .motto__content--link:visited {
+  background: none;
+  place-self: start;
+  padding: 0.7rem 1.5rem;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+}
+.motto__content--link:link span, .motto__content--link:visited span {
+  display: block;
+  position: absolute;
+}
+.motto__content--link:link span:first-child, .motto__content--link:visited span:first-child {
+  top: 0;
+  left: -100%;
+  height: 0.2rem;
+  width: 100%;
+  background: linear-gradient(90deg, transparent, var(--color-primary));
+  transition: 0.5s;
+  transition-delay: 1s;
+}
+.motto__content--link:link span:nth-child(2), .motto__content--link:visited span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  height: 100%;
+  width: 0.2rem;
+  background: linear-gradient(180deg, transparent, var(--color-primary));
+  transition: 0.5s;
+  transition-delay: 0.75s;
+}
+.motto__content--link:link span:nth-child(3), .motto__content--link:visited span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  height: 0.2rem;
+  width: 100%;
+  background: linear-gradient(270deg, transparent, var(--color-primary));
+  transition: 0.7s;
+  transition-delay: 0.25s;
+}
+.motto__content--link:link span:nth-child(4), .motto__content--link:visited span:nth-child(4) {
+  top: 100%;
+  left: 0;
+  height: 100%;
+  width: 0.2rem;
+  background: linear-gradient(360deg, transparent, var(--color-primary));
+  transition: 0.5s;
+  transition-delay: 0s;
+}
 .features {
   background-color: var(--color-quinary);
   grid-column: container-start/container-end;
@@ -475,14 +530,28 @@ i {
   height: 600px;
 }
 
-.showcase {
+.showcase, .motto {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.showcase {
+.showcase, .motto {
   padding: 6vh 4vw;
+}
+
+.motto__content--title {
+  font-size: calc(1.5rem + 2vw);
+  font-weight: 300;
+  letter-spacing: 0.2rem;
+  color: var(--color-quinary);
+}
+
+.motto__content--para {
+  font-size: calc(1.2rem + 0.5vw);
+  color: var(--color-quinary);
+  font-family: "PT Sans", sans-serif;
+  letter-spacing: 0.2rem;
 }
 
 html.transition,

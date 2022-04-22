@@ -1,5 +1,89 @@
 .motto { 
-	background-color: var(--color-quaternary);
+	// background-color: var(--color-quaternary);
 	grid-column: container-start / container-end;
-	height: 600px;
+	background-image: url('../img/motto/1.jpg');
+	@extend %bg;
+	@extend %sec-padding;
+
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+	grid-gap: 2rem;
+	place-content: center;
+
+	&__content {
+		display: grid;
+		grid-row-gap: 4vh;
+		background-color: var(--color-tertiary-m);
+		padding: 2rem;
+
+		&--title {
+			@extend %sec-heading;
+		}
+
+		&--para {
+			@extend %sec-para;
+		}
+
+		&--link:link,
+		&--link:visited {
+			background: none;
+			place-self: start;
+			padding: 0.7rem 1.5rem;
+			position: relative;
+			transition: all 0.5s ease-in-out;
+			// border: 0.2rem solid var(--color-tertiary);
+			// box-shadow: inset 0 0 1em var(--color-tertiary-m), 0 0 1em var(--color-tertiary-m);
+			// overflow: hidden;
+
+			span {
+				display: block;
+				position: absolute;
+			}
+
+			span:first-child {
+				top: 0;
+				left: -100%;
+				height: 0.2rem;
+				width: 100%;
+				background: linear-gradient(90deg, transparent, var(--color-primary));
+				transition: 0.5s;
+				transition-delay: 1s;
+			}
+
+			span:nth-child(2) {
+				top: -100%;
+				right: 0;
+				height: 100%;
+				width: 0.2rem;
+				background: linear-gradient(180deg, transparent, var(--color-primary));
+				transition: 0.5s;
+				transition-delay: 0.75s;
+			}
+
+			span:nth-child(3) {
+				bottom: 0;
+				right: -100%;
+				height: 0.2rem;
+				width: 100%;
+				background: linear-gradient(270deg, transparent, var(--color-primary));
+				transition: 0.7s;
+				transition-delay: 0.25s;
+			}
+
+			span:nth-child(4) {
+				top: 100%;
+				left: 0;
+				height: 100%;
+				width: 0.2rem;
+				background: linear-gradient(360deg, transparent, var(--color-primary));
+				transition: 0.5s;
+				transition-delay: 0s;
+			}
+		}
+
+		&--link:hover,
+		&--link:active {
+			
+		}
+	}
 }
