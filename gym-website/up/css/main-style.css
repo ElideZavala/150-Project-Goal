@@ -557,6 +557,61 @@ i {
   transform: scaleX(1);
   transform-origin: left;
 }
+.features__content--para {
+  font-weight: 500 !important;
+  background-color: var(--color-primary-m);
+  padding: 1rem;
+  text-align: center;
+}
+.features__content--link:link, .features__content--link:visited {
+  padding: 1rem 1.7rem;
+  justify-self: start;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+}
+.features__content--link:link span, .features__content--link:visited span {
+  position: absolute;
+  display: block;
+}
+.features__content--link:link span:nth-child(1), .features__content--link:visited span:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0.5rem;
+  background-image: linear-gradient(90deg, transparent, var(--color-primary));
+  animation: border1 linear infinite;
+  animation-delay: 0s;
+}
+.features__content--link:link span:nth-child(3), .features__content--link:visited span:nth-child(3) {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.5rem;
+  background-image: linear-gradient(270deg, transparent, var(--color-primary));
+  animation: border3 linear infinite;
+  animation-delay: 0.5s;
+}
+.features__content--link:link span:nth-child(2), .features__content--link:visited span:nth-child(2) {
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 0.5rem;
+  background-image: linear-gradient(180deg, transparent, var(--color-primary));
+  animation: border2 linear infinite;
+  animation-delay: 0s;
+}
+.features__content--link:link span:nth-child(4), .features__content--link:visited span:nth-child(4) {
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 0.5rem;
+  background-image: linear-gradient(360deg, transparent, var(--color-primary));
+  animation: border4 linear infinite;
+  animation-delay: 0.5s;
+}
+.features__content--link:hover, .features__content--link:active {
+  background-color: var(--color-primary);
+}
 
 .features__content:nth-child(1) {
   background-image: url("../img/features/features-1.jpg");
@@ -594,6 +649,14 @@ i {
   background-image: url("../img/features/features-9.jpg");
 }
 
+@keyframes border1 {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
 .trainers {
   background-color: var(--color-tertiary);
   grid-column: center-start/center-end;
@@ -641,7 +704,7 @@ i {
   color: var(--color-quinary);
 }
 
-.motto__content--para {
+.motto__content--para, .features__content--para {
   font-size: calc(1.2rem + 0.5vw);
   color: var(--color-quinary);
   font-family: "PT Sans", sans-serif;

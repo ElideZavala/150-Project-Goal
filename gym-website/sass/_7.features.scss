@@ -39,6 +39,73 @@
 			transform: scaleX(1);
 			transform-origin: left;
 		}
+
+		&--para {
+			@extend %sec-para;
+			font-weight: font-weight(font-weight-medium) !important;
+			background-color: var(--color-primary-m);
+			padding: 1rem;
+			text-align: center;
+		}
+
+		&--link:link,
+		&--link:visited {
+			padding: 1rem 1.7rem;
+			justify-self: start;
+			position: relative;
+			// overflow: hidden;
+			transition: all 0.5s ease-in-out;
+
+			span {
+				position: absolute;
+				display: block;
+			}
+
+			span:nth-child(1) {
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 0.5rem;
+				background-image: linear-gradient(90deg, transparent, var(--color-primary));
+				animation: border1 linear infinite;
+				animation-delay: 0s;
+			}
+
+			span:nth-child(3) {
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 0.5rem;
+				background-image: linear-gradient(270deg, transparent, var(--color-primary));
+				animation: border3 linear infinite;
+				animation-delay: 0.5s;
+			}
+
+			span:nth-child(2) {
+				top: 0;
+				right: 0;
+				height: 100%;
+				width: 0.5rem;
+				background-image: linear-gradient(180deg, transparent, var(--color-primary));
+				animation: border2 linear infinite;
+				animation-delay: 0s;
+			}
+
+			span:nth-child(4) {
+				bottom: 0;
+				left: 0;
+				height: 100%;
+				width: 0.5rem;
+				background-image: linear-gradient(360deg, transparent, var(--color-primary));
+				animation: border4 linear infinite;
+				animation-delay: 0.5s;
+			}
+		}
+		
+		&--link:hover,
+		&--link:active {
+			background-color: var(--color-primary)
+		}
 	}
 }
 
@@ -47,5 +114,15 @@
 	.features__content:nth-child(#{$img}) {
 		background-image: url('../img/features/features-#{$img}.jpg');
 		@extend %bg;
+	}
+}
+
+@keyframes border1 {
+	0% {
+		left: -100%;
+	}
+
+	100% {
+		left: 100%;
 	}
 }
