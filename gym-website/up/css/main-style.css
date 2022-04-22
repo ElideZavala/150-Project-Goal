@@ -444,7 +444,7 @@ i {
 .motto__content {
   display: grid;
   grid-row-gap: 4vh;
-  background-color: var(--color-tertiary-m);
+  background-color: var(--color-primary-m);
   padding: 2rem;
 }
 .motto__content--link:link, .motto__content--link:visited {
@@ -453,6 +453,7 @@ i {
   padding: 0.7rem 1.5rem;
   position: relative;
   transition: all 0.5s ease-in-out;
+  color: var(--color-secondary);
   overflow: hidden;
 }
 .motto__content--link:link span, .motto__content--link:visited span {
@@ -464,7 +465,7 @@ i {
   left: -100%;
   height: 0.2rem;
   width: 100%;
-  background: linear-gradient(90deg, transparent, var(--color-primary));
+  background: linear-gradient(90deg, transparent, var(--color-quaternary));
   transition: 0.5s;
   transition-delay: 1s;
 }
@@ -473,7 +474,7 @@ i {
   right: 0;
   height: 100%;
   width: 0.2rem;
-  background: linear-gradient(180deg, transparent, var(--color-primary));
+  background: linear-gradient(180deg, transparent, var(--color-quaternary));
   transition: 0.5s;
   transition-delay: 0.75s;
 }
@@ -482,7 +483,7 @@ i {
   right: -100%;
   height: 0.2rem;
   width: 100%;
-  background: linear-gradient(270deg, transparent, var(--color-primary));
+  background: linear-gradient(270deg, transparent, var(--color-quaternary));
   transition: 0.7s;
   transition-delay: 0.25s;
 }
@@ -491,12 +492,12 @@ i {
   left: 0;
   height: 100%;
   width: 0.2rem;
-  background: linear-gradient(360deg, transparent, var(--color-primary));
+  background: linear-gradient(360deg, transparent, var(--color-quaternary));
   transition: 0.5s;
   transition-delay: 0s;
 }
 .motto__content--link:hover, .motto__content--link:active {
-  background: var(--color-primary);
+  background: var(--color-quaternary);
   transition-delay: 1s;
 }
 .motto__content--link:hover span:first-child, .motto__content--link:active span:first-child {
@@ -522,7 +523,39 @@ i {
 
 .features {
   grid-column: container-start/container-end;
-  height: 600px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+}
+.features__content {
+  display: grid;
+  grid-gap: 2vw;
+  padding: 2rem 4rem;
+  height: 40rem;
+  align-items: center;
+}
+.features__content--title {
+  font-weight: 700 !important;
+  text-align: center;
+  position: relative;
+  align-self: end;
+  z-index: 1;
+}
+.features__content--title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--color-primary-m);
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s ease-in-out;
+}
+.features__content:hover .features__content--title::before, .features__content:active .features__content--title::before {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 .features__content:nth-child(1) {
@@ -601,7 +634,7 @@ i {
   padding: 6vh 4vw;
 }
 
-.motto__content--title {
+.motto__content--title, .features__content--title {
   font-size: calc(1.5rem + 2vw);
   font-weight: 300;
   letter-spacing: 0.2rem;

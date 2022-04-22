@@ -1,7 +1,45 @@
 .features {
 	// background-color: var(--color-quinary);
 	grid-column: container-start / container-end;
-	height: 600px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+
+	&__content {
+		display: grid;
+		grid-gap: 2vw;
+		padding: 2rem 4rem;
+		height: 40rem;
+		align-items: center;
+
+		&--title {
+			@extend %sec-heading;
+			font-weight: font-weight(font-weight-bold) !important;
+			text-align: center;
+			position: relative;
+			align-self: end;
+			z-index: 1;
+		}
+
+		&--title::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			background-color: var(--color-primary-m);
+			z-index: -1;
+			transform: scaleX(0);
+			transform-origin: right;
+			transition: transform 0.5s ease-in-out;
+		}
+
+		&:hover &--title::before,
+		&:active &--title::before {
+			transform: scaleX(1);
+			transform-origin: left;
+		}
+	}
 }
 
 // Recorera desde el 1 hasta el 9 colocando las imagenes. 
