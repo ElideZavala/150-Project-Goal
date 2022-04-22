@@ -453,6 +453,7 @@ i {
   padding: 0.7rem 1.5rem;
   position: relative;
   transition: all 0.5s ease-in-out;
+  overflow: hidden;
 }
 .motto__content--link:link span, .motto__content--link:visited span {
   display: block;
@@ -494,6 +495,31 @@ i {
   transition: 0.5s;
   transition-delay: 0s;
 }
+.motto__content--link:hover, .motto__content--link:active {
+  background: var(--color-primary);
+  transition-delay: 1s;
+}
+.motto__content--link:hover span:first-child, .motto__content--link:active span:first-child {
+  left: 100%;
+  transition-duration: 1s;
+  transition-delay: 0s;
+}
+.motto__content--link:hover span:nth-child(2), .motto__content--link:active span:nth-child(2) {
+  top: 100%;
+  transition-duration: 1s;
+  transition-delay: 0.25s;
+}
+.motto__content--link:hover span:nth-child(3), .motto__content--link:active span:nth-child(3) {
+  right: 100%;
+  transition-duration: 1s;
+  transition-delay: 0.5s;
+}
+.motto__content--link:hover span:nth-child(4), .motto__content--link:active span:nth-child(4) {
+  top: -100%;
+  transition-duration: 1s;
+  transition-delay: 0.75s;
+}
+
 .features {
   background-color: var(--color-quinary);
   grid-column: container-start/container-end;
