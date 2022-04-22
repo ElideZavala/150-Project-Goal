@@ -521,7 +521,6 @@ i {
 }
 
 .features {
-  background-color: var(--color-quinary);
   grid-column: container-start/container-end;
   height: 600px;
 }
