@@ -678,10 +678,69 @@ i {
   }
 }
 .trainers {
-  background-color: var(--color-tertiary);
   grid-column: center-start/center-end;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+.trainers__title {
+  text-align: center;
+  margin-bottom: 2rem;
+  background-color: var(--color-quaternary-m);
+  color: var(--color-primary);
+  border-bottom-left-radius: 8rem;
+  border-top-right-radius: 8rem;
+}
+.trainers__content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-gap: 6vh calc(1rem + 1vw);
+  place-items: center;
+}
+.trainers__content--card {
+  display: grid;
+  position: relative;
+  height: 30rem;
+  width: 30rem;
+  overflow: hidden;
+}
+.trainers__content--card__specialty, .trainers__content--card__name {
+  position: absolute;
+  bottom: 20%;
+  left: 5%;
+  transform: translate(-25rem, -15rem);
+}
+.trainers__content--card__img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease-in-out;
+}
+.trainers__content--card:hover .trainers__content--card__img, .trainers__content--card:active .trainers__content--card__img {
+  filter: contrast(30%);
+}
+.trainers__content--card:hover .trainers__content--card__specialty, .trainers__content--card:active .trainers__content--card__specialty, .trainers__content--card:hover .trainers__content--card__name, .trainers__content--card:active .trainers__content--card__name {
+  animation: name 1.5s linear forwards;
+  z-index: 1;
 }
 
+@keyframes name {
+  0% {
+    transform: translate(-25rem, -15rem);
+    opacity: 0;
+  }
+  30% {
+    transform: translate(8rem, -15rem);
+    opacity: 0.3;
+  }
+  60% {
+    transform: translate(8rem, 0rem);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
 .testimonials {
   background-color: var(--color-quaternary);
   grid-column: container-start/container-end;
@@ -712,11 +771,11 @@ i {
   background-position: center;
 }
 
-.showcase, .motto {
+.showcase, .motto, .trainers {
   padding: 6vh 4vw;
 }
 
-.motto__content--title, .features__content--title {
+.motto__content--title, .features__content--title, .trainers__title {
   font-size: calc(1.5rem + 2vw);
   font-weight: 300;
   letter-spacing: 0.2rem;
@@ -728,6 +787,15 @@ i {
   color: var(--color-quinary);
   font-family: "PT Sans", sans-serif;
   letter-spacing: 0.2rem;
+}
+
+.trainers__content--card__name {
+  font-size: calc(1.2rem + 0.5vw);
+  color: var(--color-quinary);
+}
+
+.trainers__content--card__specialty {
+  color: var(--color-quinary);
 }
 
 html.transition,

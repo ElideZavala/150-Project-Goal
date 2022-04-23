@@ -1,4 +1,91 @@
 .trainers {
-	background-color: var(--color-tertiary);
+	// background-color: var(--color-secondary);
 	grid-column: center-start / center-end;
+
+	@extend %sec-padding;
+	padding-right: 0 !important;
+	padding-left: 0 !important;
+	
+	&__title {
+		@extend %sec-heading;
+		text-align: center;
+		margin-bottom: 2rem;
+		background-color: var(--color-quaternary-m);
+		color: var(--color-primary);
+		border-bottom-left-radius: 8rem;
+		border-top-right-radius: 8rem;
+	}
+
+	&__content {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+		grid-gap: 6vh calc(1rem + 1vw);
+		place-items: center;
+
+		&--card {
+			display: grid;
+			position: relative;
+			height: 30rem;
+			width: 30rem;
+			overflow: hidden;
+
+			&__specialty, 
+			&__name { 
+				position: absolute;
+				bottom: 20%;
+				left: 5%;
+				transform: translate(-25rem, -15rem);
+			}
+
+			&__specialty {
+				@extend %sec-h4;
+			}
+
+			&__name {
+				@extend %sec-h3;
+			}
+
+			&__img {
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+				transition: all 0.5s ease-in-out;
+			}
+		}
+
+		&--card:hover .trainers__content--card__img,
+		&--card:active .trainers__content--card__img {
+			filter: contrast(30%);
+		}
+
+		&--card:hover .trainers__content--card__specialty,
+		&--card:active .trainers__content--card__specialty,
+		&--card:hover .trainers__content--card__name,
+		&--card:active .trainers__content--card__name {
+			animation: name 1.5s linear forwards;
+			z-index: 1;
+		} 
+
+	}
+}
+
+@keyframes name {
+	0% {
+		transform: translate(-25rem, -15rem);
+		opacity: 0;
+	}
+
+	30% {
+		transform: translate(8rem, -15rem);
+		opacity: 0.3;
+	}
+
+	60% {
+		transform: translate(8rem, 0rem);
+		opacity: 0.6;
+	}
+	100% {
+		transform: translate(0, 0);
+		opacity: 1;
+	}
 }
