@@ -709,6 +709,9 @@ i {
   left: 5%;
   transform: translate(-25rem, -15rem);
 }
+.trainers__content--card__name {
+  bottom: 25%;
+}
 .trainers__content--card__img {
   height: 100%;
   width: 100%;
