@@ -98,7 +98,7 @@ i {
   position: fixed;
   opacity: 0;
   display: none;
-  z-index: 10;
+  z-index: -10;
 }
 .header__nav {
   width: 100%;
@@ -321,7 +321,6 @@ i {
 .showcase__content {
   display: flex;
   flex-direction: column;
-  z-index: 10;
 }
 .showcase__content--title {
   text-align: center;
@@ -567,6 +566,7 @@ i {
   padding: 1rem 1.7rem;
   justify-self: start;
   position: relative;
+  overflow: hidden;
   transition: all 0.5s ease-in-out;
 }
 .features__content--link:link span, .features__content--link:visited span {
@@ -579,7 +579,7 @@ i {
   width: 100%;
   height: 0.5rem;
   background-image: linear-gradient(90deg, transparent, var(--color-primary));
-  animation: border1 linear infinite;
+  animation: border1 1s linear infinite;
   animation-delay: 0s;
 }
 .features__content--link:link span:nth-child(3), .features__content--link:visited span:nth-child(3) {
@@ -588,7 +588,7 @@ i {
   width: 100%;
   height: 0.5rem;
   background-image: linear-gradient(270deg, transparent, var(--color-primary));
-  animation: border3 linear infinite;
+  animation: border3 1s linear infinite;
   animation-delay: 0.5s;
 }
 .features__content--link:link span:nth-child(2), .features__content--link:visited span:nth-child(2) {
@@ -597,7 +597,7 @@ i {
   height: 100%;
   width: 0.5rem;
   background-image: linear-gradient(180deg, transparent, var(--color-primary));
-  animation: border2 linear infinite;
+  animation: border2 1s linear infinite;
   animation-delay: 0s;
 }
 .features__content--link:link span:nth-child(4), .features__content--link:visited span:nth-child(4) {
@@ -606,7 +606,7 @@ i {
   height: 100%;
   width: 0.5rem;
   background-image: linear-gradient(360deg, transparent, var(--color-primary));
-  animation: border4 linear infinite;
+  animation: border4 1s linear infinite;
   animation-delay: 0.5s;
 }
 .features__content--link:hover, .features__content--link:active {
@@ -655,6 +655,30 @@ i {
   }
   100% {
     left: 100%;
+  }
+}
+@keyframes border3 {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+@keyframes border2 {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+@keyframes border4 {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: -100%;
   }
 }
 .trainers {

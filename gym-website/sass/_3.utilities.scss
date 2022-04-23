@@ -16,7 +16,6 @@ body {
 		[container-start] 1fr [center-start] repeat(6,
 			[col-start] minmax(min-content, 16.66667rem) [col-end]) [center-end] 1fr [container-end];
 	grid-template-rows: min-content 90vh repeat(9, min-content);
-	
 	// Media Query
 	@include media-tablet {
 		grid-template-rows: min-content 100vh repeat(9, min-content);
