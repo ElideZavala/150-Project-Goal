@@ -113,11 +113,12 @@
 		grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
 	}
 
-// Recorera desde el 1 hasta el 9 colocando las imagenes. 
-@for $img from 1 through 9 {
-	.features__content:nth-child(#{$img}) {
-		background-image: url('../img/features/features-#{$img}.jpg');
-		@extend %bg;
+	// Recorera desde el 1 hasta el 9 colocando las imagenes. 
+	@for $img from 1 through 9 {
+		.features__content:nth-child(#{$img}) {
+			background-image: url('../img/features/features-#{$img}.jpg');
+			@extend %bg;
+		}
 	}
 }
 
