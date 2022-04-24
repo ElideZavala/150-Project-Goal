@@ -1,4 +1,90 @@
 .testimonials {
 	// background-color: var(--color-quaternary);
 	grid-column: container-start / container-end;
+	background-image: linear-gradient(var(--color-primary-m), var(--color-primary-m)), url('../img/testimonials/2.jpg');
+	@extend %bg;
+	@extend %sec-padding;
+
+	&__title {
+		text-align: center;
+		@extend %sec-heading;
+		margin-bottom: 4vh;
+	}
+
+	&__content { 
+		max-width: 100rem;
+		margin: 0 auto;
+
+		&--slider {
+			border: 0.1rem solid var(--color-quinary);
+			max-width: 60rem;
+			margin: 0 auto;
+			text-align: center;
+			padding: 2vh 1vw;
+
+			&__slide {
+				display: none;
+
+				&--para {
+					@extend %sec-para; 
+					margin-bottom: 3rem;
+				}
+	
+				&--title {
+					@extend %sec-h3;
+				}
+			}
+
+			&__slide.active {
+				display: block;
+				animation: slide 1s linear;
+			}
+		}
+
+		&--indicator {
+			padding-top: 4vh;
+			padding-bottom: 4vh;
+			display: flex;
+			justify-content: center;
+
+			&__img {
+				height: calc(7rem + 6vw);
+				width: calc(7rem + 6vw);
+				object-fit: cover;
+				border-radius: 50%;
+				margin: 2vh 2vw;
+				opacity: 0.2;
+				border: 0.2rem solid var(--color-quinary);
+				box-shadow: 0 0 1em var(--color-quinary);
+				cursor: pointer;
+			}
+
+			&__img.active { 
+				opacity: 1;
+			}
+		}
+	}
+
+	// *-*-*-*-*-*-*-*-*-*-*-* The 800px Mark Break Point *-*-*-*-*-*-*-*-*-*-*-*-*
+	@include media-tablet {
+		&__content {
+			&--indicator {
+				&__img {
+					height: calc(7rem + 5vw);
+					width: calc(7rem + 5vw);
+				}
+			}
+		}
+	}
+}
+@keyframes slide {
+	0% {
+		transform: translateX(-2rem);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
 }

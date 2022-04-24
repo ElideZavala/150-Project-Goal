@@ -746,8 +746,70 @@ i {
 }
 .testimonials {
   grid-column: container-start/container-end;
+  background-image: linear-gradient(var(--color-primary-m), var(--color-primary-m)), url("../img/testimonials/2.jpg");
+}
+.testimonials__title {
+  text-align: center;
+  margin-bottom: 4vh;
+}
+.testimonials__content {
+  max-width: 100rem;
+  margin: 0 auto;
+}
+.testimonials__content--slider {
+  border: 0.1rem solid var(--color-quinary);
+  max-width: 60rem;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2vh 1vw;
+}
+.testimonials__content--slider__slide {
+  display: none;
+}
+.testimonials__content--slider__slide--para {
+  margin-bottom: 3rem;
+}
+.testimonials__content--slider__slide.active {
+  display: block;
+  animation: slide 1s linear;
+}
+.testimonials__content--indicator {
+  padding-top: 4vh;
+  padding-bottom: 4vh;
+  display: flex;
+  justify-content: center;
+}
+.testimonials__content--indicator__img {
+  height: calc(7rem + 6vw);
+  width: calc(7rem + 6vw);
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 2vh 2vw;
+  opacity: 0.2;
+  border: 0.2rem solid var(--color-quinary);
+  box-shadow: 0 0 1em var(--color-quinary);
+  cursor: pointer;
+}
+.testimonials__content--indicator__img.active {
+  opacity: 1;
+}
+@media screen and (max-width: 800px) {
+  .testimonials__content--indicator__img {
+    height: calc(7rem + 5vw);
+    width: calc(7rem + 5vw);
+  }
 }
 
+@keyframes slide {
+  0% {
+    transform: translateX(-2rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 .clients {
   background-color: var(--color-secondary);
   grid-column: container-start/container-end;
@@ -766,31 +828,31 @@ i {
   height: 600px;
 }
 
-.showcase, .motto, .features .features__content:nth-child(1), .features .features__content:nth-child(2), .features .features__content:nth-child(3), .features .features__content:nth-child(4), .features .features__content:nth-child(5), .features .features__content:nth-child(6), .features .features__content:nth-child(7), .features .features__content:nth-child(8), .features .features__content:nth-child(9) {
+.showcase, .motto, .features .features__content:nth-child(1), .features .features__content:nth-child(2), .features .features__content:nth-child(3), .features .features__content:nth-child(4), .features .features__content:nth-child(5), .features .features__content:nth-child(6), .features .features__content:nth-child(7), .features .features__content:nth-child(8), .features .features__content:nth-child(9), .testimonials {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.showcase, .motto, .trainers {
+.showcase, .motto, .trainers, .testimonials {
   padding: 6vh 4vw;
 }
 
-.motto__content--title, .features__content--title, .trainers__title {
+.motto__content--title, .features__content--title, .trainers__title, .testimonials__title {
   font-size: calc(1.5rem + 2vw);
   font-weight: 300;
   letter-spacing: 0.2rem;
   color: var(--color-quinary);
 }
 
-.motto__content--para, .features__content--para {
+.motto__content--para, .features__content--para, .testimonials__content--slider__slide--para {
   font-size: calc(1.2rem + 0.5vw);
   color: var(--color-quinary);
   font-family: "PT Sans", sans-serif;
   letter-spacing: 0.2rem;
 }
 
-.trainers__content--card__name {
+.trainers__content--card__name, .testimonials__content--slider__slide--title {
   font-size: calc(1.2rem + 0.5vw);
   color: var(--color-quinary);
 }
