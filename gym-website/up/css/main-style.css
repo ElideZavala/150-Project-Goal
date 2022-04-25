@@ -917,7 +917,7 @@ i {
 
 .scroll {
   position: fixed;
-  bottom: 4rem;
+  bottom: 70rem;
   right: 4rem;
   height: 4rem;
   width: 4rem;
@@ -933,6 +933,12 @@ i {
   visibility: hidden;
   opacity: 0;
   transition: all 0.5s cubic-bezier(1, 0, 0, 1);
+}
+
+.scroll.active {
+  visibility: visible;
+  opacity: 1;
+  bottom: 4rem;
 }
 
 html.transition,
