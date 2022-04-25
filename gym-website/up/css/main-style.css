@@ -32,8 +32,8 @@ html[data-theme=dark] {
   --color-secondary-m:#0035668c;
   --color-tertiary: #001d3d;
   --color-tertiary-m: #001d3dc4;
-  --color-quaternary: #ffc300;
-  --color-quaternary-m: #ffc400bc;
+  --color-quaternary: #006664;
+  --color-quaternary-m: #006664ab;
   --color-quinary: #ffd60a;
   --color-quinary-m: #ffd60abb;
 }
@@ -859,7 +859,15 @@ i {
   background-color: var(--color-quinary-m);
   width: 20rem;
   margin: 2rem;
-  border-radius: 15px;
+  border-radius: 2rem;
+  padding: 2rem;
+  transition: transform 0.5s ease-in-out;
+}
+.clients__content--img img {
+  width: 100%;
+}
+.clients__content--img:hover, .clients__content--img:active {
+  transform: scale(1.2);
 }
 
 .register {
