@@ -88,6 +88,13 @@
 	color: var(--color-quinary);
 }
 
+// *-*-*-*-*-* Scroll to top button *-*-*-*-*-*-*
+.scroll {
+	position: fixed;
+	bottom: 4rem;
+}
+
+
 // *-*-*-*-*-* Dark Mode Smooth Transition For ALL HTML Elements *-*-*-*-*-*-*
 html.transition,
 html.transition *,

@@ -861,6 +861,11 @@ i {
   color: var(--color-quinary);
 }
 
+.scroll {
+  position: fixed;
+  bottom: 4rem;
+}
+
 html.transition,
 html.transition *,
 html.transition *::before,
