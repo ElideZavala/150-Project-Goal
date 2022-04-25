@@ -811,8 +811,55 @@ i {
   }
 }
 .clients {
-  background-color: var(--color-secondary);
   grid-column: container-start/container-end;
+  background-image: linear-gradient(var(--color-quaternary-m), var(--color-quaternary-m)), url("../img/clients/clients-bg.jpg");
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.clients__title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 500 !important;
+  position: relative;
+  align-self: center;
+  padding: 1rem;
+}
+.clients__title:before, .clients__title::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  background-color: rgba(211, 35, 19, 0.4745098039);
+  box-shadow: 60px 6px 107px 15px #d32213;
+  -webkit-box-shadow: 60px 6px 107px 15px #d32213;
+  -moz-box-shadow: 60px 6px 107px 15px #d32213;
+  height: 100%;
+  width: 0.2rem;
+  transition: all 0.5s ease-in-out;
+}
+.clients__title:before {
+  left: 0;
+}
+.clients__title::after {
+  right: 0;
+}
+.clients__title:hover::before, .clients__title:active::before, .clients__title:hover::after, .clients__title:active::after {
+  height: 0.2rem;
+  width: 100%;
+}
+.clients__title:hover::after, .clients__title:active::after {
+  top: 100%;
+}
+.clients__content {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.clients__content--img {
+  background-color: var(--color-quinary-m);
+  width: 20rem;
+  margin: 2rem;
+  border-radius: 15px;
 }
 
 .register {
@@ -827,17 +874,17 @@ i {
   height: 600px;
 }
 
-.showcase, .motto, .features .features__content:nth-child(1), .features .features__content:nth-child(2), .features .features__content:nth-child(3), .features .features__content:nth-child(4), .features .features__content:nth-child(5), .features .features__content:nth-child(6), .features .features__content:nth-child(7), .features .features__content:nth-child(8), .features .features__content:nth-child(9), .testimonials {
+.showcase, .motto, .features .features__content:nth-child(1), .features .features__content:nth-child(2), .features .features__content:nth-child(3), .features .features__content:nth-child(4), .features .features__content:nth-child(5), .features .features__content:nth-child(6), .features .features__content:nth-child(7), .features .features__content:nth-child(8), .features .features__content:nth-child(9), .testimonials, .clients {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.showcase, .motto, .trainers, .testimonials {
+.showcase, .motto, .trainers, .testimonials, .clients {
   padding: 6vh 4vw;
 }
 
-.motto__content--title, .features__content--title, .trainers__title, .testimonials__title {
+.motto__content--title, .features__content--title, .trainers__title, .testimonials__title, .clients__title {
   font-size: calc(1.5rem + 2vw);
   font-weight: 300;
   letter-spacing: 0.2rem;

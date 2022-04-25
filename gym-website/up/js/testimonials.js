@@ -16,10 +16,10 @@ for (let i = 0; i < indicatorImgs.length; i++) {
 		this.classList.add('active');
 
 		// getting the next slide.
-		// const id = this.getAttribute('data-id');
-		// for (let k = 0; k < slides.length; k++ ) {
-		// 	slides[k].classList.remove('active');
-		// }
+		const id = this.getAttribute('data-id');
+		for (let k = 0; k < slides.length; k++ ) {
+			slides[k].classList.remove('active');
+		}
 
 		slides[id].classList.add("active");
 	});
