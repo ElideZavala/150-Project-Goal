@@ -918,6 +918,21 @@ i {
 .scroll {
   position: fixed;
   bottom: 4rem;
+  right: 4rem;
+  height: 4rem;
+  width: 4rem;
+  background-image: url("../img/scroll/scroll.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--color-secondary-m);
+  background-size: contain;
+  padding: 1rem;
+  border-radius: 50%;
+  z-index: 30;
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(1, 0, 0, 1);
 }
 
 html.transition,
