@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=PT+Sans&family=Roboto:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Indie+Flower&family=PT+Sans&family=Roboto:ital@0;1&display=swap");
 ::selection {
   background-color: var(--color-primary);
   color: var(--color-quinary);
@@ -912,6 +912,63 @@ i {
 }
 .register__progress--step.active {
   background-color: var(--color-quinary);
+}
+.register__content {
+  width: 28rem;
+  margin-top: 2rem;
+  overflow: hidden;
+}
+.register__content--form {
+  display: flex;
+  justify-content: center;
+  width: 400%;
+}
+.register__content--form__page {
+  width: 50%;
+  display: grid;
+  grid-template-rows: repeat(3, 7rem);
+  grid-row-gap: 4rem;
+  align-items: start;
+  transition: margin 0.5s ease-in-out;
+}
+.register__content--form__page--field {
+  height: 4rem;
+  width: 28rem;
+}
+.register__content--form__page--field label {
+  font-size: 2rem;
+}
+.register__content--form__page--field input,
+.register__content--form__page--field select {
+  height: 100%;
+  width: 100%;
+  font-size: 1.5rem;
+  padding-left: 1rem;
+  border: none;
+  outline: none;
+  background-color: var(--color-primary-m);
+  color: var(--color-quinary);
+  letter-spacing: 0.2rem;
+  font-family: "Indie Flower", cursive;
+  font-weight: 900;
+}
+.register__content--form__page--field select {
+  color: black;
+}
+.register__content--form__page--field input:focus {
+  background-color: var(--color-quaternary);
+}
+.register__content--form__page--field button {
+  padding: 0.8rem 1.7rem;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-tertiary);
+  border: none;
+  color: var(--color-quinary);
+  font-size: 1.8rem;
+  cursor: pointer;
+  letter-spacing: 0.2rem;
+  transition: all 0.5s ease-in-out;
 }
 
 .footer {
