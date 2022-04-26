@@ -871,9 +871,47 @@ i {
 }
 
 .register {
-  background-color: var(--color-tertiary);
   grid-column: container-start/container-end;
-  height: 600px;
+  background-image: url("../img/register/register-bg.jpg");
+  color: var(--color-quinary);
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.register__progress {
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+  grid-gap: 2rem;
+}
+.register__progress--step {
+  font-size: 2rem;
+  background-color: var(--color-tertiary-m);
+  padding: 1rem;
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  text-align: center;
+  position: relative;
+  transition: all 0.5s ease-in;
+}
+.register__progress--step i {
+  font-size: calc(1.2rem + 0.5vw);
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.register__progress--step i.active {
+  display: block;
+}
+.register__progress--step span.active {
+  display: none;
+}
+.register__progress--step.active {
+  background-color: var(--color-quinary);
 }
 
 .footer {
@@ -882,13 +920,13 @@ i {
   height: 600px;
 }
 
-.showcase, .motto, .features .features__content:nth-child(1), .features .features__content:nth-child(2), .features .features__content:nth-child(3), .features .features__content:nth-child(4), .features .features__content:nth-child(5), .features .features__content:nth-child(6), .features .features__content:nth-child(7), .features .features__content:nth-child(8), .features .features__content:nth-child(9), .testimonials, .clients {
+.showcase, .motto, .features .features__content:nth-child(1), .features .features__content:nth-child(2), .features .features__content:nth-child(3), .features .features__content:nth-child(4), .features .features__content:nth-child(5), .features .features__content:nth-child(6), .features .features__content:nth-child(7), .features .features__content:nth-child(8), .features .features__content:nth-child(9), .testimonials, .clients, .register {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.showcase, .motto, .trainers, .testimonials, .clients {
+.showcase, .motto, .trainers, .testimonials, .clients, .register {
   padding: 6vh 4vw;
 }
 

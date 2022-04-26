@@ -1,5 +1,57 @@
 .register {
-	background-color: var(--color-tertiary);
+	// background-color: var(--color-tertiary);
 	grid-column: container-start / container-end;
-	height: 600px;
+
+	background-image: url('../img/register/register-bg.jpg');
+	@extend %bg;
+	@extend %sec-padding;
+	color: var(--color-quinary);
+	min-height: 80vh;  // Nuac adquirira ningun valor menor a 80vh.
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	// Register Progress 
+	&__progress { 
+		display: grid;
+		grid-template-columns: repeat(4, max-content);
+		grid-gap: 2rem;
+
+		&--step {
+			font-size: 2rem;
+			background-color: var(--color-tertiary-m);
+			padding: 1rem;
+			height: 6rem;
+			width: 6rem;
+			border-radius: 50%;
+			text-align: center;
+			position: relative;
+			transition: all 0.5s ease-in;
+
+			i {
+				font-size: font-size(font-size-small);
+				display: none;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+
+			i.active { 
+				display: block;
+			}
+
+			span.active { 
+				display: none;
+			}
+		}
+
+		&--step.active {
+			background-color: var(--color-quinary);
+		}
+	}
+
+	// Register Content
 }
