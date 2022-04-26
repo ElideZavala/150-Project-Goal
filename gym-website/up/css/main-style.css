@@ -970,6 +970,19 @@ i {
   letter-spacing: 0.2rem;
   transition: all 0.5s ease-in-out;
 }
+.register__content--form__page--field button:hover,
+.register__content--form__page--field button:active {
+  background-color: var(--color-quaternary);
+}
+.register__content--form__page .btns {
+  display: flex;
+}
+.register__content--form__page .btns button:first-child {
+  margin-right: 0.5rem;
+}
+.register__content--form__page .btns button:last-child {
+  margin-left: 0.5rem;
+}
 
 .footer {
   background-color: var(--color-quaternary);

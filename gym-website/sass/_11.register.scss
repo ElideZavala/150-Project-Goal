@@ -115,6 +115,23 @@
 						letter-spacing: 0.2rem;
 						transition: all 0.5s ease-in-out;
 					}
+
+					button:hover,
+					button:active {
+						background-color: var(--color-quaternary);
+					}
+				}
+
+				.btns {
+					display: flex;
+
+					button:first-child {
+						margin-right: 0.5rem;
+					}
+
+					button:last-child {
+						margin-left: 0.5rem;
+					}
 				}
 			}
 		}
