@@ -911,7 +911,7 @@ i {
   display: none;
 }
 .register__progress--step.active {
-  background-color: var(--color-tertiary);
+  background-color: var(--color-primary);
 }
 .register__content {
   width: 28rem;

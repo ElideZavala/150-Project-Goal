@@ -27,30 +27,44 @@ const progressTick = document.querySelectorAll('.fa-check');
 let max = 4;
 let current = 1;
 
+// The Next Button Event Listener Function. 
+function tick() {
+	progressStep[current - 1].classList.add('active');
+	progressNumber[current - 1].classList.add('active');
+	progressTick[current - 1].classList.add('active');
+	current += 1;
+}
+
+// The Previous Button Event Listener Function.
+function untick() {
+	progressStep[current - 2].classList.remove('active');
+	progressNumber[current - 2].classList.remove('active');
+	progressTick[current - 2].classList.remove('active');
+	current -= 1;
+}
 // *-*-*-*-*-*-*-*-*-*-*-* Next Btns Events *-*-*-*-*-*-*-*-*-*-*-*-*
 
 // First Next Button Event Listener
 firstNextBtn.addEventListener('click', () => {
 	slidePage.style.marginLeft = '-33%';
-	progressStep[current - 1].classList.add('active');
-	progressNumber[current - 1].classList.add('active');
-	progressTick[current - 1].classList.add('active');
-	current += 1;
+	tick();
 });
 
 // Second Next Button Event Listener
 secondNextBtn.addEventListener('click', () => {
 	slidePage.style.marginLeft = '-100%'
-	// progressStep[current - 1].classList.add('active');
+	tick();
 });
 
 // Third Next Button Event Listener
 thirdNextBtn.addEventListener('click', () => {
-	slidePage.style.marginLeft = '-200%'
+	slidePage.style.marginLeft = '-200%';
+	tick();
 });
 
 // Submit Button Event Listener
 submitBtn.addEventListener('click', () => {
+	tick();
 	swal("Good done!", "Your registration has been successful!", "success");
 	setTimeout(() => {
 		location.reload();
@@ -61,23 +75,15 @@ submitBtn.addEventListener('click', () => {
 
 // First Prev Button Event Listener
 firstPrevBtn.addEventListener('click', () => {
-	slidePage.style.marginLeft = '0';
-	progressStep[current - 2].classList.remove('active');
-	progressNumber[current - 2].classList.remove('active');
-	progressTick[current - 2].classList.remove('active');
-	current -= 1;
+	untick()
 });
 
 // Second Prev Button Event Listener
 secondPrevBtn.addEventListener('click', () => {
-	slidePage.style.marginLeft = '-33%'
-	progressStep[current - 3].classList.remove('active');
-	progressNumber[current - 3].classList.remove('active');
-	progressTick[current - 3].classList.remove('active');
-	current += 2;
+	untick()
 });
 
 // Second Prev Button Event Listener
 thirdPrevBtn.addEventListener('click', () => {
-	slidePage.style.marginLeft = '-100%'
+	untick()
 });
