@@ -1,8 +1,14 @@
 .register {
 	// background-color: var(--color-tertiary);
 	grid-column: container-start / container-end;
-
-	background-image: url('../img/register/register-bg.jpg');
+	// background-image: linear-gradient(
+	// 	var(--color-quaternary-m), 
+	// 	var(--color-quaternary-m)),
+	// 	url('../img/register/register-bg.jpg');
+	background-image: linear-gradient(
+		rgba(0, 0, 0, 0.305), 
+		rgba(0, 0, 0, 0.305)),
+		url('../img/register/register-bg.jpg');
 	@extend %bg;
 	@extend %sec-padding;
 	color: var(--color-quinary);
@@ -49,7 +55,7 @@
 		}
 
 		&--step.active {
-			background-color: var(--color-quinary);
+			background-color: var(--color-tertiary);
 		}
 	}
 

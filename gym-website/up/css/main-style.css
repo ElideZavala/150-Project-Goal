@@ -872,7 +872,7 @@ i {
 
 .register {
   grid-column: container-start/container-end;
-  background-image: url("../img/register/register-bg.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.305), rgba(0, 0, 0, 0.305)), url("../img/register/register-bg.jpg");
   color: var(--color-quinary);
   min-height: 80vh;
   display: flex;
@@ -911,7 +911,7 @@ i {
   display: none;
 }
 .register__progress--step.active {
-  background-color: var(--color-quinary);
+  background-color: var(--color-tertiary);
 }
 .register__content {
   width: 28rem;
