@@ -11,7 +11,8 @@
 ![image](./7.jpeg)
 ![image](./8.jpeg)
 
-### Dark Mode
+<h3 align="center">Dark Mode</h3> 
+
 ![image](./9.jpeg)
 ![image](./10.jpeg)
 ![image](./11.jpeg)
