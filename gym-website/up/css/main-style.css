@@ -1005,7 +1005,7 @@ i {
   display: block;
   letter-spacing: initial;
 }
-.footer__content--section__para {
+.footer__content--section__para, .footer__social--call p {
   color: var(--color-quinary);
   font-weight: 300;
   font-size: calc(1.2rem + 0.5vw);
@@ -1042,6 +1042,59 @@ i {
 .footer__content--section:last-child {
   padding-bottom: 4vw;
   border-bottom: 0.1rem solid var(--color-quinary);
+}
+.footer__social {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.footer__social--call {
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+.footer__social--call p,
+.footer__social--call i {
+  display: inline-block;
+  color: var(--color-quinary);
+}
+.footer__social--call i {
+  font-size: 3rem;
+}
+.footer__social--call p {
+  margin-left: 1rem;
+}
+.footer__social--icons {
+  display: flex;
+}
+.footer__social--icons__link:link, .footer__social--icons__link:visited {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: calc(0.5rem + 2vw);
+  height: 3rem;
+  width: 3rem;
+  border: 0.1rem solid var(--color-quinary);
+  padding: 2.5rem;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+}
+.footer__social--icons__link:link i, .footer__social--icons__link:visited i {
+  font-size: 3rem;
+}
+.footer__social--icons__link:link::before, .footer__social--icons__link:visited::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: var(--color-quaternary);
+  border-radius: inherit;
+  z-index: -1;
+  transform: scale(0);
+  transition: transform 0.5s ease;
+}
+.footer__social--icons__link:hover::before, .footer__social--icons__link:active::before {
+  transform: scale(1);
 }
 .footer__logo {
   display: flex;

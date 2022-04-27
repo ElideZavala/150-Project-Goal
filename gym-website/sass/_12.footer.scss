@@ -78,6 +78,75 @@
 			padding-bottom: 4vw;
 			border-bottom:  0.1rem solid var(--color-quinary);
 		}
+
+	}
+
+	&__social { 
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		
+		&--call {
+			margin-right: 2rem;
+			margin-bottom: 2rem;
+			
+			p,
+			i {
+				display: inline-block;
+				color: var(--color-quinary);
+			}
+
+			i { 
+				font-size: 3rem;
+			}
+
+			p {
+				margin-left: 1rem;
+				// Aplicar a todos los elementos que tengan esta clase. 
+				@extend .footer__content--section__para;
+			}
+		}
+
+		&--icons {
+			display: flex;
+
+			&__link:link,
+			&__link:visited {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-right: calc(0.5rem + 2vw);
+				height: 3rem;
+				width: 3rem;
+				border: 0.1rem solid var(--color-quinary);
+				padding: 2.5rem;
+				border-radius: 50%;
+				position: relative;
+				z-index: 1;
+				
+				i {
+					font-size: 3rem;
+				}
+			}
+			
+			&__link:link::before,
+			&__link:visited::before {
+				content: '';
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				background-color: var(--color-quaternary);
+				border-radius: inherit;
+				z-index: -1;
+				transform: scale(0);
+				transition: transform 0.5s ease;
+			}
+
+			&__link:hover::before,
+			&__link:active::before {
+				transform: scale(1);
+			}
+		}
 	}
 
 	&__logo {
