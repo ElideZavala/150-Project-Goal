@@ -1,4 +1,36 @@
 .footer {
 	// background-color: var(--color-quaternary);
 	grid-column: container-start / container-end;
+	background-image: linear-gradient(var(--color-tertiary-m), var(--color-tertiary-m)),
+	url('../img/footer/footer-bg.jpg');
+	@extend %bg;
+	@extend %sec-padding;
+
+	display: grid;
+	grid-template-rows: repeat(3, max-content);
+	grid-row-gap: 8vh;
+
+	&__content {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, 25rem);
+	}
+
+	&__logo {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		img {
+			height: 5rem;
+			width: 5rem;
+		}
+
+		span {
+			font-size: 2.5rem;
+			color: var(--color-quinary);
+			margin-left: 0.5rem;
+			letter-spacing: 0.3rem;
+			font-family: 'Homemade Apple', cursive;
+		}
+	}
 }

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Indie+Flower&family=PT+Sans&family=Roboto:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Homemade+Apple&family=Indie+Flower&family=PT+Sans&family=Roboto:ital@0;1&display=swap");
 ::selection {
   background-color: var(--color-primary);
   color: var(--color-quinary);
@@ -986,15 +986,39 @@ i {
 
 .footer {
   grid-column: container-start/container-end;
+  background-image: linear-gradient(var(--color-tertiary-m), var(--color-tertiary-m)), url("../img/footer/footer-bg.jpg");
+  display: grid;
+  grid-template-rows: repeat(3, max-content);
+  grid-row-gap: 8vh;
+}
+.footer__content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 25rem);
+}
+.footer__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer__logo img {
+  height: 5rem;
+  width: 5rem;
+}
+.footer__logo span {
+  font-size: 2.5rem;
+  color: var(--color-quinary);
+  margin-left: 0.5rem;
+  letter-spacing: 0.3rem;
+  font-family: "Homemade Apple", cursive;
 }
 
-.showcase, .motto, .features .features__content:nth-child(1), .features .features__content:nth-child(2), .features .features__content:nth-child(3), .features .features__content:nth-child(4), .features .features__content:nth-child(5), .features .features__content:nth-child(6), .features .features__content:nth-child(7), .features .features__content:nth-child(8), .features .features__content:nth-child(9), .testimonials, .clients, .register {
+.showcase, .motto, .features .features__content:nth-child(1), .features .features__content:nth-child(2), .features .features__content:nth-child(3), .features .features__content:nth-child(4), .features .features__content:nth-child(5), .features .features__content:nth-child(6), .features .features__content:nth-child(7), .features .features__content:nth-child(8), .features .features__content:nth-child(9), .testimonials, .clients, .register, .footer {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.showcase, .motto, .trainers, .testimonials, .clients, .register {
+.showcase, .motto, .trainers, .testimonials, .clients, .register, .footer {
   padding: 6vh 4vw;
 }
 
