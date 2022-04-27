@@ -13,6 +13,12 @@
 	&__content {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, 25rem);
+		place-content: center;
+		grid-gap: 10rem 4vw;
+
+		&--title {
+			@extend %sec-h3;
+		}
 	}
 
 	&__logo {

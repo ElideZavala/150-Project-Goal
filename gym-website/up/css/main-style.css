@@ -994,6 +994,8 @@ i {
 .footer__content {
   display: grid;
   grid-template-columns: repeat(auto-fit, 25rem);
+  place-content: center;
+  grid-gap: 10rem 4vw;
 }
 .footer__logo {
   display: flex;
@@ -1036,7 +1038,7 @@ i {
   letter-spacing: 0.2rem;
 }
 
-.trainers__content--card__name, .testimonials__content--slider__slide--title {
+.trainers__content--card__name, .testimonials__content--slider__slide--title, .footer__content--title {
   font-size: calc(1.2rem + 0.5vw);
   color: var(--color-quinary);
 }
