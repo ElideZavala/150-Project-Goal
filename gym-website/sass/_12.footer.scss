@@ -16,9 +16,33 @@
 		place-content: center;
 		grid-gap: 10rem 4vw;
 
-		&--title {
-			@extend %sec-h3;
+		&--section {
+			display: grid;
+			grid-row-gap: 1.5rem;
+
+			&__title {
+				@extend %sec-h3;
+			}
+
+			&__link:link,
+			&__link:visited {
+				display: block;
+				letter-spacing: initial;
+			}
+
+			&__para {
+				color: var(--color-quinary);
+				font-weight: font-weight(font-weight-light);
+				font-size: font-size(font-size-small);
+			}
 		}
+
+		&--section:first-child,
+		&--section:nth-child(2), 
+		&--section:nth-child(3) {
+			border-right: 0.1rem solid var(--color-quinary);
+		}
+
 	}
 
 	&__logo {

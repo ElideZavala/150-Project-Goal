@@ -997,6 +997,22 @@ i {
   place-content: center;
   grid-gap: 10rem 4vw;
 }
+.footer__content--section {
+  display: grid;
+  grid-row-gap: 1.5rem;
+}
+.footer__content--section__link:link, .footer__content--section__link:visited {
+  display: block;
+  letter-spacing: initial;
+}
+.footer__content--section__para {
+  color: var(--color-quinary);
+  font-weight: 300;
+  font-size: calc(1.2rem + 0.5vw);
+}
+.footer__content--section:first-child, .footer__content--section:nth-child(2), .footer__content--section:nth-child(3) {
+  border-right: 0.1rem solid var(--color-quinary);
+}
 .footer__logo {
   display: flex;
   align-items: center;
@@ -1038,7 +1054,7 @@ i {
   letter-spacing: 0.2rem;
 }
 
-.trainers__content--card__name, .testimonials__content--slider__slide--title, .footer__content--title {
+.trainers__content--card__name, .testimonials__content--slider__slide--title, .footer__content--section__title {
   font-size: calc(1.2rem + 0.5vw);
   color: var(--color-quinary);
 }
