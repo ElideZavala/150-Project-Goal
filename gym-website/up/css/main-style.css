@@ -985,9 +985,7 @@ i {
 }
 
 .footer {
-  background-color: var(--color-quaternary);
   grid-column: container-start/container-end;
-  height: 600px;
 }
 
 .showcase, .motto, .features .features__content:nth-child(1), .features .features__content:nth-child(2), .features .features__content:nth-child(3), .features .features__content:nth-child(4), .features .features__content:nth-child(5), .features .features__content:nth-child(6), .features .features__content:nth-child(7), .features .features__content:nth-child(8), .features .features__content:nth-child(9), .testimonials, .clients, .register {
