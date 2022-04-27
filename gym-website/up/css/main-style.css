@@ -872,7 +872,7 @@ i {
 
 .register {
   grid-column: container-start/container-end;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.305), rgba(0, 0, 0, 0.305)), url("../img/register/register-bg.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.41), rgba(0, 0, 0, 0.41)), url("../img/register/register-bg.jpg");
   color: var(--color-quinary);
   min-height: 80vh;
   display: flex;
@@ -986,7 +986,7 @@ i {
 
 .footer {
   grid-column: container-start/container-end;
-  background-image: linear-gradient(var(--color-tertiary-m), var(--color-tertiary-m)), url("../img/footer/footer-bg.jpg");
+  background-image: linear-gradient(var(--color-primary-m), var(--color-primary-m)), url("../img/footer/footer-bg.jpg");
   display: grid;
   grid-template-rows: repeat(3, max-content);
   grid-row-gap: 8vh;
@@ -996,6 +996,9 @@ i {
   grid-template-columns: repeat(auto-fit, 25rem);
   place-content: center;
   grid-gap: 10rem 4vw;
+}
+.footer__content i {
+  color: var(--color-quaternary);
 }
 .footer__content--section {
   display: grid;
@@ -1104,6 +1107,7 @@ i {
 .footer__logo img {
   height: 5rem;
   width: 5rem;
+  margin-right: 1.5rem;
 }
 .footer__logo span {
   font-size: 2.5rem;

@@ -1,7 +1,7 @@
 .footer {
 	// background-color: var(--color-quaternary);
 	grid-column: container-start / container-end;
-	background-image: linear-gradient(var(--color-tertiary-m), var(--color-tertiary-m)),
+	background-image: linear-gradient(var(--color-primary-m), var(--color-primary-m)),
 	url('../img/footer/footer-bg.jpg');
 	@extend %bg;
 	@extend %sec-padding;
@@ -15,6 +15,10 @@
 		grid-template-columns: repeat(auto-fit, 25rem);
 		place-content: center;
 		grid-gap: 10rem 4vw;
+
+		i {
+			color: var(--color-quaternary);
+		}
 
 		&--section {
 			display: grid;
@@ -157,6 +161,7 @@
 		img {
 			height: 5rem;
 			width: 5rem;
+			margin-right: 1.5rem;
 		}
 
 		span {
