@@ -42,7 +42,42 @@
 		&--section:nth-child(3) {
 			border-right: 0.1rem solid var(--color-quinary);
 		}
+		
+		&--section:nth-child(3) {
+			padding-right: 4vw;
+			
 
+			input[type=email] {
+				padding: 1rem;
+				background-color: transparent;
+				color: var(--color-quinary);
+				border: 0.1rem solid var(--color-quinary);
+				border-bottom: none;
+				border-right: none;
+			}
+
+			input[type=submit] {
+				background-color: transparent;
+				border: none;
+				color: var(--color-quinary);
+				font-size: 1.5rem;
+				border: 0.1rem solid var(--color-quinary);
+				padding: 0.85rem 1.5rem;
+				cursor: pointer;
+				transition: all 0.5s ease-in-out;
+			}
+
+			input[type=submit]:hover,
+			input[type=submit]:active {
+				background-color: var(--color-quinary);
+				color: black;
+			}
+		}
+
+		&--section:last-child {
+			padding-bottom: 4vw;
+			border-bottom:  0.1rem solid var(--color-quinary);
+		}
 	}
 
 	&__logo {

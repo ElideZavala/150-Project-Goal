@@ -1013,6 +1013,36 @@ i {
 .footer__content--section:first-child, .footer__content--section:nth-child(2), .footer__content--section:nth-child(3) {
   border-right: 0.1rem solid var(--color-quinary);
 }
+.footer__content--section:nth-child(3) {
+  padding-right: 4vw;
+}
+.footer__content--section:nth-child(3) input[type=email] {
+  padding: 1rem;
+  background-color: transparent;
+  color: var(--color-quinary);
+  border: 0.1rem solid var(--color-quinary);
+  border-bottom: none;
+  border-right: none;
+}
+.footer__content--section:nth-child(3) input[type=submit] {
+  background-color: transparent;
+  border: none;
+  color: var(--color-quinary);
+  font-size: 1.5rem;
+  border: 0.1rem solid var(--color-quinary);
+  padding: 0.85rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.footer__content--section:nth-child(3) input[type=submit]:hover,
+.footer__content--section:nth-child(3) input[type=submit]:active {
+  background-color: var(--color-quinary);
+  color: black;
+}
+.footer__content--section:last-child {
+  padding-bottom: 4vw;
+  border-bottom: 0.1rem solid var(--color-quinary);
+}
 .footer__logo {
   display: flex;
   align-items: center;
