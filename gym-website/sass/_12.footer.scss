@@ -167,4 +167,10 @@
 			font-family: 'Homemade Apple', cursive;
 		}
 	}
+
+	@include media-medium {
+		&__social {
+			justify-content: center;
+		}
+	}
 }
