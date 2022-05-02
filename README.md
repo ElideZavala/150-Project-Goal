@@ -58,3 +58,9 @@
   * | 28 | [Convertidor de voz a texto](https://github.com/ElideZavala/150-Project-Goal/tree/main/Speech-to-text) | [ir a la página](https://jovial-nobel-86aba6.netlify.app/)
 
   * | 29 | [Buscador por medio de voz](https://github.com/ElideZavala/150-Project-Goal/tree/main/Speech-to-text%20-Voice%20Command) | [ir a la página]()
+
+  * | 30 | [Agencia de Viajes](https://github.com/ElideZavala/NodeJs) | [ir a la página](https://tourswebsiteusa.herokuapp.com/)
+
+  * | 31 | [WebSite de Hotel](https://github.com/ElideZavala/FlexBox-Grid-Sass-Animations-Full/tree/main/vlv-website) | [ir a la página](https://glowing-douhua-4196d5.netlify.app/)
+
+  * | 32 | [WebSite de Gym](https://github.com/ElideZavala/150-Project-Goal/tree/main/gym-website) | [ir a la página](https://eloquent-pixie-77761f.netlify.app/)
